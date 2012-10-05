@@ -216,7 +216,7 @@
     <h1>This Website</h1>
     <h3>October  4, 2012</h3>
     <p>
-    This website is auto-generated from <a href="http://daringfireball.net/projects/markdown/">markdown</a> code using Haskell.  I wrote a custom CSS processor to output modern, reactive CSS.
+    I auto-generate this site from <a href="http://daringfireball.net/projects/markdown/">markdown</a> code using Haskell.  The generation code includes a custom CSS processor to output modern, reactive CSS.
     </p>
   </div>
   <div class="post">
