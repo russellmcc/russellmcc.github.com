@@ -1,0 +1,194 @@
+pre{
+background:  #002b36;
+color:  #93a1a1;
+}
+.sourceCode .c{
+color:  #586e75;
+font-style: italic;
+}
+.sourceCode .cm{
+color:  #586e75;
+font-style: italic;
+}
+.sourceCode .cp{
+color:  #586e75;
+font-style: italic;
+}
+.sourceCode .c1{
+color:  #586e75;
+font-style: italic;
+}
+.sourceCode .cs{
+color:  #586e75;
+font-weight: bold;
+font-style: italic;
+}
+.sourceCode .err{
+color:  #dc322f;
+background: none;
+}
+.sourceCode .k{
+color:  #cb4b16;
+}
+.sourceCode .o{
+color:  #93a1a1;
+font-weight: bold;
+}
+.sourceCode .p{
+color:  #93a1a1;
+}
+.sourceCode .ow{
+color:  #2aa198;
+font-weight: bold;
+}
+.sourceCode .ge{
+color:  #93a1a1;
+font-style: italic;
+}
+.sourceCode .gh{
+color:  #586e75;
+}
+.sourceCode .gs{
+color:  #93a1a1;
+font-weight: bold;
+}
+.sourceCode .gu{
+color:  #6c71c4;
+}
+.sourceCode .kc{
+color:  #859900;
+font-weight: bold;
+}
+.sourceCode .kd{
+color:  #268bd2;
+}
+.sourceCode .kp{
+color:  #cb4b16;
+font-weight: bold;
+}
+.sourceCode .kr{
+color:  #d33682;
+font-weight: bold;
+}
+.sourceCode .kt{
+color:  #2aa198;
+}
+.sourceCode .n{
+color:  #268bd2;
+}
+.sourceCode .na{
+color:  #268bd2;
+}
+.sourceCode .nb{
+color:  #859900;
+}
+.sourceCode .nc{
+color:  #d33682;
+}
+.sourceCode .no{
+color:  #b58900;
+}
+.sourceCode .nl{
+color:  #859900;
+}
+.sourceCode .ne{
+color:  #268bd2;
+font-weight: bold;
+}
+.sourceCode .nf{
+color:  #268bd2;
+font-weight: bold;
+}
+.sourceCode .nn{
+color:  #b58900;
+}
+.sourceCode .nt{
+color:  #268bd2;
+font-weight: bold;
+}
+.sourceCode .nx{
+color:  #b58900;
+}
+.sourceCode .vg{
+color:  #268bd2;
+}
+.sourceCode .vi{
+color:  #268bd2;
+}
+.sourceCode .nv{
+color:  #268bd2;
+}
+.sourceCode .mf{
+color:  #2aa198;
+}
+.sourceCode .m{
+color:  #2aa198;
+}
+.sourceCode .mh{
+color:  #2aa198;
+}
+.sourceCode .mi{
+color:  #2aa198;
+}
+.sourceCode .s{
+color:  #2aa198;
+}
+.sourceCode .sd{
+color:  #2aa198;
+}
+.sourceCode .s2{
+color:  #2aa198;
+}
+.sourceCode .se{
+color:  #dc322f;
+}
+.sourceCode .si{
+color:  #268bd2;
+}
+.sourceCode .sr{
+color:  #2aa198;
+}
+.sourceCode .s1{
+color:  #2aa198;
+}
+.sourceCode .kw{
+color:  #b58900;
+font-weight: bold;
+}
+.sourceCode .dt{
+color:  #2aa198;
+}
+.sourceCode .dv{
+color:  #586e75;
+}
+.sourceCode .bn{
+color:  #cb4b16;
+}
+.sourceCode .fl{
+color:  #2aa198;
+}
+.sourceCode .ch{
+color:  #dc322f;
+}
+.sourceCode .st{
+color:  #d33682;
+}
+.sourceCode .co{
+color:  #586e75;
+font-style: italic;
+}
+.sourceCode .ot{
+}
+.sourceCode .al{
+color:  #859900;
+font-weight: bold;
+}
+.sourceCode .fu{
+color:  #268bd2;
+}
+.sourceCode .re{
+}
+.sourceCode .er{
+color:  #dc322f;
+font-weight: bold;
+}

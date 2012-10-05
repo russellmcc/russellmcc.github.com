@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8"></meta>
+    <meta name="author" content="Your Name"></meta>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/syntax.css"></link>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/frameless.css"></link>
+    <link href="http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu+Condensed|Ubuntu|Open+Sans:300|Open+Sans:400" rel="stylesheet" type="text/css"></link> 
+    <script type="text/javascript" src="../scripts/ender.min.js"></script> 
+    <script type="text/javascript" src="../scripts/coffee-script.js"></script>
+    <script type="text/coffeescript" src="../scripts/debug_grid.coffee"></script>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0"></meta>
+    <link rel="alternate" type="application/rss+xml" title="SimpleBlog" href="../rss.xml"></link>
+    <title>3-Sat Online Puzzle Game</title>
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-29024738-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+  </head>
+  <body>
+<div id="contact">
+    <h1><a href="../index.html">russell mcclellan</a></h1>
+    <h2>musical hardware and software</h2>
+    russell.mcclellan@gmail.com
+</div>
+<div id="content">
+    <nav id="navbar">
+      <ul>
+      <li><a href="../tags/blog.html" class="taglink">blog<div class="whitesquare"></div></a></li>
+      <li><a href="../tags/portfolio.html" class="taglink">portfolio<div class="whitesquare"></div></a></li>
+      <li><a href="../resume.html" class="taglink">resume<div class="whitesquare"></div></a></li>
+      <li><a href="../about.html" class="taglink">about<div class="whitesquare"></div></a></li>
+      </ul>
+    </nav>
+    <article>
+  <div class="post">
+    <h1>3-Sat Online Puzzle Game</h1>
+    <h3>March 15, 2012</h3>
+    <p>
+    <a href="http://russellmcc.github.com/3-SAT/?puzzle=abcabCaBcaBC">3-SAT</a> was one-day project to implement a classic CS problem as a browser-based puzzle game.
+    </p>
+  </div>
+  <div class="post">
+    <h2 id="the-puzzle">The Puzzle</h2>
+<p>3-SAT is a puzzle game where you have a finite number of letter triplets. Some letters are red, and some letters are black. You must pick one letter of each triplet, with the rule that a choice is only valid if you’ve never picked that particular letter in a different color. So, once you choose a black “A” in a triplet, you are never allowed to choose a red “A”.</p>
+</div><div class="post">
+
+<h2 id="why">Why</h2>
+<p>3-SAT turns out to be important to computer science because it’s perhaps the simplest to understand example of a type of problem called an <em>NP-Complete</em> problem. Generally first or second year computer science majors will learn about these problems in a basic complexity theory class.</p>
+<p>Briefly, an <em>NP-Complete</em> problem is both <em>NP</em> and <em>NP-Hard</em>. Being <em>NP</em> means that given a guess solution, you can quickly verify whether or not the guess is correct. In this case, you can just make sure that each triplet has a letter selected, and there are no copies of the same letters in different colors. Being <em>NP-Hard</em> means you can translate any <em>NP</em> problem into a 3-SAT problem.</p>
+<p>I thought it would be a fun exercise to code up browser based “puzzle game” versions of classic CS problems like this, and create tools to translate puzzles from one to another. The project is also an excuse to learn about different single page application frameworks.</p>
+</div><div class="post">
+
+<h2 id="the-code">The Code</h2>
+<p>available <a href="https://github.com/russellmcc/3-SAT">on GitHub</a>.</p>
+<p>I used the “ember.js” framework for the UI, and coded everything in CoffeeScript.</p>
+<p>My main goal in writing this was to learn a bit about the ember.js framework. Frankly, I wasn’t a big fan of ember, as it had the sort of leaky-abstraction “magic” that I’ve come to deeply fear. By this I mean there are some features where the implementation is not covered in the documentation, but you have to know how everything works to use the framework correctly. This is a pet peeve of mine in API design.</p>
+  </div>
+</article>
+
+  </div>
+  </body>
+</html>

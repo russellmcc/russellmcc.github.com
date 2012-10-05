@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8"></meta>
+    <meta name="author" content="Your Name"></meta>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/syntax.css"></link>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/frameless.css"></link>
+    <link href="http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu+Condensed|Ubuntu|Open+Sans:300|Open+Sans:400" rel="stylesheet" type="text/css"></link> 
+    <script type="text/javascript" src="../scripts/ender.min.js"></script> 
+    <script type="text/javascript" src="../scripts/coffee-script.js"></script>
+    <script type="text/coffeescript" src="../scripts/debug_grid.coffee"></script>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0"></meta>
+    <link rel="alternate" type="application/rss+xml" title="SimpleBlog" href="../rss.xml"></link>
+    <title>Pareidoloop</title>
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-29024738-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+  </head>
+  <body>
+<div id="contact">
+    <h1><a href="../index.html">russell mcclellan</a></h1>
+    <h2>musical hardware and software</h2>
+    russell.mcclellan@gmail.com
+</div>
+<div id="content">
+    <nav id="navbar">
+      <ul>
+      <li><a href="../tags/blog.html" class="taglink">blog<div class="whitesquare"></div></a></li>
+      <li><a href="../tags/portfolio.html" class="taglink">portfolio<div class="whitesquare"></div></a></li>
+      <li><a href="../resume.html" class="taglink">resume<div class="whitesquare"></div></a></li>
+      <li><a href="../about.html" class="taglink">about<div class="whitesquare"></div></a></li>
+      </ul>
+    </nav>
+    <article>
+  <div class="post">
+    <h1>Pareidoloop</h1>
+    <h3>July 20, 2012</h3>
+    <p>
+    I made some modifications to a face-generation toy called <a href="http://russellmcc.github.com/pareidoloop">pareidoloop</a>
+    </p>
+  </div>
+  <div class="post">
+    <h2 id="the-ghost-in-the-machine-has-a-face">The ghost in the machine has a face</h2>
+<img alt="creepy face 1" src="../images/plface0.png">
+<p>Internet citizen Philip McCarthy created <a href="http://iobound.com/2012/08/pareidoloop/">pareidoloop</a>, a “face” generator that was simply a random-image generator hooked up in a loop to a face recognizer program. Things that look more like faces to the computer are kept, and things that look less like faces are discarded. After a long time, something vaguely representing a distorted face appears.</p>
+<img alt="creepy face 2" src="../images/plface1.png">
+<p>The images are visually very striking, and there’s always something a little cosmically creepy about computer-generated art.</p>
+<p>I made a few modifications to the original formula - the images are now in color, you can work at larger canvas sizes (although this would be slower), and there’s a “simulated annealing” process instead of straight randomness to speed the process up while avoiding local maxima.</p>
+<img alt="creepy face 3" src="../images/plface2.png">
+</div><div class="post">
+
+<h2 id="the-code">The code</h2>
+<p>Avaiable <a href="https://github.com/russellmcc/pareidoloop">on GitHub</a>.</p>
+  </div>
+</article>
+
+  </div>
+  </body>
+</html>

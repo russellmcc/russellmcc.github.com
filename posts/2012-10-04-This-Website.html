@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8"></meta>
+    <meta name="author" content="Your Name"></meta>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/syntax.css"></link>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/frameless.css"></link>
+    <link href="http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu+Condensed|Ubuntu|Open+Sans:300|Open+Sans:400" rel="stylesheet" type="text/css"></link> 
+    <script type="text/javascript" src="../scripts/ender.min.js"></script> 
+    <script type="text/javascript" src="../scripts/coffee-script.js"></script>
+    <script type="text/coffeescript" src="../scripts/debug_grid.coffee"></script>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0"></meta>
+    <link rel="alternate" type="application/rss+xml" title="SimpleBlog" href="../rss.xml"></link>
+    <title>This Website</title>
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-29024738-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+  </head>
+  <body>
+<div id="contact">
+    <h1><a href="../index.html">russell mcclellan</a></h1>
+    <h2>musical hardware and software</h2>
+    russell.mcclellan@gmail.com
+</div>
+<div id="content">
+    <nav id="navbar">
+      <ul>
+      <li><a href="../tags/blog.html" class="taglink">blog<div class="whitesquare"></div></a></li>
+      <li><a href="../tags/portfolio.html" class="taglink">portfolio<div class="whitesquare"></div></a></li>
+      <li><a href="../resume.html" class="taglink">resume<div class="whitesquare"></div></a></li>
+      <li><a href="../about.html" class="taglink">about<div class="whitesquare"></div></a></li>
+      </ul>
+    </nav>
+    <article>
+  <div class="post">
+    <h1>This Website</h1>
+    <h3>October  4, 2012</h3>
+    <p>
+    This website is auto-generated from <a href="http://daringfireball.net/projects/markdown/">markdown</a> code using Haskell.  I wrote a custom CSS processor to output modern, reactive CSS.
+    </p>
+  </div>
+  <div class="post">
+    <h2 id="code">Code</h2>
+<p>Code is available <a href="http://www.github.com/russellmcc/site-gen">on GitHub</a></p>
+<p>The code is based on a Haskell blog framework called <a href="http://jaspervdj.be/hakyll/">Hakyll</a>, although there is a CSS processor entirely of my own design.</p>
+<p>If you’re interested in how it works, most of the guts are in four short files:</p>
+<dl>
+
+<hr></hr>
+<dt>
+<a href="https://github.com/russellmcc/site-gen/blob/master/site.hs">site.hs</a>
+</dt>
+<dd> 
+contains the basic structure of the site. Hakyll makes heavy use of <a href="http://www.haskell.org/arrows/">Arrows</a> in its API, which are not my favorite abstraction for computation.
+</dd>
+
+<hr></hr>
+<dt>
+<a href="https://github.com/russellmcc/site-gen/blob/master/cssTokenizer.hs">cssTokenizer.hs</a> and <a href="https://github.com/russellmcc/site-gen/blob/master/cssProcess.hs">cssProcess.hs</a>
+</dt>
+<dd> 
+contain the custom CSS processor used to style the site. The style of these two files more closely matches the way I like to write Haskell. I prefer applicatives to arrows or monads whenever possible.
+</dd>
+
+<hr></hr>
+<dt>
+<a href="https://github.com/russellmcc/site-gen/blob/master/stylesheets/frameless.scss">frameless.scss</a>
+</dt>
+<dd> 
+includes the CSS used to style the site, heavily based on the <a href="http://framelessgrid.com/">“frameless grid”</a> design concept by Joni Korpi
+</dd>
+
+</dl>
+
+</div><div class="post">
+
+<h2 id="design">Design</h2>
+<p>Most of the initial design concept was done by my friend <a href="http://www.kate-lindsay.com">Kate Lindsay</a>, although due to time constraints I had to finalize the design and do the mobile layout. I’m still very much in the early stages of learning about what works and what doesn’t, so I’d appreciate any feedback or hints.</p>
+  </div>
+</article>
+
+  </div>
+  </body>
+</html>
