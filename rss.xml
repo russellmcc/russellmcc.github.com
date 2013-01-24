@@ -238,9 +238,7 @@ contains the basic structure of the site. Hakyll makes heavy use of <a href="htt
 <a href="https://github.com/russellmcc/site-gen/blob/master/cssTokenizer.hs">cssTokenizer.hs</a> and <a href="https://github.com/russellmcc/site-gen/blob/master/cssProcess.hs">cssProcess.hs</a>
 </dt>
 <dd> 
-contain the custom CSS processor used to style the site. Since these files don’t make any reference to the Hakyll framework, I was more free to write in a style I prefer: applicatives over arrows and monads whenever possible. I wrote the first version of this file using <a href="https://personal.cis.strath.ac.uk/conor.mcbride/pub/she/">SHE</a>, but the idiom brackets eventually got too idiotic for me.
-</dd>
-
+<p>contain the custom CSS processor used to style the site. Since these files don’t make any reference to the Hakyll framework, I was more free to write in a style I prefer: applicatives over arrows and monads whenever possible. For cssProcess.hs I used <a href="https://personal.cis.strath.ac.uk/conor.mcbride/pub/she/">SHE</a> for the applicative idiom brackets. More syntactic sugar, please!</p>
 <hr></hr>
 <dt>
 <a href="https://github.com/russellmcc/site-gen/blob/master/stylesheets/frameless.scss">frameless.scss</a>
