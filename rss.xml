@@ -8,7 +8,7 @@
                    type="application/rss+xml" />
         <lastBuildDate>Thu, 15 Mar 2012 00:00:00 UT</lastBuildDate>
         <item>
-    <title>3-Sat Online Puzzle Game</title>
+    <title>Project Log: 3-Sat Online Puzzle Game</title>
     <link>http://www.russellmcc.com/posts/2012-03-15-3SAT.html</link>
     <description><![CDATA[<!DOCTYPE HTML>
 
@@ -24,7 +24,7 @@
     <script type="text/coffeescript" src="../scripts/debug_grid.coffee"></script>
     <meta name="viewport" content="width=device-width; initial-scale=1.0"></meta>
     <link rel="alternate" type="application/rss+xml" title="SimpleBlog" href="../rss.xml"></link>
-    <title>3-Sat Online Puzzle Game</title>
+    <title>Project Log: 3-Sat Online Puzzle Game</title>
     <script type="text/javascript">
 
       var _gaq = _gaq || [];
@@ -48,15 +48,15 @@
 <div id="content">
     <nav id="navbar">
       <ul>
-      <li><a href="../tags/blog.html" class="taglink">blog<div class="whitesquare"></div></a></li>
-      <li><a href="../tags/portfolio.html" class="taglink">portfolio<div class="whitesquare"></div></a></li>
+      <li><a href="../index.html" class="taglink">home<div class="whitesquare"></div></a></li>
+      <li><a href="../tags/blog.html" class="taglink">archive<div class="whitesquare"></div></a></li>
       <li><a href="../resume.html" class="taglink">resume<div class="whitesquare"></div></a></li>
       <li><a href="../about.html" class="taglink">about<div class="whitesquare"></div></a></li>
       </ul>
     </nav>
     <article>
   <div class="post">
-    <h1>3-Sat Online Puzzle Game</h1>
+    <h1>Project Log: 3-Sat Online Puzzle Game</h1>
     <h3>March 15, 2012</h3>
     <p>
     <a href="http://russellmcc.github.com/3-SAT/?puzzle=abcabCaBcaBC">3-SAT</a> was one-day project to implement a classic CS problem as a browser-based puzzle game.
@@ -64,19 +64,18 @@
   </div>
   <div class="post">
     <h2 id="the-puzzle">The Puzzle</h2>
-<p>3-SAT is a puzzle game where you have a finite number of letter triplets. Some letters are red, and some letters are black. You must pick one letter of each triplet, with the rule that a choice is only valid if you’ve never picked that particular letter in a different color. So, once you choose a black “A” in a triplet, you are never allowed to choose a red “A”.</p>
+<p>3-SAT is a puzzle game. You’re presented with a finite number of letter triplets. Some letters are red, and some letters are black. You must pick one letter of each triplet, with the rule that a choice is only valid if you’ve never picked that particular letter in a different color. So, once you choose a black “A” in a triplet, you are never allowed to choose a red “A” in any other triplet.</p>
 </div><div class="post">
 
 <h2 id="why">Why</h2>
-<p>3-SAT turns out to be important to computer science because it’s perhaps the simplest to understand example of a type of problem called an <em>NP-Complete</em> problem. Generally first or second year computer science majors will learn about these problems in a basic complexity theory class.</p>
+<p>3-SAT turns out to be important to computer science because it’s perhaps the simplest example of a type of problem called an <em>NP-Complete</em> problem. Generally first or second year computer science majors will learn about these problems in a basic complexity theory class.</p>
 <p>Briefly, an <em>NP-Complete</em> problem is both <em>NP</em> and <em>NP-Hard</em>. Being <em>NP</em> means that given a guess solution, you can quickly verify whether or not the guess is correct. In this case, you can just make sure that each triplet has a letter selected, and there are no copies of the same letters in different colors. Being <em>NP-Hard</em> means you can translate any <em>NP</em> problem into a 3-SAT problem.</p>
 <p>I thought it would be a fun exercise to code up browser based “puzzle game” versions of classic CS problems like this, and create tools to translate puzzles from one to another. The project is also an excuse to learn about different single page application frameworks.</p>
 </div><div class="post">
 
 <h2 id="the-code">The Code</h2>
 <p>available <a href="https://github.com/russellmcc/3-SAT">on GitHub</a>.</p>
-<p>I used the “ember.js” framework for the UI, and coded everything in CoffeeScript.</p>
-<p>My main goal in writing this was to learn a bit about the ember.js framework. Frankly, I wasn’t a big fan of ember, as it had the sort of leaky-abstraction “magic” that I’ve come to deeply fear. By this I mean there are some features where the implementation is not covered in the documentation, but you have to know how everything works to use the framework correctly. This is a pet peeve of mine in API design.</p>
+<p>I used the “ember.js” framework for the UI, and coded everything in CoffeeScript.<br />My main goal in writing this was to learn a bit about the ember.js framework. Frankly, I wasn’t a big fan of ember, as it had the sort of leaky-abstraction “magic” that I’ve come to deeply fear. By this I mean there are some features where the implementation is not covered in the documentation, but you have to know how everything works to use the framework correctly.</p>
   </div>
 </article>
 
@@ -88,7 +87,7 @@
     <guid>http://www.russellmcc.com/posts/2012-03-15-3SAT.html</guid>
 </item>
 <item>
-    <title>Pareidoloop</title>
+    <title>Project Log: Pareidoloop Modifications</title>
     <link>http://www.russellmcc.com/posts/2012-07-20-pareidoloop-edits.html</link>
     <description><![CDATA[<!DOCTYPE HTML>
 
@@ -104,7 +103,7 @@
     <script type="text/coffeescript" src="../scripts/debug_grid.coffee"></script>
     <meta name="viewport" content="width=device-width; initial-scale=1.0"></meta>
     <link rel="alternate" type="application/rss+xml" title="SimpleBlog" href="../rss.xml"></link>
-    <title>Pareidoloop</title>
+    <title>Project Log: Pareidoloop Modifications</title>
     <script type="text/javascript">
 
       var _gaq = _gaq || [];
@@ -128,15 +127,15 @@
 <div id="content">
     <nav id="navbar">
       <ul>
-      <li><a href="../tags/blog.html" class="taglink">blog<div class="whitesquare"></div></a></li>
-      <li><a href="../tags/portfolio.html" class="taglink">portfolio<div class="whitesquare"></div></a></li>
+      <li><a href="../index.html" class="taglink">home<div class="whitesquare"></div></a></li>
+      <li><a href="../tags/blog.html" class="taglink">archive<div class="whitesquare"></div></a></li>
       <li><a href="../resume.html" class="taglink">resume<div class="whitesquare"></div></a></li>
       <li><a href="../about.html" class="taglink">about<div class="whitesquare"></div></a></li>
       </ul>
     </nav>
     <article>
   <div class="post">
-    <h1>Pareidoloop</h1>
+    <h1>Project Log: Pareidoloop Modifications</h1>
     <h3>July 20, 2012</h3>
     <p>
     I made some modifications to a face-generation toy called <a href="http://russellmcc.github.com/pareidoloop">pareidoloop</a>
@@ -165,7 +164,7 @@
     <guid>http://www.russellmcc.com/posts/2012-07-20-pareidoloop-edits.html</guid>
 </item>
 <item>
-    <title>This Website</title>
+    <title>Project Log: This Website</title>
     <link>http://www.russellmcc.com/posts/2012-10-04-This-Website.html</link>
     <description><![CDATA[<!DOCTYPE HTML>
 
@@ -181,7 +180,7 @@
     <script type="text/coffeescript" src="../scripts/debug_grid.coffee"></script>
     <meta name="viewport" content="width=device-width; initial-scale=1.0"></meta>
     <link rel="alternate" type="application/rss+xml" title="SimpleBlog" href="../rss.xml"></link>
-    <title>This Website</title>
+    <title>Project Log: This Website</title>
     <script type="text/javascript">
 
       var _gaq = _gaq || [];
@@ -205,15 +204,15 @@
 <div id="content">
     <nav id="navbar">
       <ul>
-      <li><a href="../tags/blog.html" class="taglink">blog<div class="whitesquare"></div></a></li>
-      <li><a href="../tags/portfolio.html" class="taglink">portfolio<div class="whitesquare"></div></a></li>
+      <li><a href="../index.html" class="taglink">home<div class="whitesquare"></div></a></li>
+      <li><a href="../tags/blog.html" class="taglink">archive<div class="whitesquare"></div></a></li>
       <li><a href="../resume.html" class="taglink">resume<div class="whitesquare"></div></a></li>
       <li><a href="../about.html" class="taglink">about<div class="whitesquare"></div></a></li>
       </ul>
     </nav>
     <article>
   <div class="post">
-    <h1>This Website</h1>
+    <h1>Project Log: This Website</h1>
     <h3>October  4, 2012</h3>
     <p>
     I auto-generate this site from <a href="http://daringfireball.net/projects/markdown/">markdown</a> code using Haskell.  The generation code includes a custom CSS processor to output modern, reactive CSS.
@@ -239,7 +238,7 @@ contains the basic structure of the site. Hakyll makes heavy use of <a href="htt
 <a href="https://github.com/russellmcc/site-gen/blob/master/cssTokenizer.hs">cssTokenizer.hs</a> and <a href="https://github.com/russellmcc/site-gen/blob/master/cssProcess.hs">cssProcess.hs</a>
 </dt>
 <dd> 
-contain the custom CSS processor used to style the site. The style of these two files more closely matches the way I like to write Haskell. I prefer applicatives to arrows or monads whenever possible.
+contain the custom CSS processor used to style the site. Since these files don’t make any reference to the Hakyll framework, I was more free to write in a style I prefer: applicatives over arrows and monads whenever possible. I wrote the first version of this file using <a href="https://personal.cis.strath.ac.uk/conor.mcbride/pub/she/">SHE</a>, but the idiom brackets eventually got too idiotic for me.
 </dd>
 
 <hr></hr>
@@ -255,7 +254,7 @@ includes the CSS used to style the site, heavily based on the <a href="http://fr
 </div><div class="post">
 
 <h2 id="design">Design</h2>
-<p>Most of the initial design concept was done by my friend <a href="http://www.kate-lindsay.com">Kate Lindsay</a>, although due to time constraints I had to finalize the design and do the mobile layout. I’m still very much in the early stages of learning about what works and what doesn’t, so I’d appreciate any feedback or hints.</p>
+<p>Most of the initial design concept was done by my friend <a href="http://www.kate-lindsay.com">Kate Lindsay</a>, although due to time constraints I had to finalize the design and do the mobile layout. Clearly, I’m not much of a designer :-).</p>
   </div>
 </article>
 

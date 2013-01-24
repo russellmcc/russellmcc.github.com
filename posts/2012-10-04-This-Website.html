@@ -12,7 +12,7 @@
     <script type="text/coffeescript" src="../scripts/debug_grid.coffee"></script>
     <meta name="viewport" content="width=device-width; initial-scale=1.0"></meta>
     <link rel="alternate" type="application/rss+xml" title="SimpleBlog" href="../rss.xml"></link>
-    <title>This Website</title>
+    <title>Project Log: This Website</title>
     <script type="text/javascript">
 
       var _gaq = _gaq || [];
@@ -36,15 +36,15 @@
 <div id="content">
     <nav id="navbar">
       <ul>
-      <li><a href="../tags/blog.html" class="taglink">blog<div class="whitesquare"></div></a></li>
-      <li><a href="../tags/portfolio.html" class="taglink">portfolio<div class="whitesquare"></div></a></li>
+      <li><a href="../index.html" class="taglink">home<div class="whitesquare"></div></a></li>
+      <li><a href="../tags/blog.html" class="taglink">archive<div class="whitesquare"></div></a></li>
       <li><a href="../resume.html" class="taglink">resume<div class="whitesquare"></div></a></li>
       <li><a href="../about.html" class="taglink">about<div class="whitesquare"></div></a></li>
       </ul>
     </nav>
     <article>
   <div class="post">
-    <h1>This Website</h1>
+    <h1>Project Log: This Website</h1>
     <h3>October  4, 2012</h3>
     <p>
     I auto-generate this site from <a href="http://daringfireball.net/projects/markdown/">markdown</a> code using Haskell.  The generation code includes a custom CSS processor to output modern, reactive CSS.
@@ -70,7 +70,7 @@ contains the basic structure of the site. Hakyll makes heavy use of <a href="htt
 <a href="https://github.com/russellmcc/site-gen/blob/master/cssTokenizer.hs">cssTokenizer.hs</a> and <a href="https://github.com/russellmcc/site-gen/blob/master/cssProcess.hs">cssProcess.hs</a>
 </dt>
 <dd> 
-contain the custom CSS processor used to style the site. The style of these two files more closely matches the way I like to write Haskell. I prefer applicatives to arrows or monads whenever possible.
+contain the custom CSS processor used to style the site. Since these files don’t make any reference to the Hakyll framework, I was more free to write in a style I prefer: applicatives over arrows and monads whenever possible. I wrote the first version of this file using <a href="https://personal.cis.strath.ac.uk/conor.mcbride/pub/she/">SHE</a>, but the idiom brackets eventually got too idiotic for me.
 </dd>
 
 <hr></hr>
@@ -86,7 +86,7 @@ includes the CSS used to style the site, heavily based on the <a href="http://fr
 </div><div class="post">
 
 <h2 id="design">Design</h2>
-<p>Most of the initial design concept was done by my friend <a href="http://www.kate-lindsay.com">Kate Lindsay</a>, although due to time constraints I had to finalize the design and do the mobile layout. I’m still very much in the early stages of learning about what works and what doesn’t, so I’d appreciate any feedback or hints.</p>
+<p>Most of the initial design concept was done by my friend <a href="http://www.kate-lindsay.com">Kate Lindsay</a>, although due to time constraints I had to finalize the design and do the mobile layout. Clearly, I’m not much of a designer :-).</p>
   </div>
 </article>
 
