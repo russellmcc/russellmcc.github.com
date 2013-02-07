@@ -140,10 +140,10 @@ includes the CSS used to style the site, heavily based on the <a href="http://fr
 <p>For the board layout I used <a href="http://www.cadsoftusa.com/">EAGLE</a>, which is free for non-commercial use and does the job. The learning curve was quite difficult, and I probably wouldn’t have been able to use it without the support of some experienced friends. While there are other electronic CAD choices out there, none are nearly as ubiquitous for hobbiests.</p>
 <p>All of the design files for the project, including a list of all parts required, are <a href="https://github.com/russellmcc/hexbuffer">on GitHub</a> under a permissive license.</p>
 <h2 id="board-fabrication">Board Fabrication</h2>
-<p><img src="/images/buffer_board.JPG" alt="PCB" /><br /> The board was fabricated by <a href="http://oshpark.com/">OSH Park</a>, which was quite affordable at $6 per board. A nice feature of OSH Park is that they support EAGLE files, so no export to the more-standard gerber files is needed.</p>
+<p><img src="/images/buffer_board.jpg" alt="PCB" /><br /> The board was fabricated by <a href="http://oshpark.com/">OSH Park</a>, which was quite affordable at $6 per board. A nice feature of OSH Park is that they support EAGLE files, so no export to the more-standard gerber files is needed.</p>
 <p>I hand assembled the boards with parts from <a href="http://www.mouser.com/ProjectManager/ProjectDetail.aspx?AccessID=8b942c2668">mouser</a>.</p>
 <h2 id="front-panel">Front Panel</h2>
-<p><img src="/images/buffer_insitu.JPG" alt="completed buffer" /><br /> The panel was lasercut out of acrylic from <a href="https://www.inventables.com/">Inventables</a> at a <a href="http://dangerawesome.co/">local lasercutting shop</a>. The design files were done in InkScape.</p>
+<p><img src="/images/buffer_insitu.jpg" alt="completed buffer" /><br /> The panel was lasercut out of acrylic from <a href="https://www.inventables.com/">Inventables</a> at a <a href="http://dangerawesome.co/">local lasercutting shop</a>. The design files were done in InkScape.</p>
   </div>
 </article>
 ]]></description>
