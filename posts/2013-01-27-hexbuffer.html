@@ -7,9 +7,6 @@
     <link rel="stylesheet" type="text/css" href="../stylesheets/syntax.css" />
     <link rel="stylesheet" type="text/css" href="../stylesheets/frameless.css" />
     <link href="http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu+Condensed|Ubuntu|Open+Sans:300|Open+Sans:400" rel="stylesheet" type="text/css" /> 
-    <script type="text/javascript" src="../scripts/ender.min.js"></script> 
-    <script type="text/javascript" src="../scripts/coffee-script.js"></script>
-    <script type="text/coffeescript" src="../scripts/debug_grid.coffee"></script>
     <meta name="viewport" content="width=device-width; initial-scale=1.0" />
     <link rel="alternate" type="application/rss+xml" title="SimpleBlog" href="../rss.xml" />
     <title>Project Log: Eurorack Buffered Multiple</title>
@@ -51,19 +48,21 @@
     </p>
   </div>
   <div class="post">
-    <h2 id="background">background</h2>
+    <h2>background</h2>
 <p><a href="http://www.youtube.com/watch?v=GCyiDaM3boc">Modular synthesizers</a> are musical instruments made out of removable, replacable building blocks. Each module in a synth is able to interact with all the others to create unique sonic landscapes. While precise, <a href="http://www.soundonsound.com/sos/allsynthsecrets.htm">engineered</a> sounds are possible, the tactile physical nature of the system tends to encourage organic, creative exploration of the rich parameter space.</p>
-<p>I’ve been interested in designing modules for this ecosystem for a long time, and now I’ve finally found a comfortable design and fabrication stack for it. As a proof of concept, I’ve created a very simple type of module called a buffered multiple.</p>
+<p>I've been interested in designing modules for this ecosystem for a long time, and now I've finally found a comfortable design and fabrication stack for it. As a proof of concept, I've created a very simple type of module called a buffered multiple.</p>
 <p>A multiple is just a signal splitter, allowing the user to connect one output into multiple inputs of other modules.</p>
-<h2 id="electronic-design">Electronic Design</h2>
+<h2>Electronic Design</h2>
 <p>The electronics of a multiple are quite simple, really just consisting of a single op amp stage per output. There are two inputs, each providing three buffered clones of the input signal. If there is no jack plugged into the second input, all the outputs follow the first input signal.</p>
-<p>For the board layout I used <a href="http://www.cadsoftusa.com/">EAGLE</a>, which is free for non-commercial use and does the job. The learning curve was quite difficult, and I probably wouldn’t have been able to use it without the support of some experienced friends. While there are other electronic CAD choices out there, none are nearly as ubiquitous for hobbiests.</p>
+<p>For the board layout I used <a href="http://www.cadsoftusa.com/">EAGLE</a>, which is free for non-commercial use and does the job. The learning curve was quite difficult, and I probably wouldn't have been able to use it without the support of some experienced friends. While there are other electronic CAD choices out there, none are nearly as ubiquitous for hobbiests.</p>
 <p>All of the design files for the project, including a list of all parts required, are <a href="https://github.com/russellmcc/hexbuffer">on GitHub</a> under a permissive license.</p>
-<h2 id="board-fabrication">Board Fabrication</h2>
-<p><img src="../images/buffer_board.jpg" alt="PCB" /><br /> The board was fabricated by <a href="http://oshpark.com/">OSH Park</a>, which was quite affordable at $6 per board. A nice feature of OSH Park is that they support EAGLE files, so no export to the more-standard gerber files is needed.</p>
+<h2>Board Fabrication</h2>
+<p><img src="../images/buffer_board.jpg" alt="PCB" /></p>
+<p>The board was fabricated by <a href="http://oshpark.com/">OSH Park</a>, which was quite affordable at $6 per board. A nice feature of OSH Park is that they support EAGLE files, so no export to the more-standard gerber files is needed.</p>
 <p>I hand assembled the boards with parts from <a href="http://www.mouser.com/ProjectManager/ProjectDetail.aspx?AccessID=8b942c2668">mouser</a>.</p>
-<h2 id="front-panel">Front Panel</h2>
-<p><img src="../images/buffer_insitu.jpg" alt="completed buffer" /><br /> The panel was lasercut out of acrylic from <a href="https://www.inventables.com/">Inventables</a> at a <a href="http://dangerawesome.co/">local lasercutting shop</a>. The design files were done in InkScape.</p>
+<h2>Front Panel</h2>
+<p><img src="../images/buffer_insitu.jpg" alt="completed buffer" /></p>
+<p>The panel was lasercut out of acrylic from <a href="https://www.inventables.com/">Inventables</a> at a <a href="http://dangerawesome.co/">local lasercutting shop</a>. The design files were done in InkScape.</p>
   </div>
 </article>
 
