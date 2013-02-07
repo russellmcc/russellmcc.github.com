@@ -2,16 +2,16 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta charset="utf-8"></meta>
-    <meta name="author" content="Your Name"></meta>
-    <link rel="stylesheet" type="text/css" href="../stylesheets/syntax.css"></link>
-    <link rel="stylesheet" type="text/css" href="../stylesheets/frameless.css"></link>
-    <link href="http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu+Condensed|Ubuntu|Open+Sans:300|Open+Sans:400" rel="stylesheet" type="text/css"></link> 
+    <meta charset="utf-8" />
+    <meta name="author" content="Your Name" />
+    <link rel="stylesheet" type="text/css" href="../stylesheets/syntax.css" />
+    <link rel="stylesheet" type="text/css" href="../stylesheets/frameless.css" />
+    <link href="http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu+Condensed|Ubuntu|Open+Sans:300|Open+Sans:400" rel="stylesheet" type="text/css" /> 
     <script type="text/javascript" src="../scripts/ender.min.js"></script> 
     <script type="text/javascript" src="../scripts/coffee-script.js"></script>
     <script type="text/coffeescript" src="../scripts/debug_grid.coffee"></script>
-    <meta name="viewport" content="width=device-width; initial-scale=1.0"></meta>
-    <link rel="alternate" type="application/rss+xml" title="SimpleBlog" href="../rss.xml"></link>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0" />
+    <link rel="alternate" type="application/rss+xml" title="SimpleBlog" href="../rss.xml" />
     <title>Project Log: This Website</title>
     <script type="text/javascript">
 
@@ -37,7 +37,7 @@
     <nav id="navbar">
       <ul>
       <li><a href="../index.html" class="taglink">home<div class="whitesquare"></div></a></li>
-      <li><a href="../tags/blog.html" class="taglink">archive<div class="whitesquare"></div></a></li>
+      <li><a href="../archive.html" class="taglink">archive<div class="whitesquare"></div></a></li>
       <li><a href="../resume.html" class="taglink">resume<div class="whitesquare"></div></a></li>
       <li><a href="../about.html" class="taglink">about<div class="whitesquare"></div></a></li>
       </ul>
@@ -57,21 +57,21 @@
 <p>If you’re interested in how it works, most of the guts are in four short files:</p>
 <dl>
 
-<hr></hr>
+<hr />
 <dt>
 <a href="https://github.com/russellmcc/site-gen/blob/master/site.hs">site.hs</a>
 </dt>
 <dd> 
-contains the basic structure of the site. Hakyll makes heavy use of <a href="http://www.haskell.org/arrows/">Arrows</a> in its API, which are not my favorite abstraction for computation.
+contains the basic structure of the site. Hakyll 4 has finally removed all usage of the cumbersome <a href="http://www.haskell.org/arrows/">arrows</a> in its API, which are not my favorite abstraction for computation.
 </dd>
 
-<hr></hr>
+<hr />
 <dt>
 <a href="https://github.com/russellmcc/site-gen/blob/master/cssTokenizer.hs">cssTokenizer.hs</a> and <a href="https://github.com/russellmcc/site-gen/blob/master/cssProcess.hs">cssProcess.hs</a>
 </dt>
 <dd> 
-<p>contain the custom CSS processor used to style the site. Since these files don’t make any reference to the Hakyll framework, I was more free to write in a style I prefer: applicatives over arrows and monads whenever possible. For cssProcess.hs I used <a href="https://personal.cis.strath.ac.uk/conor.mcbride/pub/she/">SHE</a> for the applicative idiom brackets. More syntactic sugar, please!</p>
-<hr></hr>
+<p>contain the custom CSS processor used to style the site. Since these files don’t make any reference to the Hakyll framework, I was more free to write in a style I prefer. For cssProcess.hs I used <a href="https://personal.cis.strath.ac.uk/conor.mcbride/pub/she/">SHE</a> for the applicative idiom brackets. More syntactic sugar, please!</p>
+<hr />
 <dt>
 <a href="https://github.com/russellmcc/site-gen/blob/master/stylesheets/frameless.scss">frameless.scss</a>
 </dt>

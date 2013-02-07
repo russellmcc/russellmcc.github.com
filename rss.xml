@@ -10,51 +10,7 @@
         <item>
     <title>Project Log: 3-Sat Online Puzzle Game</title>
     <link>http://www.russellmcc.com/posts/2012-03-15-3SAT.html</link>
-    <description><![CDATA[<!DOCTYPE HTML>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta charset="utf-8"></meta>
-    <meta name="author" content="Your Name"></meta>
-    <link rel="stylesheet" type="text/css" href="../stylesheets/syntax.css"></link>
-    <link rel="stylesheet" type="text/css" href="../stylesheets/frameless.css"></link>
-    <link href="http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu+Condensed|Ubuntu|Open+Sans:300|Open+Sans:400" rel="stylesheet" type="text/css"></link> 
-    <script type="text/javascript" src="../scripts/ender.min.js"></script> 
-    <script type="text/javascript" src="../scripts/coffee-script.js"></script>
-    <script type="text/coffeescript" src="../scripts/debug_grid.coffee"></script>
-    <meta name="viewport" content="width=device-width; initial-scale=1.0"></meta>
-    <link rel="alternate" type="application/rss+xml" title="SimpleBlog" href="../rss.xml"></link>
-    <title>Project Log: 3-Sat Online Puzzle Game</title>
-    <script type="text/javascript">
-
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-29024738-1']);
-      _gaq.push(['_trackPageview']);
-
-      (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-
-    </script>
-  </head>
-  <body>
-<div id="contact">
-    <h1><a href="../index.html">russell mcclellan</a></h1>
-    <h2>musical hardware and software</h2>
-    russell.mcclellan@gmail.com
-</div>
-<div id="content">
-    <nav id="navbar">
-      <ul>
-      <li><a href="../index.html" class="taglink">home<div class="whitesquare"></div></a></li>
-      <li><a href="../tags/blog.html" class="taglink">archive<div class="whitesquare"></div></a></li>
-      <li><a href="../resume.html" class="taglink">resume<div class="whitesquare"></div></a></li>
-      <li><a href="../about.html" class="taglink">about<div class="whitesquare"></div></a></li>
-      </ul>
-    </nav>
-    <article>
+    <description><![CDATA[<article>
   <div class="post">
     <h1>Project Log: 3-Sat Online Puzzle Game</h1>
     <h3>March 15, 2012</h3>
@@ -78,10 +34,6 @@
 <p>I used the “ember.js” framework for the UI, and coded everything in CoffeeScript.<br />My main goal in writing this was to learn a bit about the ember.js framework. Frankly, I wasn’t a big fan of ember, as it had the sort of leaky-abstraction “magic” that I’ve come to deeply fear. By this I mean there are some features where the implementation is not covered in the documentation, but you have to know how everything works to use the framework correctly.</p>
   </div>
 </article>
-
-  </div>
-  </body>
-</html>
 ]]></description>
     <pubDate>Thu, 15 Mar 2012 00:00:00 UT</pubDate>
     <guid>http://www.russellmcc.com/posts/2012-03-15-3SAT.html</guid>
@@ -89,51 +41,7 @@
 <item>
     <title>Project Log: Pareidoloop Modifications</title>
     <link>http://www.russellmcc.com/posts/2012-07-20-pareidoloop-edits.html</link>
-    <description><![CDATA[<!DOCTYPE HTML>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta charset="utf-8"></meta>
-    <meta name="author" content="Your Name"></meta>
-    <link rel="stylesheet" type="text/css" href="../stylesheets/syntax.css"></link>
-    <link rel="stylesheet" type="text/css" href="../stylesheets/frameless.css"></link>
-    <link href="http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu+Condensed|Ubuntu|Open+Sans:300|Open+Sans:400" rel="stylesheet" type="text/css"></link> 
-    <script type="text/javascript" src="../scripts/ender.min.js"></script> 
-    <script type="text/javascript" src="../scripts/coffee-script.js"></script>
-    <script type="text/coffeescript" src="../scripts/debug_grid.coffee"></script>
-    <meta name="viewport" content="width=device-width; initial-scale=1.0"></meta>
-    <link rel="alternate" type="application/rss+xml" title="SimpleBlog" href="../rss.xml"></link>
-    <title>Project Log: Pareidoloop Modifications</title>
-    <script type="text/javascript">
-
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-29024738-1']);
-      _gaq.push(['_trackPageview']);
-
-      (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-
-    </script>
-  </head>
-  <body>
-<div id="contact">
-    <h1><a href="../index.html">russell mcclellan</a></h1>
-    <h2>musical hardware and software</h2>
-    russell.mcclellan@gmail.com
-</div>
-<div id="content">
-    <nav id="navbar">
-      <ul>
-      <li><a href="../index.html" class="taglink">home<div class="whitesquare"></div></a></li>
-      <li><a href="../tags/blog.html" class="taglink">archive<div class="whitesquare"></div></a></li>
-      <li><a href="../resume.html" class="taglink">resume<div class="whitesquare"></div></a></li>
-      <li><a href="../about.html" class="taglink">about<div class="whitesquare"></div></a></li>
-      </ul>
-    </nav>
-    <article>
+    <description><![CDATA[<article>
   <div class="post">
     <h1>Project Log: Pareidoloop Modifications</h1>
     <h3>July 20, 2012</h3>
@@ -143,22 +51,18 @@
   </div>
   <div class="post">
     <h2 id="the-ghost-in-the-machine-has-a-face">The ghost in the machine has a face</h2>
-<img alt="creepy face 1" src="../images/plface0.png">
+<p><img alt="creepy face 1" src="/images/plface0.png"></p>
 <p>Internet citizen Philip McCarthy created <a href="http://iobound.com/2012/08/pareidoloop/">pareidoloop</a>, a “face” generator that was simply a random-image generator hooked up in a loop to a face recognizer program. Things that look more like faces to the computer are kept, and things that look less like faces are discarded. After a long time, something vaguely representing a distorted face appears.</p>
-<img alt="creepy face 2" src="../images/plface1.png">
+<p><img alt="creepy face 2" src="/images/plface1.png"></p>
 <p>The images are visually very striking, and there’s always something a little cosmically creepy about computer-generated art.</p>
 <p>I made a few modifications to the original formula - the images are now in color, you can work at larger canvas sizes (although this would be slower), and there’s a “simulated annealing” process instead of straight randomness to speed the process up while avoiding local maxima.</p>
-<img alt="creepy face 3" src="../images/plface2.png">
+<p><img alt="creepy face 3" src="/images/plface2.png"></p>
 </div><div class="post">
 
 <h2 id="the-code">The code</h2>
 <p>Avaiable <a href="https://github.com/russellmcc/pareidoloop">on GitHub</a>.</p>
   </div>
 </article>
-
-  </div>
-  </body>
-</html>
 ]]></description>
     <pubDate>Fri, 20 Jul 2012 00:00:00 UT</pubDate>
     <guid>http://www.russellmcc.com/posts/2012-07-20-pareidoloop-edits.html</guid>
@@ -166,51 +70,7 @@
 <item>
     <title>Project Log: This Website</title>
     <link>http://www.russellmcc.com/posts/2012-10-04-This-Website.html</link>
-    <description><![CDATA[<!DOCTYPE HTML>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta charset="utf-8"></meta>
-    <meta name="author" content="Your Name"></meta>
-    <link rel="stylesheet" type="text/css" href="../stylesheets/syntax.css"></link>
-    <link rel="stylesheet" type="text/css" href="../stylesheets/frameless.css"></link>
-    <link href="http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu+Condensed|Ubuntu|Open+Sans:300|Open+Sans:400" rel="stylesheet" type="text/css"></link> 
-    <script type="text/javascript" src="../scripts/ender.min.js"></script> 
-    <script type="text/javascript" src="../scripts/coffee-script.js"></script>
-    <script type="text/coffeescript" src="../scripts/debug_grid.coffee"></script>
-    <meta name="viewport" content="width=device-width; initial-scale=1.0"></meta>
-    <link rel="alternate" type="application/rss+xml" title="SimpleBlog" href="../rss.xml"></link>
-    <title>Project Log: This Website</title>
-    <script type="text/javascript">
-
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-29024738-1']);
-      _gaq.push(['_trackPageview']);
-
-      (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-
-    </script>
-  </head>
-  <body>
-<div id="contact">
-    <h1><a href="../index.html">russell mcclellan</a></h1>
-    <h2>musical hardware and software</h2>
-    russell.mcclellan@gmail.com
-</div>
-<div id="content">
-    <nav id="navbar">
-      <ul>
-      <li><a href="../index.html" class="taglink">home<div class="whitesquare"></div></a></li>
-      <li><a href="../tags/blog.html" class="taglink">archive<div class="whitesquare"></div></a></li>
-      <li><a href="../resume.html" class="taglink">resume<div class="whitesquare"></div></a></li>
-      <li><a href="../about.html" class="taglink">about<div class="whitesquare"></div></a></li>
-      </ul>
-    </nav>
-    <article>
+    <description><![CDATA[<article>
   <div class="post">
     <h1>Project Log: This Website</h1>
     <h3>October  4, 2012</h3>
@@ -225,21 +85,21 @@
 <p>If you’re interested in how it works, most of the guts are in four short files:</p>
 <dl>
 
-<hr></hr>
+<hr />
 <dt>
 <a href="https://github.com/russellmcc/site-gen/blob/master/site.hs">site.hs</a>
 </dt>
 <dd> 
-contains the basic structure of the site. Hakyll makes heavy use of <a href="http://www.haskell.org/arrows/">Arrows</a> in its API, which are not my favorite abstraction for computation.
+contains the basic structure of the site. Hakyll 4 has finally removed all usage of the cumbersome <a href="http://www.haskell.org/arrows/">arrows</a> in its API, which are not my favorite abstraction for computation.
 </dd>
 
-<hr></hr>
+<hr />
 <dt>
 <a href="https://github.com/russellmcc/site-gen/blob/master/cssTokenizer.hs">cssTokenizer.hs</a> and <a href="https://github.com/russellmcc/site-gen/blob/master/cssProcess.hs">cssProcess.hs</a>
 </dt>
 <dd> 
-<p>contain the custom CSS processor used to style the site. Since these files don’t make any reference to the Hakyll framework, I was more free to write in a style I prefer: applicatives over arrows and monads whenever possible. For cssProcess.hs I used <a href="https://personal.cis.strath.ac.uk/conor.mcbride/pub/she/">SHE</a> for the applicative idiom brackets. More syntactic sugar, please!</p>
-<hr></hr>
+<p>contain the custom CSS processor used to style the site. Since these files don’t make any reference to the Hakyll framework, I was more free to write in a style I prefer. For cssProcess.hs I used <a href="https://personal.cis.strath.ac.uk/conor.mcbride/pub/she/">SHE</a> for the applicative idiom brackets. More syntactic sugar, please!</p>
+<hr />
 <dt>
 <a href="https://github.com/russellmcc/site-gen/blob/master/stylesheets/frameless.scss">frameless.scss</a>
 </dt>
@@ -255,13 +115,40 @@ includes the CSS used to style the site, heavily based on the <a href="http://fr
 <p>Most of the initial design concept was done by my friend <a href="http://www.kate-lindsay.com">Kate Lindsay</a>, although due to time constraints I had to finalize the design and do the mobile layout. Clearly, I’m not much of a designer :-).</p>
   </div>
 </article>
-
-  </div>
-  </body>
-</html>
 ]]></description>
     <pubDate>Thu, 04 Oct 2012 00:00:00 UT</pubDate>
     <guid>http://www.russellmcc.com/posts/2012-10-04-This-Website.html</guid>
+</item>
+<item>
+    <title>Project Log: Eurorack Buffered Multiple</title>
+    <link>http://www.russellmcc.com/posts/2013-01-27-hexbuffer.html</link>
+    <description><![CDATA[<article>
+  <div class="post">
+    <h1>Project Log: Eurorack Buffered Multiple</h1>
+    <h3>January 27, 2013</h3>
+    <p>
+    I finally finished my first-ever DIY eurorack synthesizer module - the ever-humble buffered multiple.
+    </p>
+  </div>
+  <div class="post">
+    <h2 id="background">background</h2>
+<p><a href="http://www.youtube.com/watch?v=GCyiDaM3boc">Modular synthesizers</a> are musical instruments made out of removable, replacable building blocks. Each module in a synth is able to interact with all the others to create unique sonic landscapes. While precise, <a href="http://www.soundonsound.com/sos/allsynthsecrets.htm">engineered</a> sounds are possible, the tactile physical nature of the system tends to encourage organic, creative exploration of the rich parameter space.</p>
+<p>I’ve been interested in designing modules for this ecosystem for a long time, and now I’ve finally found a comfortable design and fabrication stack for it. As a proof of concept, I’ve created a very simple type of module called a buffered multiple.</p>
+<p>A multiple is just a signal splitter, allowing the user to connect one output into multiple inputs of other modules.</p>
+<h2 id="electronic-design">Electronic Design</h2>
+<p>The electronics of a multiple are quite simple, really just consisting of a single op amp stage per output. There are two inputs, each providing three buffered clones of the input signal. If there is no jack plugged into the second input, all the outputs follow the first input signal.</p>
+<p>For the board layout I used <a href="http://www.cadsoftusa.com/">EAGLE</a>, which is free for non-commercial use and does the job. The learning curve was quite difficult, and I probably wouldn’t have been able to use it without the support of some experienced friends. While there are other electronic CAD choices out there, none are nearly as ubiquitous for hobbiests.</p>
+<p>All of the design files for the project, including a list of all parts required, are <a href="https://github.com/russellmcc/hexbuffer">on GitHub</a> under a permissive license.</p>
+<h2 id="board-fabrication">Board Fabrication</h2>
+<p><img src="/images/buffer_board.JPG" alt="PCB" /><br /> The board was fabricated by <a href="http://oshpark.com/">OSH Park</a>, which was quite affordable at $6 per board. A nice feature of OSH Park is that they support EAGLE files, so no export to the more-standard gerber files is needed.</p>
+<p>I hand assembled the boards with parts from <a href="http://www.mouser.com/ProjectManager/ProjectDetail.aspx?AccessID=8b942c2668">mouser</a>.</p>
+<h2 id="front-panel">Front Panel</h2>
+<p><img src="/images/buffer_insitu.JPG" alt="completed buffer" /><br /> The panel was lasercut out of acrylic from <a href="https://www.inventables.com/">Inventables</a> at a <a href="http://dangerawesome.co/">local lasercutting shop</a>. The design files were done in InkScape.</p>
+  </div>
+</article>
+]]></description>
+    <pubDate>Sun, 27 Jan 2013 00:00:00 UT</pubDate>
+    <guid>http://www.russellmcc.com/posts/2013-01-27-hexbuffer.html</guid>
 </item>
 
     </channel> 

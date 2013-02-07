@@ -2,16 +2,16 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta charset="utf-8"></meta>
-    <meta name="author" content="Your Name"></meta>
-    <link rel="stylesheet" type="text/css" href="../stylesheets/syntax.css"></link>
-    <link rel="stylesheet" type="text/css" href="../stylesheets/frameless.css"></link>
-    <link href="http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu+Condensed|Ubuntu|Open+Sans:300|Open+Sans:400" rel="stylesheet" type="text/css"></link> 
+    <meta charset="utf-8" />
+    <meta name="author" content="Your Name" />
+    <link rel="stylesheet" type="text/css" href="../stylesheets/syntax.css" />
+    <link rel="stylesheet" type="text/css" href="../stylesheets/frameless.css" />
+    <link href="http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu+Condensed|Ubuntu|Open+Sans:300|Open+Sans:400" rel="stylesheet" type="text/css" /> 
     <script type="text/javascript" src="../scripts/ender.min.js"></script> 
     <script type="text/javascript" src="../scripts/coffee-script.js"></script>
     <script type="text/coffeescript" src="../scripts/debug_grid.coffee"></script>
-    <meta name="viewport" content="width=device-width; initial-scale=1.0"></meta>
-    <link rel="alternate" type="application/rss+xml" title="SimpleBlog" href="../rss.xml"></link>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0" />
+    <link rel="alternate" type="application/rss+xml" title="SimpleBlog" href="../rss.xml" />
     <title>Project Log: Pareidoloop Modifications</title>
     <script type="text/javascript">
 
@@ -37,7 +37,7 @@
     <nav id="navbar">
       <ul>
       <li><a href="../index.html" class="taglink">home<div class="whitesquare"></div></a></li>
-      <li><a href="../tags/blog.html" class="taglink">archive<div class="whitesquare"></div></a></li>
+      <li><a href="../archive.html" class="taglink">archive<div class="whitesquare"></div></a></li>
       <li><a href="../resume.html" class="taglink">resume<div class="whitesquare"></div></a></li>
       <li><a href="../about.html" class="taglink">about<div class="whitesquare"></div></a></li>
       </ul>
@@ -52,12 +52,12 @@
   </div>
   <div class="post">
     <h2 id="the-ghost-in-the-machine-has-a-face">The ghost in the machine has a face</h2>
-<img alt="creepy face 1" src="../images/plface0.png">
+<p><img alt="creepy face 1" src="../images/plface0.png"></p>
 <p>Internet citizen Philip McCarthy created <a href="http://iobound.com/2012/08/pareidoloop/">pareidoloop</a>, a “face” generator that was simply a random-image generator hooked up in a loop to a face recognizer program. Things that look more like faces to the computer are kept, and things that look less like faces are discarded. After a long time, something vaguely representing a distorted face appears.</p>
-<img alt="creepy face 2" src="../images/plface1.png">
+<p><img alt="creepy face 2" src="../images/plface1.png"></p>
 <p>The images are visually very striking, and there’s always something a little cosmically creepy about computer-generated art.</p>
 <p>I made a few modifications to the original formula - the images are now in color, you can work at larger canvas sizes (although this would be slower), and there’s a “simulated annealing” process instead of straight randomness to speed the process up while avoiding local maxima.</p>
-<img alt="creepy face 3" src="../images/plface2.png">
+<p><img alt="creepy face 3" src="../images/plface2.png"></p>
 </div><div class="post">
 
 <h2 id="the-code">The code</h2>
