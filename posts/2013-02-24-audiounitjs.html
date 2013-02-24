@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Your Name" />
+    <link rel="stylesheet" type="text/css" href="../stylesheets/syntax.css" />
+    <link rel="stylesheet" type="text/css" href="../stylesheets/frameless.css" />
+    <link href="http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu+Condensed|Ubuntu|Open+Sans:300|Open+Sans:400" rel="stylesheet" type="text/css" /> 
+    <meta name="viewport" content="width=device-width; initial-scale=1.0" />
+    <link rel="alternate" type="application/rss+xml" title="SimpleBlog" href="../rss.xml" />
+    <title>project log: audiounitjs</title>
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-29024738-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+  </head>
+  <body>
+<div id="contact">
+    <h1><a href="../index.html">russell mcclellan</a></h1>
+    <h2>musical hardware and software</h2>
+    russell.mcclellan@gmail.com
+</div>
+<div id="content">
+    <nav id="navbar">
+      <ul>
+      <li><a href="../index.html" class="taglink">home<div class="whitesquare"></div></a></li>
+      <li><a href="../archive.html" class="taglink">archive<div class="whitesquare"></div></a></li>
+      <li><a href="../about.html" class="taglink">about<div class="whitesquare"></div></a></li>
+      </ul>
+    </nav>
+    <article>
+  <div class="post">
+    <h1>project log: audiounitjs</h1>
+    <h3>February 24, 2013</h3>
+    <p>
+    One of the most frustrating, thankless, and time-consuming parts of audio plug-in development is creating the UI.  I've made a framework to allow audio programmers to use HTML and Javascript to quickly write plug-in UIs.  As a bonus, you can write your audio processing and UI code once, and then compile it as a Mac plug-in, a Mac standalone app, and an iOS app!
+    </p>
+  </div>
+  <div class="post">
+    <h1>Background</h1>
+<p><img src="../images/fivescope.png" alt="HTML Oscilloscope" /></p>
+<p><a href="https://www.github.com/russellmcc/audiounitjs">audiounitjs</a> was borne out of frustration with two issues: audio plug-in UIs are frustrating and annoying to write, and iOS audio programming is difficult even to those with much audio programming experience, due to poorly documented APIs.</p>
+<p>In audiounitjs, you write a CoreAudio Audio Unit, and an HTML UI, and you get a Mac App, an iOS App, and a Audio Unit plug-in all using that UI, for free.</p>
+</div><div class="post">
+<h1>In Use</h1>
+<p>audiounitjs is simply a scaffolding script. You create a simple configuration <code>.json</code> file, and then the script will produce an Xcode project filled with boilerplate. Then, you can edit the <code>audio.cpp</code> file to create audio processing source, and also the <code>ui</code> folder to create the HTML UI. Full documentation is available <a href="https://www.github.com/russellmcc/audiounitjs">on GitHub</a></p>
+</div><div class="post">
+<h1>Getting it</h1>
+<p>Install via npm with <code>npm install -g audiounitjs</code>. I made a <a href="http://youtu.be/tqxOLf8EmdU">quick screencast</a> of the install process.</p>
+  </div>
+</article>
+
+  </div>
+  </body>
+</html>

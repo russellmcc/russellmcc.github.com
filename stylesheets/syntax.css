@@ -1,6 +1,10 @@
 pre{
+font-family: 'Ubuntu Mono';
 background:  #002b36;
 color:  #93a1a1;
+}
+code{
+font-family: 'Ubuntu Mono';
 }
 .sourceCode .c{
 color:  #586e75;
