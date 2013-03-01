@@ -11,11 +11,10 @@ html{
 font-size: 20px ;
 }
 body{
-background-image: url('/images/bg.png') ;
 background-attachment: fixed;
 background-position: right bottom;
 background-repeat: no-repeat;
-background-color:  #303030;
+background-color: rgb(45 ,43 ,45 );
 }
  #contact{
 color: rgb(211 ,41 ,67 );
@@ -72,6 +71,13 @@ margin-top: 1rem ;
 padding-bottom: 1rem ;
 margin-bottom: 1rem ;
 }
+.postpreview{
+background-size: cover;
+display: block;
+}
+.postpreview-date{
+text-align: center;
+}
 .post h1,.resume h1{
 font-family: 'Ubuntu Condensed';
 color: rgb(211 ,41 ,67 );
@@ -80,7 +86,7 @@ font-size: 2rem ;
 margin-bottom: .3rem ;
 margin-left: .3rem ;
 }
-.postpreview h2,.post h2,.resume h2{
+.postpreview-title ,.postpreview h2,.post h2,.resume h2{
 font-family: 'Ubuntu Condensed';
 color: rgb(211 ,41 ,67 );
 text-transform: lowercase;
@@ -91,12 +97,16 @@ padding-top: 1rem ;
 margin-top: .3rem ;
 margin-bottom: .3rem ;
 }
-.postpreview h3,.post h3,.resume h3,.resume dt{
+.postpreview-date ,.post h3,.resume h3,.resume dt{
 font-family: 'Ubuntu Condensed';
 color: rgb(211 ,41 ,67 );
 text-transform: lowercase;
 margin-left: .2rem ;
 font-size: 1rem ;
+}
+.postpreview-date ,.postpreview-title{
+color: rgb(211 ,41 ,67 );
+display: block;
 }
 .about-section dl{
 line-height: 2em ;
