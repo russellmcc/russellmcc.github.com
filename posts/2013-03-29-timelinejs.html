@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Your Name" />
+    <link rel="stylesheet" type="text/css" href="../stylesheets/syntax.css" />
+    <link rel="stylesheet" type="text/css" href="../stylesheets/frameless.css" />
+    <link href="http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu+Condensed|Ubuntu|Open+Sans:300|Open+Sans:400" rel="stylesheet" type="text/css" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="alternate" type="application/rss+xml" title="SimpleBlog" href="../rss.xml" />
+    <title>timeline.js</title>
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-29024738-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+  </head>
+  <body>
+<div id="contact">
+    <h1><a href="../index.html">russell mcclellan</a></h1>
+    <h2>musical hardware and software</h2>
+    russell.mcclellan@gmail.com
+</div>
+<div id="content">
+    <nav id="navbar">
+      <ul>
+      <li><a href="../index.html" class="taglink">index<div class="whitesquare"></div></a></li>
+      <li><a href="https://github.com/russellmcc" class="taglink">github<div class="whitesquare"></div></a></li>
+      </ul>
+    </nav>
+    <article>
+  <div class="post">
+    <h1>timeline.js</h1>
+    <h3>March 29, 2013</h3>
+    <p>
+    
+    </p>
+  </div>
+  <div class="post">
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.1.1.min.js"></script>
+<script src="https://raw.github.com/russellmcc/timelinejs/master/timeline.min.js"></script>
+<div id="timeline" style="height:200px;"></div>
+<script>
+  var p = [];
+  var n = 35;
+  for(var i = 0; i < n; ++i) {
+      var h = 0.5 + 0.3 * Math.sin(i/n * Math.PI) * Math.cos(i * Math.PI);
+      p.push([i/n, h]);
+  }
+  $('#timeline').timeline({
+     points: p
+  });
+</script>
+
+</div><div class="post">
+
+<p><a href="http://russellmcc.com/timelinejs/">Timeline.js</a> is a jquery plug-in/html5 widget that allows you to add mult-touch and mouse enabled line editing to your web app. Retina screens welcome.</p>
+<p>I plan to use it in future sequencer/synth projects for envelope editing.</p>
+<p>Inspired by <a href="http://www.duration.cc/">duration.cc</a></p>
+  </div>
+</article>
+
+  </div>
+  </body>
+</html>
