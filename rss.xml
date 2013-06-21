@@ -33,6 +33,11 @@
 <p>available <a href="https://github.com/russellmcc/3-SAT">on GitHub</a>.</p>
 <p>I used the &quot;ember.js&quot; framework for the UI, and coded everything in CoffeeScript.<br />My main goal in writing this was to learn a bit about the ember.js framework. Frankly, I wasn't a big fan of ember, as it had the sort of leaky-abstraction &quot;magic&quot; that I've come to deeply fear. By this I mean there are some features where the implementation is not covered in the documentation, but you have to know how everything works to use the framework correctly.</p>
   </div>
+  <div class="post">
+    <p>
+All images and text are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/us/deed.en_US">Creative Commons Attribution 3.0 United States License</a>, except as noted. Linked code, and embedded code examples are licensed separately.
+    </p>
+  </div>
 </article>
 ]]></description>
     <pubDate>Thu, 15 Mar 2012 00:00:00 UT</pubDate>
@@ -61,6 +66,11 @@
 
 <h2>The code</h2>
 <p>Avaiable <a href="https://github.com/russellmcc/pareidoloop">on GitHub</a>.</p>
+  </div>
+  <div class="post">
+    <p>
+All images and text are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/us/deed.en_US">Creative Commons Attribution 3.0 United States License</a>, except as noted. Linked code, and embedded code examples are licensed separately.
+    </p>
   </div>
 </article>
 ]]></description>
@@ -106,6 +116,11 @@
 <h2>Design</h2>
 <p>Most of the initial design concept was done by my friend <a href="http://www.kate-lindsay.com">Kate Lindsay</a>, although due to time constraints I had to finalize the design and do the mobile layout. Clearly, I'm not much of a designer :-).</p>
   </div>
+  <div class="post">
+    <p>
+All images and text are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/us/deed.en_US">Creative Commons Attribution 3.0 United States License</a>, except as noted. Linked code, and embedded code examples are licensed separately.
+    </p>
+  </div>
 </article>
 ]]></description>
     <pubDate>Thu, 04 Oct 2012 00:00:00 UT</pubDate>
@@ -139,6 +154,11 @@
 <p><img src="/images/buffer_insitu.jpg" alt="completed buffer" /></p>
 <p>The panel was lasercut out of acrylic from <a href="https://www.inventables.com/">Inventables</a> at a <a href="http://dangerawesome.co/">local lasercutting shop</a>. The design files were done in InkScape.</p>
   </div>
+  <div class="post">
+    <p>
+All images and text are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/us/deed.en_US">Creative Commons Attribution 3.0 United States License</a>, except as noted. Linked code, and embedded code examples are licensed separately.
+    </p>
+  </div>
 </article>
 ]]></description>
     <pubDate>Sun, 27 Jan 2013 00:00:00 UT</pubDate>
@@ -171,6 +191,11 @@
 </dd>
 </dl>
   </div>
+  <div class="post">
+    <p>
+All images and text are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/us/deed.en_US">Creative Commons Attribution 3.0 United States License</a>, except as noted. Linked code, and embedded code examples are licensed separately.
+    </p>
+  </div>
 </article>
 ]]></description>
     <pubDate>Thu, 07 Feb 2013 00:00:00 UT</pubDate>
@@ -202,6 +227,11 @@
 <p>Currently, this is an extremely niche project, because it requires the user to be able to create Audio Unit C++ code. In the future I'd like to relax this requirement by adding some sort of JavaScript audio API. Perhaps the easiest way to do this would be to implement the WebAudio API for CoreAudio. If I did that, the JavaScript code would control all of the audio processing, and I could add the browser as a fourth target.</p>
 <p>Another feature that might be fun would be to automatically support OSC messages mapped to Audio Unit parameters. This would be not difficult to implement and would allow the stand alone and iphone versions to be automated by something like <a href="http://www.duration.cc/">duration.cc</a>.</p>
   </div>
+  <div class="post">
+    <p>
+All images and text are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/us/deed.en_US">Creative Commons Attribution 3.0 United States License</a>, except as noted. Linked code, and embedded code examples are licensed separately.
+    </p>
+  </div>
 </article>
 ]]></description>
     <pubDate>Sun, 24 Feb 2013 00:00:00 UT</pubDate>
@@ -225,6 +255,11 @@
 <p>I had a lot of fun playing with my previous emulation, so I thought I'd build a web-based one as a way to learn about the current state of Web Audio. The main audio coding only took a few hours, which is a testament to how well thought out and efficiently designed the Web Audio API is. I ran into a few nasty bugs (the most embarassing was <a href="https://code.google.com/p/chromium/issues/detail?id=82795">this</a>, which has existed since May 2011 on both Chrome and Safari), but basically it was smooth sailing.</p>
 <p>Check out the <a href="http://www.coffeescript.org">coffeescript</a> code <a href="https://github.com/russellmcc/soundfxweb">on github</a>!</p>
   </div>
+  <div class="post">
+    <p>
+All images and text are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/us/deed.en_US">Creative Commons Attribution 3.0 United States License</a>, except as noted. Linked code, and embedded code examples are licensed separately.
+    </p>
+  </div>
 </article>
 ]]></description>
     <pubDate>Fri, 08 Mar 2013 00:00:00 UT</pubDate>
@@ -244,7 +279,7 @@
   <div class="post">
     <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 <script src="http://code.jquery.com/jquery-migrate-1.1.1.min.js"></script>
-<script src="https://raw.github.com/russellmcc/timelinejs/master/timeline.min.js"></script>
+<script src="https://www.russellmcc.com/timelinejs/master/timeline.min.js"></script>
 <div id="timeline" style="height:200px;"></div>
 <script>
   var p = [];
@@ -263,6 +298,11 @@
 <p><a href="http://russellmcc.com/timelinejs/">Timeline.js</a> is a jquery plug-in/html5 widget that allows you to add mult-touch and mouse enabled line editing to your web app. Retina screens welcome.</p>
 <p>I plan to use it in future sequencer/synth projects for envelope editing.</p>
 <p>Inspired by <a href="http://www.duration.cc/">duration.cc</a></p>
+  </div>
+  <div class="post">
+    <p>
+All images and text are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/us/deed.en_US">Creative Commons Attribution 3.0 United States License</a>, except as noted. Linked code, and embedded code examples are licensed separately.
+    </p>
   </div>
 </article>
 ]]></description>
@@ -296,6 +336,11 @@
 <h2>Front Panel</h2>
 <p><img src="/images/headphone_front.jpg" alt="completed buffer" /></p>
 <p>Again, the panel was lasercut out of acrylic from <a href="https://www.inventables.com/">Inventables</a> at a <a href="http://dangerawesome.co/">local lasercutting shop</a>. The design files were done in InkScape.</p>
+  </div>
+  <div class="post">
+    <p>
+All images and text are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/us/deed.en_US">Creative Commons Attribution 3.0 United States License</a>, except as noted. Linked code, and embedded code examples are licensed separately.
+    </p>
   </div>
 </article>
 ]]></description>
@@ -390,6 +435,11 @@
 <dd>As mentioned in the patent, base currents will create errors that will have to be compensated when the stages are connected directly.
 </dd>
 </dl>
+  </div>
+  <div class="post">
+    <p>
+All images and text are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/us/deed.en_US">Creative Commons Attribution 3.0 United States License</a>, except as noted. Linked code, and embedded code examples are licensed separately.
+    </p>
   </div>
 </article>
 ]]></description>
