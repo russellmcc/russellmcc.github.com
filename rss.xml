@@ -279,7 +279,7 @@ All images and text are licensed under a <a rel="license" href="http://creativec
   <div class="post">
     <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 <script src="http://code.jquery.com/jquery-migrate-1.1.1.min.js"></script>
-<script src="https://www.russellmcc.com/timelinejs/master/timeline.min.js"></script>
+<script src="https://www.russellmcc.com/timelinejs/timeline.min.js"></script>
 <div id="timeline" style="height:200px;"></div>
 <script>
   var p = [];
