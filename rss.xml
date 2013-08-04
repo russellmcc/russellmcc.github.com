@@ -448,6 +448,97 @@ All images and text are licensed under a <a rel="license" href="http://creativec
     <pubDate>Fri, 14 Jun 2013 00:00:00 UT</pubDate>
     <guid>http://www.russellmcc.com/posts/2013-06-14-CEM3372.html</guid>
 </item>
+<item>
+    <title>More RTTI, More Problems</title>
+    <link>http://www.russellmcc.com/posts/2013-08-03-rtti.html</link>
+    <description><![CDATA[<article>
+  <div class="post">
+    <h1>More RTTI, More Problems</h1>
+    <h3>August  3, 2013</h3>
+    <p>
+    
+    </p>
+  </div>
+  <div class="post">
+    <h2>or, <em>An Elementary Explanation of Mach-o Linkage with Applications to Having Your C++ Program Not Constantly Crash in <code>dynamic_cast</code></em></h2>
+<p>Sometimes it seems like a good idea to split your large program into multiple dynamic libraries, and share C++ objects across dylib boundaries. While this approach is certainly feasible, the waters are surprisingly treacherous, especially for apps that use C++ RTTI. This guide is meant for deploying to Apple Platforms ca. Mavericks/iOS7, but it probably applies to any mach-o platform with clang as a compiler, and the ELF case is similar enough that this guide will probably still be useful.</p>
+</div><div class="post">
+
+<h2>Symbol Visibility</h2>
+<p>While there are is a veritible managerie of symbol types that exist in mach-o binaries (and we will be encountering many of these shortly), there is only one distinction you can make in source code to control which symbol type gets generated during linking: &quot;default&quot; visibility vs &quot;hidden&quot; visibility.</p>
+<dl>
+<dt>default visibility</dt>
+<dd><em>default</em> visibility creates what <code>nm -m</code> calls an <em>external</em> symbol. These symbols can be looked up by client libraries during dynamic loading.
+</dd>
+<dt>hidden visibility</dt>
+<dd><em>hidden</em> visibility creates what <code>nm -m</code> calls a <em>non-external</em> symbol. These cannot be seen anywhere outside of the library where they exist.
+</dd>
+</dl>
+<p>Confusingly, if your app uses best practice, you'll pass the <code>-fvisibility=hidden</code> flag to the linker, which sets the &quot;default&quot; for symbols that are not explicitly marked in source code is <em>hidden</em>. This is a good idea because you don't want all of your private functions in dynamic libraries leaking out to the rest of your program. In fact, this is probably why you wanted to split your program across executables in the first place. Using this flag, for symbols that you want to be accessible to outside libraries, you must explicitly mark them as having <em>default</em> visibility. I don't know any justification for these names - if I were designing gcc, I would have gone with &quot;external&quot; and &quot;private&quot; instead of &quot;default&quot; and &quot;hidden&quot;.</p>
+</div><div class="post">
+
+<h2>Defining &quot;Undefined&quot; Symbols</h2>
+<p>If you give a function a definition, it becomes a <em>defined</em> symbol in your executable or shared library. If the function has no definition, but does have a declaration, it gets marked as an <em>undefined</em> symbol.</p>
+<p><em>defined</em>, <em>non-external</em> symbols are private to the specific library where they were created</p>
+<p><em>defined</em>, <em>external</em> symbols are exported to all other libraries. By default, if you link to any library that has a symbol with the same name, you'll get a linker error.</p>
+<p><em>undefined</em>, <em>non-external</em> symbols are an immediate linker error</p>
+<p><em>undefined</em>, <em>external</em> symbols will be looked up at runtime. By default, the linker will check to make sure that some dynamic library that you've linked to contains the symbol in question, and if it's missing it will issue an error. This behavior can be disabled, causing a runtime error in the missing symbol case.</p>
+<p>So far, so boring. Hopefully everything up until now has been a review if you are even remotely considering breaking your program up into multiple binaries.</p>
+</div><div class="post">
+
+<h2>A Root of Some Evil: stdc++ <code>dynamic_cast</code> Implementation Details</h2>
+<p>To understand why any of these linker specifics is even relevant to keeping your program crash-free, we need to understand an important detail about how <code>dynamic_cast</code> is implemented in stdc++ and c++abi - two type infos are detected as equal through a <em>pointer compare</em> <a href="#foot1">[1]</a>. This means that <code>dynamic_cast</code> can be <strong>wrong</strong> if there's more than one copy of the type info structure - the structures may be identical, but it doesn't matter because only their locations in memory are being compared. So, because of this optimization, we actually have to care about how and when these type info objects get generated, and how they behave at runtime.</p>
+</div><div class="post">
+
+<h2>Vague Linkage (Yes, That's Actually What It's Called)</h2>
+<p>The way type infos work in gcc and clang is that each <code>.o</code> file (that is, compiled <code>.cpp</code> file) generates a <em>weak</em> version of each class's type info. This is called <em>vague linkage</em> in the docs (such as there are docs for this low-level crap). At link time, these are combined into a single copy of that type info. For classes that are marked in code to be <em>hidden</em>, that's more or less the end of the story - the typeinfo is marked <em>non-external</em>, and of course <code>dynamic_cast</code>s within that binary work, and since the class was hidden, you aren't supposed to be able to use it outside of that binary, so in theory <code>dynamic_cast</code>s outside of the binary aren't a concern. In practice, this requires some discipline from programmers to avoid disaster - if you mark a class as <em>hidden</em>, you <strong>really can't</strong> use it safely outside of the binary where it was defined.</p>
+<p>For classes that are marked <em>default</em>, the story is a bit more complicated as it involves an entirely new symbol type, called a <em>weak external</em> symbol. These symbols are <strong>coalesced</strong> at runtime such that there is only one copy of each in a given program (which may comprise several binaries). This is precisely the behavior that enables the pointer compare in <code>dynamic_cast</code> - without this, there would be no way to share types across dynamic library boundaries.</p>
+</div><div class="post">
+
+<h2>Sounds Great, What Could Go Wrong?</h2>
+<p>Well, if you've programmed carefully, you should be safe from any <code>dynamic_cast</code> problems. The issue is, if you've programmed slightly sloppily, in the current toolchain, you'll get no major errors at compile time, and your only indication is that something is wrong is that <code>dynamic_cast</code> will sometimes inexplicitly return zero, probably causing a crash. Here are three common cases that I've seen:</p>
+<hr />
+<h3>Using a <em>hidden</em> class from outside its home binary</h3>
+<p>How could this happen? Well, both clang and g++ happily will mark member functions as <em>default</em> even if the class is <em>hidden</em>. So, you can include the class's header from another binary and use the any of the functions that were marked <em>default</em>. This is a recipe for disaster, because <strong>both binaries</strong> will create a <em>non-external</em>, private copy of the type info and the pointer comparison will fail.</p>
+<p>To detect this, run <code>nm -mo * | c++filt</code> on all your binaries, and ensure that there aren't any duplicate &quot;non-external typeinfo&quot; symbols.</p>
+<hr />
+<h3>Having a class marked <em>hidden</em> in one binary and <em>default</em> in another</h3>
+<p>This can happen if you are using a macro system to mark your classes that breaks down somehow. I've also seen this when template class explicit instantiations are not marked with the correct visibility. This will result in the exact same sort of problems seen above, as the weak symbol loading will <strong>not</strong> coalesce the <em>weak external</em> version with the <em>non-external</em> version.</p>
+<p>Similarly to the last case, to detect this, run <code>nm -mo * | c++filt</code> and ensure that for any typeinfos that have at least one <em>non-external</em> copies, there are no other copies of that typeinfo.</p>
+<hr />
+<h3>Having a class marked <em>hidden</em> in one compilation unit and <em>default</em> in another in the same binary</h3>
+<p>This is sort of the &quot;ultimate screw case&quot;, and I've only seen it happen with template instantiations - if you have an explicit instantiation that's marked <em>default</em>, and somehwhere else, in a different compilation unit in the same binary, you have an implicit instantiation, it will be marked <em>hidden</em>.</p>
+<p>What happens here? Well, in modern (10.7+) versions of <code>ld</code>, this is a warning. (&quot;<code>direct access</code> ... <code>means the weak symbol cannot be overriden at runtime</code>&quot;). The compilation unit with the <em>hidden</em> definition will incorrectly use the local definition, and dynamic casts will fail. Other compilation units will be fine, and the symbol will be marked <em>external</em> in the binary.</p>
+<p>On older versions of <code>ld</code> (10.6 and below), things are even worse. The symbol will be <em>non-external</em> in the binary if it's marked <em>hidden</em> for even one compilation unit - making <code>dynamic_cast</code>s fail throughout the entire binary, even in compilation units where the visibility was correct. No meaningful warning is generated.</p>
+<p>To detect this insidious problem, if you're compiling with the 10.7+ linker, I recommend turning <code>fatal_warnings</code> on. If you're using the 10.6 linker, the <code>nm</code> method from before will work because the symbol will be marked <em>non-external</em> in the binary. If you're super-paranoid, you can run <code>nm -om * | c++filt</code> on all your <code>.o</code> files - object files where the visibility was <em>hidden</em> will report <code>weak private external typeinfo</code> where object files with <em>default</em> visibility will report <code>weak external typeinfo</code> (note that if you forget the <code>-m</code> flag on <code>nm</code> these two cases are indistinguishable).</p>
+</div><div class="post">
+
+<h2>What Have We Learned?</h2>
+<hr />
+<h3>Be careful when sharing C++ objects across binary boundaries - this is something that's a lot more dangerous than perhaps it should be.</h3>
+<hr />
+<h3>If you are sharing C++ across binary boundaries, consider if the risks of using RTTI are worth it.</h3>
+<hr />
+<h3>If you're using RTTI, make sure that each class that's used by multiple binaries is marked with <em>default</em> visibility wherever it is used.</h3>
+<hr />
+<h3>If you're using a modern <code>ld</code>, turn on <code>fatal_warnings</code></h3>
+<hr />
+<h3>Write a script using <code>nm</code> to ensure that if a typeinfo symbol is duplicated between binaries, all copies of it are marked <em>weak external</em>, and add this script to your unit tests.</h3>
+</div><div class="post">
+
+<h2>footnote</h2>
+<p><a id="foot1"></a> [1]: You can verify this yourself <a href="http://llvm.org/svn/llvm-project/libcxxabi/trunk/src/private_typeinfo.cpp">by looking at the easy-to-read llvm source</a> (check the <code>is_equal</code> function implementation). This is actually determined by a compile-time flag called <code>_LIBCXX_DYNAMIC_FALLBACK</code>. If this flag is on, a string compare occurs during <code>dynamic_cast</code>. This is intended to allow c++abi to be used on platforms that don't allow for weak symbols or COMDAT. This flag is off in apple-provided builds of c++abi.</p>
+  </div>
+  <div class="post">
+    <p>
+All images and text are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/us/deed.en_US">Creative Commons Attribution 3.0 United States License</a>, except as noted. Linked code, and embedded code examples are licensed separately.
+    </p>
+  </div>
+</article>
+]]></description>
+    <pubDate>Sat, 03 Aug 2013 00:00:00 UT</pubDate>
+    <guid>http://www.russellmcc.com/posts/2013-08-03-rtti.html</guid>
+</item>
 
     </channel> 
 </rss>
