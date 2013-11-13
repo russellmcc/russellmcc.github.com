@@ -1,0 +1,6 @@
+.unprefixed-url {
+    fill: url("#grad");
+}
+.prefixed-url {
+    fill: url("../index.html#grad");
+}
