@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Your Name" />
+    <link rel="stylesheet" type="text/css" href="../stylesheets/syntax.css" />
+    <link rel="stylesheet" type="text/css" href="../stylesheets/frameless.css" />
+    <link href="http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu+Condensed|Ubuntu|Open+Sans:300|Open+Sans:400" rel="stylesheet" type="text/css" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="alternate" type="application/rss+xml" title="SimpleBlog" href="../rss.xml" />
+    <title>Eurorack Digitally Controlled Analog Oscillator</title>
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-29024738-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  </head>
+  <body>
+<div id="contact">
+    <h1><a href="../index.html">russell mcclellan</a></h1>
+    <h2>musical hardware and software</h2>
+    russell.mcclellan@gmail.com
+</div>
+<div id="content">
+    <nav id="navbar">
+      <ul>
+      <li><a href="../index.html" class="taglink">index<div class="whitesquare"></div></a></li>
+      <li><a href="https://github.com/russellmcc" class="taglink">github<div class="whitesquare"></div></a></li>
+      </ul>
+    </nav>
+    <article>
+  <div class="post">
+    <h1>Eurorack Digitally Controlled Analog Oscillator</h1>
+    <h3>December  1, 2013</h3>
+    <p>
+    
+    </p>
+  </div>
+  <div class="post">
+    <p>The latest installment in my open-source eurorack series (see previous installments <a href="../posts/2013-01-27-hexbuffer.html">here</a> and <a href="2013-05-14-headphone.html">here</a>) is an 80s-style digitally controlled oscillator. Since a DCO is perhaps a bit less familiar than my previous modules, I'll first describe a bit of its history and design. If you're curious about the fabrication process or eager to access the schematics, skip ahead to the <a href="#fabrication">fabrication</a> section below.</p>
+<p><img src="../images/dco_front.jpg" alt="DCO front" /></p>
+</div><div class="post">
+
+<h1>What is a DCO?</h1>
+<p><a href="http://en.wikipedia.org/wiki/Digitally_controlled_oscillator">&quot;Digitally Controlled Oscillator&quot;</a> is primarily a marketing term, so it doesn't really have a precise technical definition. Most generally, it's an oscillator that is somehow &quot;more analog&quot; than a fully digital oscillator, where the signal is output direct from a <a href="http://en.wikipedia.org/wiki/Digital-to-analog_converter">DAC</a>, but yet &quot;less analog&quot; than a traditional <a href="http://en.wikipedia.org/wiki/Voltage-controlled_oscillator">VCO</a>. Sometimes a &quot;DCO&quot; is a fully analog oscillator being driven with a control voltage from a DAC, and <a href="http://en.wikipedia.org/wiki/Korg_Poly-800">sometimes</a> &quot;DCO&quot; means a sum of digitally-created square waves. However, the most common definition is the one that this module falls under: a fully analog saw tooth oscillator hard-synced to a digital counter.</p>
+<p>This design (which is the only thing I'll call a 'DCO' from here on out) was first popularized by the Roland <a href="http://en.wikipedia.org/wiki/Roland_Juno-60">Juno</a> series, and became quite popular for a time, especially in <a href="http://www.vintagesynth.com/oberheim/mat6.php">low cost</a> <a href="http://www.vintagesynth.com/misc/bit01.php">polyphonic</a> <a href="http://en.wikipedia.org/wiki/Korg_Poly-61">analogs</a>. During the analog resurgance of the late 2000s/early 2010s, DCOs again became a go-to option, appearing in the <a href="http://en.wikipedia.org/wiki/Prophet_08">Prophet 08</a> and the <a href="http://www.soundonsound.com/sos/may12/articles/moog-minitaur.htm">Moog Minitaur</a>, among others.</p>
+<p>DCOs have a number of differences from the &quot;more analog&quot; VCOs: their tuning is very stable because the frequency ultimately comes from a crystal oscillator. This makes them have less &quot;analog drift&quot;, and generally speaking this makes for better bass tones. The main price you pay for this stability is coarser tuning - since the tone is coming from an integer divide down of a fixed clock, there's a limited number of &quot;tuning steps&quot;, where an analog oscillator would have completely continuous tuning.</p>
+</div><div class="post">
+
+<h1>How do they work?</h1>
+<p>The core of a DCO is a high speed (usually in the low megahertz) digital clock. This clock is then fed into a <a href="http://en.wikipedia.org/wiki/Programmable_interval_timer">counter</a>, which emits a pulse each time the count reaches a certain value. That pulse then is connected to a switch that will short accross a charging capacitor, resetting the capacitor's voltage back to zero. This creates a saw-tooth wave across the capacitor, whose frequency is set by the count value.</p>
+</div><div class="post">
+
+<p><a id="fabrication"></a></p>
+<h1>Design and Fabrication</h1>
+<p><img src="../images/dco_back.jpg" alt="DCO back" /></p>
+<p>As always, all schematics and source code are available under a permissive license at <a href="https://github.com/russellmcc/dco">github</a>.</p>
+<p>The microcontroller I used was an AVR <a href="http://www.atmel.com/devices/ATXMEGA32A4U.aspx?tab=documents">xmega32A4U</a>, programmed using an Arduino port forked from the <a href="https://github.com/akafugu/Xmegaduino">Xmegaduino</a> project by myself and <a href="https://twitter.com/brendan0powers">Brendan Powers</a>, located <a href="https://github.com/brendan0powers/Xmegaduino">here</a>. If you're interested in Arduino programming on the xmega, I highly recommend you check out our port as it contains numerous bug fixes over the original, now unmaintained Xmegaduino project.</p>
+<p>In addition to an arduino sketch, my design includes a <a href="https://github.com/russellmcc/dco/blob/master/firmware/tablegen.hs">haskell pre-processor</a> to generate look-up tables for the tuning. Anyone developing a DCO may find the code helpful.</p>
+<p>The fabrication stack was the same as last time, that is, laser-cut stencils from <a href="http://dangerawesome.co/">danger awesome</a>, and PCBs from <a href="http://oshpark.com/">OSH Park</a>. Everything worked quite well, except for the <a href="http://en.wikipedia.org/wiki/Quad-flat_no-leads_package">TQFN</a> package I originally spec'ed for the microcontroller - TQFNs are quite hard to work with at home. If you're a hobbiest assembling boards at home, I highly recommend choosing the much more friendly <a href="http://en.wikipedia.org/wiki/Quad_Flat_Package">TQFP</a> package, if you have the option.</p>
+  </div>
+  <div class="post">
+    <p>
+All images and text are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/us/deed.en_US">Creative Commons Attribution 3.0 United States License</a>, except as noted. Linked code, and embedded code examples are licensed separately.
+    </p>
+  </div>
+</article>
+
+  </div>
+  </body>
+</html>
