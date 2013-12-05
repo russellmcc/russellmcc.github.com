@@ -61,11 +61,22 @@
       color: #2A2432;
       cursor: pointer;
     }
+    #clickme2 {
+      position: absolute;
+      left:175px;
+      top:75px;
+      height: 50px;
+      width:50px;
+      background: #FCDBA6;
+      color: #2A2432;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
 <!-- enough divs to take a while to layout -->
 <div id="clickme">click here</div>
+<div id="clickme2">or here</div>
 <script>
   var f = function() {
     var t1 = document.querySelector("#t1");
@@ -74,7 +85,14 @@
     var doClick = function() {
       t1.value = t2.value = ++v;
     };
+    var doClick2 = function() {
+      v++;
+      t1.value = v;
+      var bleh = t1.clientHeight;
+      t2.value = v;
+    };
     document.querySelector("#clickme").addEventListener('click', doClick, true);
+    document.querySelector("#clickme2").addEventListener('click', doClick2, true);
     doClick()
   };
   window.addEventListener('load', f, false);
