@@ -583,6 +583,39 @@ All images and text are licensed under a <a rel="license" href="http://creativec
     <pubDate>Sun, 01 Dec 2013 00:00:00 UT</pubDate>
     <guid>http://www.russellmcc.com/posts/2013-12-01-DCO.html</guid>
 </item>
+<item>
+    <title>Collaborative Remixing at a Halloween Party</title>
+    <link>http://www.russellmcc.com/posts/2013-12-26-halloween.html</link>
+    <description><![CDATA[<article>
+  <div class="post">
+    <h1>Collaborative Remixing at a Halloween Party</h1>
+    <h3>December 26, 2013</h3>
+    <p>
+    Collaborative Remixing at a Halloween Party
+    </p>
+  </div>
+  <div class="post">
+    <p>For the last few years, my roommates and I have hosted costumed dance parties every Halloween weekend. This year, we decided to add a twist by allowing guests with smart phones to take part in remixing the music while they dance!</p>
+<p>To accomplish this, I built a web server in <a href="www.nodejs.org">node</a> to serve a web page with some simple controls with the most common remixing tasks - a knob to filter high and low frequencies, an X-Y pad to create stutter effects, and most critically, a button to sound the all important <a href="http://blog.dubspot.com/contraption/">air-horn</a>. These controls were adapted from a jQuery plug-in called <a href="https://github.com/russellmcc/jQuery-Kontrol">jQuery-kontrol</a> by GitHub user <a href="https://github.com/aterrien"><code>aterrien</code></a>.</p>
+</div><div class="post">
+
+<p><img src="/images/halloween_example.png" alt="example" /></p>
+</div><div class="post">
+
+<p>Each browser control (i.e., knob, pad, or button) communicated over WebSockets (via <a href="http://socket.io/">socket.io</a>) to the server, which then translated the message into an <a href="http://opensoundcontrol.org/">OSC</a> message, which was in turn sent to the effects hosted in the DJ software. Changes to the positions of the controls were broadcast to all other clients via WebSockets so that guests could watch as others moved the controls. Also, UDP messages were sent from the server to an Arduino that my roommate <a href="http://tamas-szalay.squarespace.com/">Tamas</a> programmed with amazing lighting effects.</p>
+<p>We printed QR code posters linking to the public URL of the site, and included a simple password authorization lest mischeivous internet users stumble upon the site. I was impressed with the responsiveness of websockets over the internet: latency was low enough for the remixing tools to be a lot of fun.</p>
+<p>Code for the project is available <a href="https://github.com/russellmcc/halloweenparty2013">on GitHub</a> under the CC0 license, and while it probably won't be directly applicable for your project, I hope it can serve as starting-off point for similar parties.</p>
+  </div>
+  <div class="post">
+    <p>
+All images and text are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/us/deed.en_US">Creative Commons Attribution 3.0 United States License</a>, except as noted. Linked code, and embedded code examples are licensed separately.
+    </p>
+  </div>
+</article>
+]]></description>
+    <pubDate>Thu, 26 Dec 2013 00:00:00 UT</pubDate>
+    <guid>http://www.russellmcc.com/posts/2013-12-26-halloween.html</guid>
+</item>
 
     </channel> 
 </rss>
