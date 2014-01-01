@@ -82,8 +82,11 @@ padding-right: 1rem ;
 background-size: cover;
 display: block;
 }
-.postpreview-date{
+.postpreview time{
 text-align: center;
+}
+.hidden-author{
+display: none;
 }
 .post h1,.resume h1{
 font-family: 'Ubuntu Condensed';
@@ -104,14 +107,14 @@ padding-top: 1rem ;
 margin-top: .3rem ;
 margin-bottom: .3rem ;
 }
-.postpreview-date ,.post h3,.resume h3,.resume dt{
+.postpreview time,.post time,.resume h3,.resume dt{
 font-family: 'Ubuntu Condensed';
 color: rgb(211 ,41 ,67 );
 text-transform: lowercase;
 margin-left: .2rem ;
 font-size: 1rem ;
 }
-.postpreview-date ,.postpreview-title{
+.postpreview time,.postpreview-title{
 color: rgb(211 ,41 ,67 );
 display: block;
 }
@@ -252,7 +255,7 @@ margin-left: 7.20000000000000018rem ;
 .about-section dd{
 padding-left: 3.6000000000000001rem ;
 }
-.about-section h3,.post h3,.postpreview h3{
+.about-section h3,.post time,.postpreview h3{
 padding-left: 3.6000000000000001rem ;
 }
 .about-section img,.postpreview img{
