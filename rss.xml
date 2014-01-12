@@ -526,6 +526,30 @@
     <guid>http://www.russellmcc.com/posts/2013-12-26-halloween.html</guid>
 </item>
 <item>
+    <title>Eurorack Mixer Module</title>
+    <link>http://www.russellmcc.com/posts/2014-01-11-EurorackMixer.html</link>
+    <description><![CDATA[<article itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="post">
+    <h1 itemprop="name headline">Eurorack Mixer Module</h1>
+    <span class="hidden-author" itemprop="author" itemscope="" itemtype="http://schema.org/Person"><span itemprop="name"><a href="http://russellmcc.com" itemprop="url" rel="author">Russell McClellan</a></span></span>
+    <time itemprop="datePublished" datetime="2014-01-11">January 11, 2014</time>
+  </div>
+  <div class="post">
+    <p>That's right! I've made <a href="/posts/2013-01-27-hexbuffer.html">yet</a> <a href="2013-05-14-headphone.html">another</a> <a href="/posts/2013-12-01-DCO.html">open-source</a> eurorack module! This one is a simple mixing utility module that mixes up to four inputs together into one output. It's suitable for both CV and audio signals.</p>
+<p><img src="/images/euromix_panel.png" alt="back view" /></p>
+<p>Unlike the DCO, but like my other modules, this one is a very simple circuit with easy assembly. It was a nice break from all the complication of my last module.</p>
+<p><img src="/images/euromix_front.png" alt="back view" /></p>
+<p>The fabrication stack was the almost exactly same as the last few times, with designs done in <a href="http://www.cadsoftusa.com/">Eagle</a>, fabrication by <a href="http://oshpark.com/">OSH Park</a>, assembly done at home with <a href="http://www.dangerawesome.co/">laser-cut</a> stencils with the help of <a href="https://github.com/brendan0powers">my friend Brendan</a>. The only new step was desigining the front panels with the <a href="http://www.rhino3d.com/">rhino for mac</a> beta. Even though this was a 3D program, it worked much better for technical 2D designs than <a href="http://www.inkscape.org/en/">inkscape</a>, with the exception of format support.</p>
+<p>Panels were again laser-cut out of <a href="https://www.inventables.com/">acrylic</a> with the paper mask still on, and then spray-painted.</p>
+<p><img src="/images/euromix_back.png" alt="back view" /></p>
+<p>As always, design files, BOMs, and mouser orders are available <a href="https://github.com/russellmcc/euromixer">on github</a>, under a permissive license. Enjoy!</p>
+  </div>
+</article>
+]]></description>
+    <pubDate>Sat, 11 Jan 2014 00:00:00 UT</pubDate>
+    <guid>http://www.russellmcc.com/posts/2014-01-11-EurorackMixer.html</guid>
+</item>
+<item>
     <title>Dancing Stick Figures</title>
     <link>http://www.russellmcc.com/posts/2014-01-11-MusicHackDay2013.html</link>
     <description><![CDATA[<article itemscope itemtype="http://schema.org/BlogPosting">
