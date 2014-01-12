@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Your Name" />
+    <link rel="stylesheet" type="text/css" href="../stylesheets/syntax.css" />
+    <link rel="stylesheet" type="text/css" href="../stylesheets/frameless.css" />
+    <link href="http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu+Condensed|Ubuntu|Open+Sans:300|Open+Sans:400" rel="stylesheet" type="text/css" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="alternate" type="application/rss+xml" title="SimpleBlog" href="../rss.xml" />
+    <title>Dancing Stick Figures</title>
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-29024738-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  </head>
+  <body>
+<div id="contact">
+    <h1><a href="../index.html">russell mcclellan</a></h1>
+    <h2>musical hardware and software</h2>
+    russell.mcclellan@gmail.com
+</div>
+<div id="content">
+    <nav id="navbar">
+      <ul>
+      <li><a href="../index.html" class="taglink">index<div class="whitesquare"></div></a></li>
+      <li><a href="https://github.com/russellmcc" class="taglink">github<div class="whitesquare"></div></a></li>
+      </ul>
+    </nav>
+    <article itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="post">
+    <h1 itemprop="name headline">Dancing Stick Figures</h1>
+    <span class="hidden-author" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name"><a href="http://russellmcc.com" itemprop="url" rel="author">Russell McClellan</a></span></span>
+    <time itemprop="datePublished" datetime="2014-01-11">January 11, 2014</time>
+  </div>
+  <div class="post">
+    <p>Last November, as part of <a href="http://new.musichackday.org/">Music Hack Day</a>, co-worker <a href="https://github.com/AlexPowers">Alex Powers</a> and I created a <a href="http://www.dancingstickfigures.com/">music visualizer</a> involving dancing stick figures. Alex has had the idea of creating an &quot;algorithmic choreography generator&quot; for some time, and music hack day seemed like the perfect time do it. Alex wrote a python program to take analysis from the <a href="http://echonest.com/">echo nest</a> API and generate a &quot;choreography file&quot;, describing a dance routine in completely abstract terms. It was my job to take the choreography file and turn that into something people could look at. This separation of responsibilities worked well, and I think it played to both of our strengths. While Alex didn't have much choreography experience, he ended up writing code that produced fairly logical dances and worked for many different genres of music.</p>
+<p><img src="../images/dancingstick.png" alt="dancing stick figures" /></p>
+<p>I learned a lot during the 24 hour hack - I had never touched a 3D modeling program before, so perhaps the hardest part was creating the animated dance moves with <a href="http://www.blender.org/">Blender</a>. I also had my first exposure to 3D rendering in the browser - after trying to use raw webgl, I ended up using the significantly more fully-featured <a href="http://threejs.org/">three.js</a>, which felt quite similar to desktop renderers like opengl. The blender animation integration built into three.js was a total life-saver for our project.</p>
+<p>Our demo was quite a crowd pleaser, and we ended up winning the <a href="http://blog.echonest.com/post/66776489063/the-echo-nests-5th-music-hack-day-boston-was-a-roaring">echo nest prize</a> for best use of the echo nest api. Another victory for whimsy! Code, as usual, is available <a href="https://github.com/AlexPowers/danceomatic">on github</a> under a permissive license. We used both CoffeeScript and Python.</p>
+  </div>
+</article>
+
+<div class="post">
+  <p>
+    All images and text are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/us/deed.en_US">Creative Commons Attribution 3.0 United States License</a>, except as noted. Linked code, and embedded code examples are licensed separately.
+  </p>
+</div>
+<div class="post disqus">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'russellmcc'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+  </div>
+  </body>
+</html>
