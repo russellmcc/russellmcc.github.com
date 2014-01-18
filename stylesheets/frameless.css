@@ -377,3 +377,26 @@ display: list-item;
 display: inline;
 }
 }
+.gist{
+font-size: 12px ;
+margin-top: 2em !important;
+margin-bottom: 2em !important;
+}
+.gist-file .gist-data ,.gist-meta{
+background-color: rgba(0 ,0 ,0 ,0.2 )!important;
+}
+.gist-file .gist-data .line-numbers{
+background-color: rgba(0 ,0 ,0 ,0 )!important;
+}
+.gist-file ,.gist-data{
+border: none !important;
+}
+.gist-meta{
+padding: 10px 5px 0px !important;
+background: rgba(0 ,0 ,0 ,0.2 )!important;
+color: rgb(255 ,189 ,199 )!important;
+text-shadow: none !important;
+}
+.gist-meta a{
+color: rgb(255 ,189 ,199 )!important;
+}

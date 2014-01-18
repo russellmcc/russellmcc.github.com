@@ -6,193 +6,193 @@ color:  #93a1a1;
 code{
 font-family: 'Ubuntu Mono';
 }
-.sourceCode .c{
-color:  #586e75;
+.gist-syntax .c{
+color: #586e75 !important;
 font-style: italic;
 }
-.sourceCode .cm{
-color:  #586e75;
+.gist-syntax .cm{
+color: #586e75 !important;
 font-style: italic;
 }
-.sourceCode .cp{
-color:  #586e75;
+.gist-syntax .cp{
+color: #586e75 !important;
 font-style: italic;
 }
-.sourceCode .c1{
-color:  #586e75;
+.gist-syntax .c1{
+color: #586e75 !important;
 font-style: italic;
 }
-.sourceCode .cs{
-color:  #586e75;
+.gist-syntax .cs{
+color: #586e75 !important;
 font-weight: bold;
 font-style: italic;
 }
-.sourceCode .err{
-color:  #dc322f;
+.gist-syntax .err{
+color: #dc322f !important;
 background: none;
 }
-.sourceCode .k{
-color:  #cb4b16;
+.gist-syntax .k{
+color: #cb4b16 !important;
 }
-.sourceCode .o{
-color:  #93a1a1;
+.gist-syntax .o{
+color: #93a1a1 !important;
 font-weight: bold;
 }
-.sourceCode .p{
-color:  #93a1a1;
+.gist-syntax .p{
+color: #93a1a1 !important;
 }
-.sourceCode .ow{
-color:  #2aa198;
+.gist-syntax .ow{
+color: #2aa198 !important;
 font-weight: bold;
 }
-.sourceCode .ge{
-color:  #93a1a1;
+.gist-syntax .ge{
+color: #93a1a1 !important;
 font-style: italic;
 }
-.sourceCode .gh{
-color:  #586e75;
+.gist-syntax .gh{
+color: #586e75 !important;
 }
-.sourceCode .gs{
-color:  #93a1a1;
+.gist-syntax .gs{
+color: #93a1a1 !important;
 font-weight: bold;
 }
-.sourceCode .gu{
-color:  #6c71c4;
+.gist-syntax .gu{
+color: #6c71c4 !important;
 }
-.sourceCode .kc{
-color:  #859900;
+.gist-syntax .kc{
+color: #859900 !important;
 font-weight: bold;
 }
-.sourceCode .kd{
-color:  #268bd2;
+.gist-syntax .kd{
+color: #268bd2 !important;
 }
-.sourceCode .kp{
-color:  #cb4b16;
+.gist-syntax .kp{
+color: #cb4b16 !important;
 font-weight: bold;
 }
-.sourceCode .kr{
-color:  #d33682;
+.gist-syntax .kr{
+color: #d33682 !important;
 font-weight: bold;
 }
-.sourceCode .kt{
-color:  #2aa198;
+.gist-syntax .kt{
+color: #2aa198 !important;
 }
-.sourceCode .n{
-color:  #268bd2;
+.gist-syntax .n{
+color: #268bd2 !important;
 }
-.sourceCode .na{
-color:  #268bd2;
+.gist-syntax .na{
+color: #268bd2 !important;
 }
-.sourceCode .nb{
-color:  #859900;
+.gist-syntax .nb{
+color: #859900 !important;
 }
-.sourceCode .nc{
-color:  #d33682;
+.gist-syntax .nc{
+color: #d33682 !important;
 }
-.sourceCode .no{
-color:  #b58900;
+.gist-syntax .no{
+color: #b58900 !important;
 }
-.sourceCode .nl{
-color:  #859900;
+.gist-syntax .nl{
+color: #859900 !important;
 }
-.sourceCode .ne{
-color:  #268bd2;
+.gist-syntax .ne{
+color: #268bd2 !important;
 font-weight: bold;
 }
-.sourceCode .nf{
-color:  #268bd2;
+.gist-syntax .nf{
+color: #268bd2 !important;
 font-weight: bold;
 }
-.sourceCode .nn{
-color:  #b58900;
+.gist-syntax .nn{
+color: #b58900 !important;
 }
-.sourceCode .nt{
-color:  #268bd2;
+.gist-syntax .nt{
+color: #268bd2 !important;
 font-weight: bold;
 }
-.sourceCode .nx{
-color:  #b58900;
+.gist-syntax .nx{
+color: #b58900 !important;
 }
-.sourceCode .vg{
-color:  #268bd2;
+.gist-syntax .vg{
+color: #268bd2 !important;
 }
-.sourceCode .vi{
-color:  #268bd2;
+.gist-syntax .vi{
+color: #268bd2 !important;
 }
-.sourceCode .nv{
-color:  #268bd2;
+.gist-syntax .nv{
+color: #268bd2 !important;
 }
-.sourceCode .mf{
-color:  #2aa198;
+.gist-syntax .mf{
+color: #2aa198 !important;
 }
-.sourceCode .m{
-color:  #2aa198;
+.gist-syntax .m{
+color: #2aa198 !important;
 }
-.sourceCode .mh{
-color:  #2aa198;
+.gist-syntax .mh{
+color: #2aa198 !important;
 }
-.sourceCode .mi{
-color:  #2aa198;
+.gist-syntax .mi{
+color: #2aa198 !important;
 }
-.sourceCode .s{
-color:  #2aa198;
+.gist-syntax .s{
+color: #2aa198 !important;
 }
-.sourceCode .sd{
-color:  #2aa198;
+.gist-syntax .sd{
+color: #2aa198 !important;
 }
-.sourceCode .s2{
-color:  #2aa198;
+.gist-syntax .s2{
+color: #2aa198 !important;
 }
-.sourceCode .se{
-color:  #dc322f;
+.gist-syntax .se{
+color: #dc322f !important;
 }
-.sourceCode .si{
-color:  #268bd2;
+.gist-syntax .si{
+color: #268bd2 !important;
 }
-.sourceCode .sr{
-color:  #2aa198;
+.gist-syntax .sr{
+color: #2aa198 !important;
 }
-.sourceCode .s1{
-color:  #2aa198;
+.gist-syntax .s1{
+color: #2aa198 !important;
 }
-.sourceCode .kw{
-color:  #b58900;
+.gist-syntax .kw{
+color: #b58900 !important;
 font-weight: bold;
 }
-.sourceCode .dt{
-color:  #2aa198;
+.gist-syntax .dt{
+color: #2aa198 !important;
 }
-.sourceCode .dv{
-color:  #586e75;
+.gist-syntax .dv{
+color: #586e75 !important;
 }
-.sourceCode .bn{
-color:  #cb4b16;
+.gist-syntax .bn{
+color: #cb4b16 !important;
 }
-.sourceCode .fl{
-color:  #2aa198;
+.gist-syntax .fl{
+color: #2aa198 !important;
 }
-.sourceCode .ch{
-color:  #dc322f;
+.gist-syntax .ch{
+color: #dc322f !important;
 }
-.sourceCode .st{
-color:  #d33682;
+.gist-syntax .st{
+color: #d33682 !important;
 }
-.sourceCode .co{
-color:  #586e75;
+.gist-syntax .co{
+color: #586e75 !important;
 font-style: italic;
 }
-.sourceCode .ot{
+.gist-syntax .ot{
 }
-.sourceCode .al{
-color:  #859900;
+.gist-syntax .al{
+color: #859900 !important;
 font-weight: bold;
 }
-.sourceCode .fu{
-color:  #268bd2;
+.gist-syntax .fu{
+color: #268bd2 !important;
 }
-.sourceCode .re{
+.gist-syntax .re{
 }
-.sourceCode .er{
-color:  #dc322f;
+.gist-syntax .er{
+color: #dc322f !important;
 font-weight: bold;
 }
