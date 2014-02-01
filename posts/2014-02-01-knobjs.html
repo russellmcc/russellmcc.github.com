@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Your Name" />
+    <link rel="stylesheet" type="text/css" href="../stylesheets/syntax.css" />
+    <link rel="stylesheet" type="text/css" href="../stylesheets/frameless.css" />
+    <link href="http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu+Condensed|Ubuntu|Open+Sans:300|Open+Sans:400" rel="stylesheet" type="text/css" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="alternate" type="application/rss+xml" title="SimpleBlog" href="../rss.xml" />
+    <title>knob.js</title>
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-29024738-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  </head>
+  <body>
+<div id="contact">
+    <h1><a href="../index.html">russell mcclellan</a></h1>
+    <h2>musical hardware and software</h2>
+    russell.mcclellan@gmail.com
+</div>
+<div id="content">
+    <nav id="navbar">
+      <ul>
+      <li><a href="../index.html" class="taglink">index<div class="whitesquare"></div></a></li>
+      <li><a href="https://github.com/russellmcc" class="taglink">github<div class="whitesquare"></div></a></li>
+      </ul>
+    </nav>
+    <article itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="post">
+    <h1 itemprop="name headline">knob.js</h1>
+    <span class="hidden-author" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name"><a href="http://russellmcc.com" itemprop="url" rel="author">Russell McClellan</a></span></span>
+    <time itemprop="datePublished" datetime="2014-02-01">February  1, 2014</time>
+  </div>
+  <div class="post">
+    <p>For the last few years, whenever <a href="http://www.russellmcc.com/soundfxweb/">I've needed some browser-based knobs</a>, I've used <a href="http://anthonyterrien.com/knob/">Anothy Terrien's excellent jQuery Knob plug-in</a>. However, despite the high quality of that library, the situation has always made me feel a bit uncomfortable.</p>
+<p>I've never really liked the idea of bundling components like this as jQuery plug-ins, since there is no fundamental reason that a widget should need to be tied to a specific DOM-manipulation library. jQuery's bizarre API, muddled concepts, overcomplicated semantics, and totally unique aesthetic sense have always bothered me, and as browsers get more and more compatible, it has become totally viable to ditch jQuery entirely. The one thing that many of my projects still need from jQuery ecosystem is the various UI widgets that have for some reason been forever tied to the jQuery library.</p>
+<p>This project is an attempt to show that distributing widgets without jQuery doesn't have to be painful.</p>
+</div><div class="post">
+
+<h2>live demo</h2>
+<link rel="stylesheet" href="http://www.russellmcc.com/knobjs/knobjs.css">
+<script src="http://www.russellmcc.com/knobjs/knob.min.js"></script>
+<x-knobjs-knob id="knob"></x-knobjs-knob> <input id="input" style="vertical-align:top;">
+<script type="text/javascript">
+  window.onload = function(){
+    var knob = document.getElementById("knob");
+    var input = document.getElementById("input");
+    knob.onchange = function(){
+      input.value = ~~knob.value;
+    }
+    input.onchange = function(){
+      knob.value = ~~input.value;
+    }
+    input.value = knob.value;
+  }
+</script>
+
+</div><div class="post">
+
+<h2>live demo code</h2>
+<script src="https://gist.github.com/russellmcc/8760316.js"></script>
+
+</div><div class="post">
+
+<h2>technical details</h2>
+<p>The project uses google's <a href="https://github.com/polymer/platform">polymer platform</a> to polyfill some <a href="http://www.w3.org/TR/components-intro/">web component</a> features. For now, it requires some non-semantic markup (i.e. the <code>&lt;x-knobjs-knob&gt;</code> tag is presentational and not semantic), but that will change once browsers start supporting the <a href="http://w3c.github.io/webcomponents/spec/shadow/">shadow DOM</a> in earnest. In the future, I'm hoping <code>knob.js</code> can simply become an alternate shadow-dom for the <code>&lt;input type='range'&gt;</code> element.</p>
+</div><div class="post">
+
+<h2>more info</h2>
+<p>Documentation, along with code under a permissive license, is available <a href="https://github.com/russellmcc/knobjs">on GitHub</a></p>
+  </div>
+</article>
+
+<div class="post">
+  <p>
+    All images and text are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/us/deed.en_US">Creative Commons Attribution 3.0 United States License</a>, except as noted. Linked code, and embedded code examples are licensed separately.
+  </p>
+  <p>
+    Some patterns from <a href="http://subtlepatterns.com">subtlepatterns.com</a> are used in this blog.
+  </p>
+</div>
+<div class="post disqus">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'russellmcc'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+  </div>
+  </body>
+</html>
