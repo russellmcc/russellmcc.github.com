@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Your Name" />
+    <link rel="stylesheet" type="text/css" href="../stylesheets/syntax.css" />
+    <link rel="stylesheet" type="text/css" href="../stylesheets/frameless.css" />
+    <link href="http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu+Condensed|Ubuntu|Open+Sans:300|Open+Sans:400" rel="stylesheet" type="text/css" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="alternate" type="application/rss+xml" title="SimpleBlog" href="../rss.xml" />
+    <title>An Open-Source Bass Pre-Amp</title>
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-29024738-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  </head>
+  <body>
+<div id="contact">
+    <h1><a href="../index.html">russell mcclellan</a></h1>
+    <h2>musical hardware and software</h2>
+    russell.mcclellan@gmail.com
+</div>
+<div id="content">
+    <nav id="navbar">
+      <ul>
+      <li><a href="../index.html" class="taglink">index<div class="whitesquare"></div></a></li>
+      <li><a href="https://github.com/russellmcc" class="taglink">github<div class="whitesquare"></div></a></li>
+      </ul>
+    </nav>
+    <article itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="post">
+    <h1 itemprop="name headline">An Open-Source Bass Pre-Amp</h1>
+    <span class="hidden-author" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name"><a href="http://russellmcc.com" itemprop="url" rel="author">Russell McClellan</a></span></span>
+    <time itemprop="datePublished" datetime="2015-01-25">January 25, 2015</time>
+  </div>
+  <div class="post">
+    <p>Some time ago, I bought an Epiphone Thunderbird Pro bass. I love the look of this bass, kind of a mix of the <a href="http://en.wikipedia.org/wiki/Gibson_Thunderbird">Gibson Thunderbird</a> and the <a href="http://www.matsumoku.org/models/ariaproii/bass/sb/sb.html">Aria Pro II</a> basses from the 80s.</p>
+<p>There were a few things I didn't like about it though - first of all, the pickguard was a bit ugly, so I replaced it with one lasercut from <a href="https://www.inventables.com/technologies/leopardwood--2">leopardwood</a>.</p>
+<p><img src="../images/bass-pickguard.jpg" alt="New pickguard" /></p>
+</div>
+<div class="post">
+<p>Even after changing the pickguard, I wasn't crazy about the sound. It's an active bass, meaning that it has a battery and a pre-amp on-board to shape the sound. Sensing a fun project, I designed a small, cheap pre-amp to replace the existing one. Like all of my electronic designs, the pre-amp is open-source with a permissive license. You can see more details <a href="https://github.com/russellmcc/basspre-mm2">on github</a>.</p>
+<p>The design is heavily based on the first version of the pre-amp included in the <a href="http://en.wikipedia.org/wiki/Music_Man_StingRay">Music Man Stingray</a>, a design overseen by Leo Fender. The first version of the StingRay pre-amp has only two controls, Bass and Treble (really, what else do you need?).</p>
+<p>My version is quite close to that original Music Man design in frequency response, but uses modern components for lower power consumption. In tests, my pre-amp uses about 1.5 milliamps, giving approximately 400 hours of play time with a normal nine volt battery.</p>
+<p>If you're interested in seeing lots of graphs of the response, all settings of interest are <a href="https://github.com/russellmcc/basspre-mm2">on the project's github page</a>, including simulations and real-world tests. My favorite setting is both bass and treble boosted, giving a &quot;scooped&quot; frequency response:</p>
+<p><img src="../images/bass-both-boost-response.png" alt="Both boost response" /></p>
+</div>
+<div class="post">
+<p>The build process was identical to my last few electronics projects, with boards printed by the still-awesome <a href="https://oshpark.com">OSH Park</a>, and then built by me using laser-cut stencils and a toaster oven. Here's a few pictures of the completed board in the bass:</p>
+<p><img src="../images/bass-built-board.jpg" alt="Built board" /></p>
+<p><img src="../images/bass-wire-mess.jpg" alt="Mess of Wires" /></p>
+<p>Installing the pre-amp was fairly easy, but I did have to wrap the entire board in electrical tape to prevent it from rubbing against the conductive walls of the electronics chamber and causing noise.</p>
+  </div>
+</article>
+
+<div class="post">
+  <p>
+    All images and text are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/us/deed.en_US">Creative Commons Attribution 3.0 United States License</a>, except as noted. Linked code, and embedded code examples are licensed separately.
+  </p>
+  <p>
+    Some patterns from <a href="http://subtlepatterns.com">subtlepatterns.com</a> are used in this blog.
+  </p>
+</div>
+<div class="post disqus">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'russellmcc'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+  </div>
+  </body>
+</html>
