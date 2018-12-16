@@ -4,25 +4,13 @@
   <head>
     <meta charset="utf-8" />
     <meta name="author" content="Your Name" />
+    <link rel="stylesheet" type="text/css" href="../stylesheets/fonts.css" />
     <link rel="stylesheet" type="text/css" href="../stylesheets/syntax.css" />
     <link rel="stylesheet" type="text/css" href="../stylesheets/frameless.css" />
-    <link href="http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu+Condensed|Ubuntu|Open+Sans:300|Open+Sans:400" rel="stylesheet" type="text/css" /> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="alternate" type="application/rss+xml" title="SimpleBlog" href="../rss.xml" />
     <title>Notes on the CEM3372 VCF</title>
-    <script type="text/javascript">
-
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-29024738-1']);
-      _gaq.push(['_trackPageview']);
-
-      (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-    </script>
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   </head>
   <body>
 <div id="contact">
@@ -50,8 +38,8 @@
 <p>Back in the heyday of the <a href="http://www.youtube.com/watch?v=xq4XOVde1Yk">giant</a> <a href="http://www.youtube.com/watch?v=Yv4EADAHwOA">analog</a> <a href="http://www.youtube.com/watch?v=FfhnF2SZTzE">polysynths</a> (i.e. the early to mid 80s), most synthesizers were powered by analog integrated circuits. The small size of these chips is what enabled synths to have so many voices in such a relatively small amount of space. Generally, each standard synth function (<a href="http://en.wikipedia.org/wiki/Voltage-controlled_oscillator">VCO</a>, <a href="http://en.wikipedia.org/wiki/Voltage-controlled_filter">VCF</a>, <a href="http://en.wikipedia.org/wiki/Voltage-controlled_amplifier">VCA</a>) was implemented by a dedicated chip.</p>
 <p>At first glance, there's nothing incredibly extraordinary about the <a href="http://www.synthtech.com/cem/c3372pdf.pdf">CEM3372</a> VCF chip. It is famous for its use in the wildly flexible <a href="http://www.youtube.com/watch?v=kmfzoHDqPpk">Oberheim</a> <a href="http://www.youtube.com/watch?v=XN6LuK80KrM">Xpander</a> filter circuit, but the flexibility of that filter comes from a <a href="http://manuals.fdiskc.com/flat/Oberheim%20Xpander%20Service%20Manual.pdf">clever circuit trick</a>, not from anything specific to a single chip <a href="#foot1">[1]</a>. The CEM3372 also has an unusual number of &quot;convenience features&quot; - an integrated VCA for the output and two VCAs for voltage-controlled mixing on the input. Perhaps because of these extra features it was marketed as a &quot;signal processor&quot; chip instead of just a &quot;filter&quot;.</p>
 <p>However, a deeper look reveals that the filtering works through a slightly different technology than the previous generation of VCF chips (e.g. <a href="http://curtiselectromusic.com/uploads/CEM_3320_Long.pdf">CEM3320</a>, SSM2040, IR3109), and I thought it might be worth writing up how it works as the technology has applications for discrete circuits as well.</p>
-</div><div class="post">
-
+</div>
+<div class="post">
 <h1>Low Pass Filters</h1>
 <p>Low pass filters are designed to remove high frequency components from a signal. Any components higher in frequency than a certain &quot;cut-off&quot; frequency will be removed. Musically, filters are one of the most basic electronic &quot;timbre modifiers&quot; and are included in almost all synthesizers. In fact, the &quot;sound&quot; of the synthesizer is often defined by the character of its filter. <a href="http://www.youtube.com/watch?v=b8TdBJDC_9Q">Whole genres</a> have sprung up exploiting the effect created from changing the cut-off frequency over time.</p>
 <p>WARNING! The rest of this post will probably require some (hopefully basic) familiarity with circuits.</p>
@@ -70,16 +58,16 @@
 <p>or, after some alegbra</p>
 <p>$$V_{out}= I_{in}Z_R\frac{1}{1 + \frac{Z_R}{Z_C}}$$</p>
 <p>So, since \(Z_R\) does not vary with frequency, this is the exact same sort of lowpass filter as the first one we considered. In synthesizer filters, unlike most analog circuits, you need to be able to change the cut-off point of the filter based on electrical signals. To do this, we need some way to electronically control either the resistance or the capacitance.</p>
-</div><div class="post">
-
+</div>
+<div class="post">
 <h1>The CEM3372 Circuit</h1>
 <p>As described in <a href="http://www.google.com/patents/US4514704">this patent</a>, in the CEM3372, we simulate a current-controlled resistor by sending a large, steady current through a diode, and then sending a very small current as the signal. At a small enough signal current, the diode behaves as a voltage source followed by a resistor whose value is set by the large, steady current going through it. This is often called the diode's <a href="http://www.youtube.com/watch?v=QF6V74D2hbY">dynamic resistance.</a>. This is approximately \(\frac{26mV}{I_{steady}}\).</p>
 <p>Since synthesizers generally send audio signals as voltages, the CEM3372 circuit also includes voltage-to-current converters for both the audio and control input. Here's the circuit with control signal's voltage-to-current converter not shown.</p>
 <p><img src="../images/cem3372.png" alt="CEM3372 circuit" /></p>
 <p>The control signal is sent as a current \(I_{control}\), and the audio input is \(V_{in}\). D1 and Q1 comprise a common circuit idiom called a <a href="http://en.wikipedia.org/wiki/Current_mirror">current mirror</a>, which mirrors the current through D1 out the collector of Q1. In this case, with \(V_{in}\) steady, both D1 and Q1 will have \(\frac{I_{control}}{2}\) going through them.</p>
 <p>Now, let's assume \(V_{in}\) is quite small. Then increasing \(V_{in}\) will create a small increase of the current through Q1's collector. Let's call this small-scale current \(i_{in}\). Then this is mirrored by D1 and Q1, such that the same current as Q2's collector, i.e. \(\frac{I_{control}}{2}+i_{in}\) appears at Q1's collector. Since \(\frac{I_{control}}{2}\) is steady, none of it flows through C1, and it all goes through D2. Since the steady current is so much larger than \(i_{in}\), we can treat D2 as a dynamic resistor with resistance set by the steady current. So, in practice, we now have a very similar situation to the parallel low pass filter considered above, with the input current being the small-scale \(i_{in}\).</p>
-</div><div class="post">
-
+</div>
+<div class="post">
 <h1>more advanced analysis</h1>
 <p>The rest of the post will be a slightly more detailed analysis of this situation. The main result here is the transfer function is more-or-less the same as the RC filter case, except the amplitude of the output does not depend on the resistance.</p>
 <p>The main difference in the CEM3372 situation from the currentbased- RC filter above is that in the RC filter, both the resistance and the capacitor are tied to ground. That's not true here, as D2 goes accross \(V_{out}\) to \(V_{in} - V_{Q2be}\), where \(V_{Q2be}\) is the base-emitter voltage of Q1. This acts as afeedback loop and eliminates the awkward effect of increasing the output amplitude when the resistance increases.</p>
@@ -91,13 +79,13 @@
 <p>as we were trying to show. Using the formula for an RC filter's frequency cut-off from above, we have</p>
 <p>$$f_{c} = \frac{I_{control}}{4 C \pi \cdot 26mV}$$</p>
 <p>which, as we hoped, is directly controllable from the control current.</p>
-</div><div class="post">
-
+</div>
+<div class="post">
 <h1>advantages</h1>
 <p>Using a diode's dynamic resistance inside the differential pair arrangement provides many advantages over the standard <a href="http://en.wikipedia.org/wiki/Operational_transconductance_amplifier">OTA</a> based low-pass filter. The main one is that in the CEM3372, unlike competitor chips, the stages themselves don't need to have feedback. This means far fewer external components and less trimming required. The signal is passed in as a voltage and comes out as a voltage, so the stages can be cascaded without ever converting from current to voltage <a href="#foot4">[4]</a>.</p>
 <p>The downside to all this is that you lose the ability to make a voltage-controlled integrator, which is a necessary part of the popular <a href="http://en.wikipedia.org/wiki/State_variable_filter">state variable</a> filter used in the <a href="http://www.youtube.com/watch?v=mTC4EM9DefQ">Oberheim SEM</a>, Jupiter 6, and many other synthesizers.</p>
-</div><div class="post">
-
+</div>
+<div class="post">
 <h1>footnotes</h1>
 <dl>
 <dt><a id="foot1"></a> 1</dt>
@@ -132,22 +120,6 @@
   <p>
     Some patterns from <a href="http://subtlepatterns.com">subtlepatterns.com</a> are used in this blog.
   </p>
-</div>
-<div class="post disqus">
-  <div id="disqus_thread"></div>
-  <script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-    var disqus_shortname = 'russellmcc'; // required: replace example with your forum shortname
-
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function() {
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 </div>
 
   </div>

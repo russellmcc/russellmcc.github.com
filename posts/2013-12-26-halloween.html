@@ -4,25 +4,13 @@
   <head>
     <meta charset="utf-8" />
     <meta name="author" content="Your Name" />
+    <link rel="stylesheet" type="text/css" href="../stylesheets/fonts.css" />
     <link rel="stylesheet" type="text/css" href="../stylesheets/syntax.css" />
     <link rel="stylesheet" type="text/css" href="../stylesheets/frameless.css" />
-    <link href="http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu+Condensed|Ubuntu|Open+Sans:300|Open+Sans:400" rel="stylesheet" type="text/css" /> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="alternate" type="application/rss+xml" title="SimpleBlog" href="../rss.xml" />
     <title>Collaborative Remixing at a Halloween Party</title>
-    <script type="text/javascript">
-
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-29024738-1']);
-      _gaq.push(['_trackPageview']);
-
-      (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-    </script>
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   </head>
   <body>
 <div id="contact">
@@ -46,11 +34,11 @@
   <div class="post">
     <p>For the last few years, my roommates and I have hosted costumed dance parties every Halloween weekend. This year, we decided to add a twist by allowing guests with smart phones to take part in remixing the music while they dance!</p>
 <p>To accomplish this, I built a web server in <a href="www.nodejs.org">node</a> to serve a web page with some simple controls with the most common remixing tasks - a knob to filter high and low frequencies, an X-Y pad to create stutter effects, and most critically, a button to sound the all important <a href="http://blog.dubspot.com/contraption/">air-horn</a>. These controls were adapted from a jQuery plug-in called <a href="https://github.com/russellmcc/jQuery-Kontrol">jQuery-kontrol</a> by GitHub user <a href="https://github.com/aterrien"><code>aterrien</code></a>.</p>
-</div><div class="post">
-
+</div>
+<div class="post">
 <p><img src="../images/halloween_example.png" alt="example" /></p>
-</div><div class="post">
-
+</div>
+<div class="post">
 <p>Each browser control (i.e., knob, pad, or button) communicated over WebSockets (via <a href="http://socket.io/">socket.io</a>) to the server, which then translated the message into an <a href="http://opensoundcontrol.org/">OSC</a> message, which was in turn sent to the effects hosted in the DJ software. Changes to the positions of the controls were broadcast to all other clients via WebSockets so that guests could watch as others moved the controls. Also, UDP messages were sent from the server to an Arduino that my roommate <a href="http://tamas-szalay.squarespace.com/">Tamas</a> programmed with amazing lighting effects.</p>
 <p>We printed QR code posters linking to the public URL of the site, and included a simple password authorization lest mischeivous internet users stumble upon the site. I was impressed with the responsiveness of websockets over the internet: latency was low enough for the remixing tools to be a lot of fun.</p>
 <p>Code for the project is available <a href="https://github.com/russellmcc/halloweenparty2013">on GitHub</a> under the CC0 license, and while it probably won't be directly applicable for your project, I hope it can serve as starting-off point for similar parties.</p>
@@ -64,22 +52,6 @@
   <p>
     Some patterns from <a href="http://subtlepatterns.com">subtlepatterns.com</a> are used in this blog.
   </p>
-</div>
-<div class="post disqus">
-  <div id="disqus_thread"></div>
-  <script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-    var disqus_shortname = 'russellmcc'; // required: replace example with your forum shortname
-
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function() {
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 </div>
 
   </div>
