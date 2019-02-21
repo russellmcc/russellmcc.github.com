@@ -14,10 +14,10 @@ body{
 background-attachment: fixed;
 background-position: right bottom;
 background-repeat: no-repeat;
-background-color: rgb(45 ,43 ,45 );
+background-color: rgb(11 ,11 ,11 );
 }
  #contact{
-color: rgb(211 ,41 ,67 );
+color: rgb(211 ,41 ,100 );
 font-family: 'Ubuntu Condensed';
 font-size: .8rem ;
 width: 13.1999999999999993rem ;
@@ -36,7 +36,7 @@ width: 13.1999999999999993rem ;
 margin: 0 auto;
 }
  #navbar{
-color: rgb(244 ,196 ,144 );
+color: rgb(214 ,166 ,160 );
 font-family: 'Ubuntu Condensed';
 font-size: 1rem ;
 text-align: justify;
@@ -66,17 +66,10 @@ height: 0 ;
 content: '';
 }
 .post ,.postpreview ,.resume-section ,.about-section{
-background-image: url('/images/divbg.png') ;
+background-color: rgb(45 ,48 ,51 );
 margin-top: 1rem ;
 padding-bottom: 1rem ;
 margin-bottom: 1rem ;
-}
-.disqus{
-color: rgb(255 ,189 ,199 );
-font-family: 'Open Sans';
-padding-top: 1rem ;
-padding-left: 1rem ;
-padding-right: 1rem ;
 }
 .postpreview{
 background-size: cover;
@@ -90,7 +83,7 @@ display: none;
 }
 .post h1,.resume h1{
 font-family: 'Ubuntu Condensed';
-color: rgb(211 ,41 ,67 );
+color: rgb(211 ,41 ,100 );
 text-transform: lowercase;
 font-size: 2rem ;
 margin-bottom: .3rem ;
@@ -98,7 +91,7 @@ margin-left: .3rem ;
 }
 .postpreview-title ,.postpreview h2,.post h2,.resume h2{
 font-family: 'Ubuntu Condensed';
-color: rgb(211 ,41 ,67 );
+color: rgb(211 ,41 ,100 );
 text-transform: lowercase;
 font-size: 1.5rem ;
 text-align: center;
@@ -109,13 +102,13 @@ margin-bottom: .3rem ;
 }
 .postpreview time,.post time,.resume h3,.post h3,.resume dt{
 font-family: 'Ubuntu Condensed';
-color: rgb(211 ,41 ,67 );
+color: rgb(211 ,41 ,100 );
 text-transform: lowercase;
 margin-left: .2rem ;
 font-size: 1rem ;
 }
 .postpreview time,.postpreview-title{
-color: rgb(211 ,41 ,67 );
+color: rgb(211 ,41 ,100 );
 display: block;
 }
 .about-section dl{
@@ -128,7 +121,7 @@ width: 2.3999999999999999rem ;
 }
 .resume dd{
 font-family: 'Ubuntu Condensed';
-color: rgb(211 ,41 ,67 );
+color: rgb(211 ,41 ,100 );
 text-transform: lowercase;
 font-size: 1rem ;
 width: 9.5999999999999996rem ;
@@ -150,7 +143,7 @@ margin-bottom: 1rem ;
 clear: both;
 }
 .previewtext{
-color: rgb(255 ,189 ,199 );
+color: rgb(218 ,200 ,209 );
 font-family: 'Open Sans';
 font-weight: 300 ;
 font-size: .8rem ;
@@ -167,7 +160,7 @@ visibility: hidden;
 clear: both;
 }
 .post p,.post ul,.post dt,.post dd{
-color: rgb(255 ,189 ,199 );
+color: rgb(218 ,200 ,209 );
 font-family: 'Open Sans';
 font-weight: 300 ;
 font-size: .8rem ;
@@ -178,16 +171,16 @@ margin-top: 1rem ;
 padding: 0 2.5%;
 }
 .post a,.previewtext a{
-color: rgb(255 ,189 ,199 );
+color: rgb(218 ,200 ,209 );
 font-family: 'Open Sans';
 font-weight: 300 ;
 font-size: .8rem ;
 line-height: 180%;
 text-align: left;
-color: rgb(211 ,41 ,67 );
+color: rgb(211 ,41 ,100 );
 }
 .resume p,.resume li{
-color: rgb(255 ,189 ,199 );
+color: rgb(218 ,200 ,209 );
 font-family: 'Open Sans';
 font-weight: 300 ;
 font-size: .8rem ;
@@ -234,7 +227,7 @@ display: block;
 .readmore{
 clear: both;
 font-family: 'Ubuntu Condensed';
-color: rgb(211 ,41 ,67 );
+color: rgb(211 ,41 ,100 );
 text-decoration: underline;
 margin-top: 2em ;
 margin-left: 3.6000000000000001rem ;
@@ -394,9 +387,9 @@ border: none !important;
 .gist-meta{
 padding: 10px 5px 0px !important;
 background: rgba(0 ,0 ,0 ,0.2 )!important;
-color: rgb(255 ,189 ,199 )!important;
+color: rgb(218 ,200 ,209 )!important;
 text-shadow: none !important;
 }
 .gist-meta a{
-color: rgb(255 ,189 ,199 )!important;
+color: rgb(218 ,200 ,209 )!important;
 }
