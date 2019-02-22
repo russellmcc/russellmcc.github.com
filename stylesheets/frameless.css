@@ -20,8 +20,10 @@ background-color: rgb(11 ,11 ,11 );
 color: rgb(211 ,41 ,100 );
 font-family: 'Ubuntu Condensed';
 font-size: .8rem ;
-width: 13.1999999999999993rem ;
-margin: 0 auto;
+margin-left: 0.6rem ;
+margin-right: 0.6rem ;
+margin-top: 0 ;
+margin-bottom: 0 ;
 text-align: right;
 z-index: -1 ;
 }
@@ -32,8 +34,10 @@ line-height: 1em ;
 padding-bottom: .3em ;
 }
  #content{
-width: 13.1999999999999993rem ;
-margin: 0 auto;
+margin-left: 0.6rem ;
+margin-right: 0.6rem ;
+margin-top: 0 ;
+margin-bottom: 0 ;
 }
  #navbar{
 color: rgb(214 ,166 ,160 );
@@ -234,9 +238,11 @@ margin-left: 3.6000000000000001rem ;
 }
 @media (min-width:30em ){
  #content{
+margin: 0 auto;
 width: 20.3999999999999986rem ;
 }
  #contact{
+margin: 0 auto;
 width: 20.3999999999999986rem ;
 }
 .resume dt{
