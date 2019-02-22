@@ -12,7 +12,7 @@
     <title>3-Sat Online Puzzle Game</title>
     <link>http://www.russellmcc.com/posts/2012-03-15-3SAT.html</link>
     <description><![CDATA[<article itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="post">
+  <div class="post post-title">
     <h1 itemprop="name headline">3-Sat Online Puzzle Game</h1>
     <span class="hidden-author" itemprop="author" itemscope="" itemtype="http://schema.org/Person"><span itemprop="name"><a href="http://russellmcc.com" itemprop="url" rel="author">Russell McClellan</a></span></span>
     <time itemprop="datePublished" datetime="2012-03-15">March 15, 2012</time>
@@ -43,7 +43,7 @@ My main goal in writing this was to learn a bit about the ember.js framework. Fr
     <title>Pareidoloop In Color</title>
     <link>http://www.russellmcc.com/posts/2012-07-20-pareidoloop-edits.html</link>
     <description><![CDATA[<article itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="post">
+  <div class="post post-title">
     <h1 itemprop="name headline">Pareidoloop In Color</h1>
     <span class="hidden-author" itemprop="author" itemscope="" itemtype="http://schema.org/Person"><span itemprop="name"><a href="http://russellmcc.com" itemprop="url" rel="author">Russell McClellan</a></span></span>
     <time itemprop="datePublished" datetime="2012-07-20">July 20, 2012</time>
@@ -71,7 +71,7 @@ My main goal in writing this was to learn a bit about the ember.js framework. Fr
     <title>Creating This Website</title>
     <link>http://www.russellmcc.com/posts/2012-10-04-This-Website.html</link>
     <description><![CDATA[<article itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="post">
+  <div class="post post-title">
     <h1 itemprop="name headline">Creating This Website</h1>
     <span class="hidden-author" itemprop="author" itemscope="" itemtype="http://schema.org/Person"><span itemprop="name"><a href="http://russellmcc.com" itemprop="url" rel="author">Russell McClellan</a></span></span>
     <time itemprop="datePublished" datetime="2012-10-04">October  4, 2012</time>
@@ -114,7 +114,7 @@ My main goal in writing this was to learn a bit about the ember.js framework. Fr
     <title>Eurorack Buffered Multiple</title>
     <link>http://www.russellmcc.com/posts/2013-01-27-hexbuffer.html</link>
     <description><![CDATA[<article itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="post">
+  <div class="post post-title">
     <h1 itemprop="name headline">Eurorack Buffered Multiple</h1>
     <span class="hidden-author" itemprop="author" itemscope="" itemtype="http://schema.org/Person"><span itemprop="name"><a href="http://russellmcc.com" itemprop="url" rel="author">Russell McClellan</a></span></span>
     <time itemprop="datePublished" datetime="2013-01-27">January 27, 2013</time>
@@ -146,7 +146,7 @@ My main goal in writing this was to learn a bit about the ember.js framework. Fr
     <title>Eagle Footprints for Eurorack</title>
     <link>http://www.russellmcc.com/posts/2013-02-07-erthenvar.html</link>
     <description><![CDATA[<article itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="post">
+  <div class="post post-title">
     <h1 itemprop="name headline">Eagle Footprints for Eurorack</h1>
     <span class="hidden-author" itemprop="author" itemscope="" itemtype="http://schema.org/Person"><span itemprop="name"><a href="http://russellmcc.com" itemprop="url" rel="author">Russell McClellan</a></span></span>
     <time itemprop="datePublished" datetime="2013-02-07">February  7, 2013</time>
@@ -177,7 +177,7 @@ My main goal in writing this was to learn a bit about the ember.js framework. Fr
     <title>audiounitjs</title>
     <link>http://www.russellmcc.com/posts/2013-02-24-audiounitjs.html</link>
     <description><![CDATA[<article itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="post">
+  <div class="post post-title">
     <h1 itemprop="name headline">audiounitjs</h1>
     <span class="hidden-author" itemprop="author" itemscope="" itemtype="http://schema.org/Person"><span itemprop="name"><a href="http://russellmcc.com" itemprop="url" rel="author">Russell McClellan</a></span></span>
     <time itemprop="datePublished" datetime="2013-02-24">February 24, 2013</time>
@@ -210,7 +210,7 @@ My main goal in writing this was to learn a bit about the ember.js framework. Fr
     <title>web-based soundfx generator</title>
     <link>http://www.russellmcc.com/posts/2013-03-08-soundfxweb.html</link>
     <description><![CDATA[<article itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="post">
+  <div class="post post-title">
     <h1 itemprop="name headline">web-based soundfx generator</h1>
     <span class="hidden-author" itemprop="author" itemscope="" itemtype="http://schema.org/Person"><span itemprop="name"><a href="http://russellmcc.com" itemprop="url" rel="author">Russell McClellan</a></span></span>
     <time itemprop="datePublished" datetime="2013-03-08">March  8, 2013</time>
@@ -232,7 +232,7 @@ My main goal in writing this was to learn a bit about the ember.js framework. Fr
     <title>timeline.js</title>
     <link>http://www.russellmcc.com/posts/2013-03-29-timelinejs.html</link>
     <description><![CDATA[<article itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="post">
+  <div class="post post-title">
     <h1 itemprop="name headline">timeline.js</h1>
     <span class="hidden-author" itemprop="author" itemscope="" itemtype="http://schema.org/Person"><span itemprop="name"><a href="http://russellmcc.com" itemprop="url" rel="author">Russell McClellan</a></span></span>
     <time itemprop="datePublished" datetime="2013-03-29">March 29, 2013</time>
@@ -270,7 +270,7 @@ My main goal in writing this was to learn a bit about the ember.js framework. Fr
     <title>Eurorack Headphone Amp</title>
     <link>http://www.russellmcc.com/posts/2013-05-14-headphone.html</link>
     <description><![CDATA[<article itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="post">
+  <div class="post post-title">
     <h1 itemprop="name headline">Eurorack Headphone Amp</h1>
     <span class="hidden-author" itemprop="author" itemscope="" itemtype="http://schema.org/Person"><span itemprop="name"><a href="http://russellmcc.com" itemprop="url" rel="author">Russell McClellan</a></span></span>
     <time itemprop="datePublished" datetime="2013-05-14">May 14, 2013</time>
@@ -302,7 +302,7 @@ My main goal in writing this was to learn a bit about the ember.js framework. Fr
     <title>Notes on the CEM3372 VCF</title>
     <link>http://www.russellmcc.com/posts/2013-06-14-CEM3372.html</link>
     <description><![CDATA[<article itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="post">
+  <div class="post post-title">
     <h1 itemprop="name headline">Notes on the CEM3372 VCF</h1>
     <span class="hidden-author" itemprop="author" itemscope="" itemtype="http://schema.org/Person"><span itemprop="name"><a href="http://russellmcc.com" itemprop="url" rel="author">Russell McClellan</a></span></span>
     <time itemprop="datePublished" datetime="2013-06-14">June 14, 2013</time>
@@ -397,7 +397,7 @@ My main goal in writing this was to learn a bit about the ember.js framework. Fr
     <title>More RTTI, More Problems</title>
     <link>http://www.russellmcc.com/posts/2013-08-03-rtti.html</link>
     <description><![CDATA[<article itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="post">
+  <div class="post post-title">
     <h1 itemprop="name headline">More RTTI, More Problems</h1>
     <span class="hidden-author" itemprop="author" itemscope="" itemtype="http://schema.org/Person"><span itemprop="name"><a href="http://russellmcc.com" itemprop="url" rel="author">Russell McClellan</a></span></span>
     <time itemprop="datePublished" datetime="2013-08-03">August  3, 2013</time>
@@ -481,7 +481,7 @@ My main goal in writing this was to learn a bit about the ember.js framework. Fr
     <title>Eurorack Digitally Controlled Analog Oscillator</title>
     <link>http://www.russellmcc.com/posts/2013-12-01-DCO.html</link>
     <description><![CDATA[<article itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="post">
+  <div class="post post-title">
     <h1 itemprop="name headline">Eurorack Digitally Controlled Analog Oscillator</h1>
     <span class="hidden-author" itemprop="author" itemscope="" itemtype="http://schema.org/Person"><span itemprop="name"><a href="http://russellmcc.com" itemprop="url" rel="author">Russell McClellan</a></span></span>
     <time itemprop="datePublished" datetime="2013-12-01">December  1, 2013</time>
@@ -519,7 +519,7 @@ My main goal in writing this was to learn a bit about the ember.js framework. Fr
     <title>Collaborative Remixing at a Halloween Party</title>
     <link>http://www.russellmcc.com/posts/2013-12-26-halloween.html</link>
     <description><![CDATA[<article itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="post">
+  <div class="post post-title">
     <h1 itemprop="name headline">Collaborative Remixing at a Halloween Party</h1>
     <span class="hidden-author" itemprop="author" itemscope="" itemtype="http://schema.org/Person"><span itemprop="name"><a href="http://russellmcc.com" itemprop="url" rel="author">Russell McClellan</a></span></span>
     <time itemprop="datePublished" datetime="2013-12-26">December 26, 2013</time>
@@ -546,7 +546,7 @@ My main goal in writing this was to learn a bit about the ember.js framework. Fr
     <title>Eurorack Mixer Module</title>
     <link>http://www.russellmcc.com/posts/2014-01-11-EurorackMixer.html</link>
     <description><![CDATA[<article itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="post">
+  <div class="post post-title">
     <h1 itemprop="name headline">Eurorack Mixer Module</h1>
     <span class="hidden-author" itemprop="author" itemscope="" itemtype="http://schema.org/Person"><span itemprop="name"><a href="http://russellmcc.com" itemprop="url" rel="author">Russell McClellan</a></span></span>
     <time itemprop="datePublished" datetime="2014-01-11">January 11, 2014</time>
@@ -571,7 +571,7 @@ My main goal in writing this was to learn a bit about the ember.js framework. Fr
     <title>Dancing Stick Figures</title>
     <link>http://www.russellmcc.com/posts/2014-01-11-MusicHackDay2013.html</link>
     <description><![CDATA[<article itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="post">
+  <div class="post post-title">
     <h1 itemprop="name headline">Dancing Stick Figures</h1>
     <span class="hidden-author" itemprop="author" itemscope="" itemtype="http://schema.org/Person"><span itemprop="name"><a href="http://russellmcc.com" itemprop="url" rel="author">Russell McClellan</a></span></span>
     <time itemprop="datePublished" datetime="2014-01-11">January 11, 2014</time>
@@ -592,7 +592,7 @@ My main goal in writing this was to learn a bit about the ember.js framework. Fr
     <title>Haskell-style Do Notation in Javascript</title>
     <link>http://www.russellmcc.com/posts/2014-01-18-do-notation-javascript.html</link>
     <description><![CDATA[<article itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="post">
+  <div class="post post-title">
     <h1 itemprop="name headline">Haskell-style Do Notation in Javascript</h1>
     <span class="hidden-author" itemprop="author" itemscope="" itemtype="http://schema.org/Person"><span itemprop="name"><a href="http://russellmcc.com" itemprop="url" rel="author">Russell McClellan</a></span></span>
     <time itemprop="datePublished" datetime="2014-01-18">January 18, 2014</time>
@@ -631,7 +631,7 @@ My main goal in writing this was to learn a bit about the ember.js framework. Fr
     <title>knob.js</title>
     <link>http://www.russellmcc.com/posts/2014-02-01-knobjs.html</link>
     <description><![CDATA[<article itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="post">
+  <div class="post post-title">
     <h1 itemprop="name headline">knob.js</h1>
     <span class="hidden-author" itemprop="author" itemscope="" itemtype="http://schema.org/Person"><span itemprop="name"><a href="http://russellmcc.com" itemprop="url" rel="author">Russell McClellan</a></span></span>
     <time itemprop="datePublished" datetime="2014-02-01">February  1, 2014</time>
@@ -682,7 +682,7 @@ My main goal in writing this was to learn a bit about the ember.js framework. Fr
     <title>An Open-Source Bass Pre-Amp</title>
     <link>http://www.russellmcc.com/posts/2015-01-25-bass-preamp.html</link>
     <description><![CDATA[<article itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="post">
+  <div class="post post-title">
     <h1 itemprop="name headline">An Open-Source Bass Pre-Amp</h1>
     <span class="hidden-author" itemprop="author" itemscope="" itemtype="http://schema.org/Person"><span itemprop="name"><a href="http://russellmcc.com" itemprop="url" rel="author">Russell McClellan</a></span></span>
     <time itemprop="datePublished" datetime="2015-01-25">January 25, 2015</time>
