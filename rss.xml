@@ -12,26 +12,26 @@
     <title>3-Sat Online Puzzle Game</title>
     <link>http://www.russellmcc.com/posts/2012-03-15-3SAT.html</link>
     <description><![CDATA[<article itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="post post-title">
+  <div class="post post-title" style="background-image:url(/images/3sat.png);">
     <h1 itemprop="name headline">3-Sat Online Puzzle Game</h1>
     <span class="hidden-author" itemprop="author" itemscope="" itemtype="http://schema.org/Person"><span itemprop="name"><a href="http://russellmcc.com" itemprop="url" rel="author">Russell McClellan</a></span></span>
     <time itemprop="datePublished" datetime="2012-03-15">March 15, 2012</time>
   </div>
   <div class="post">
     <h2>The Puzzle</h2>
-<p>3-SAT is a puzzle game. You're presented with a finite number of letter triplets. Some letters are red, and some letters are black. You must pick one letter of each triplet, with the rule that a choice is only valid if you've never picked that particular letter in a different color. So, once you choose a black &quot;A&quot; in a triplet, you are never allowed to choose a red &quot;A&quot; in any other triplet.</p>
+<p>3-SAT is a puzzle game. You're presented with a finite number of letter triplets. Some letters are red, and some letters are black. You must pick one letter of each triplet, with the rule that a choice is only valid if you've never picked that particular letter in a different color. So, once you choose a black "A" in a triplet, you are never allowed to choose a red "A" in any other triplet.</p>
 </div>
 <div class="post">
 <h2>Why</h2>
 <p>3-SAT turns out to be important to computer science because it's perhaps the simplest example of a type of problem called an <em>NP-Complete</em> problem. Generally first or second year computer science majors will learn about these problems in a basic complexity theory class.</p>
 <p>Briefly, an <em>NP-Complete</em> problem is both <em>NP</em> and <em>NP-Hard</em>. Being <em>NP</em> means that given a guess solution, you can quickly verify whether or not the guess is correct. In this case, you can just make sure that each triplet has a letter selected, and there are no copies of the same letters in different colors. Being <em>NP-Hard</em> means you can translate any <em>NP</em> problem into a 3-SAT problem.</p>
-<p>I thought it would be a fun exercise to code up browser based &quot;puzzle game&quot; versions of classic CS problems like this, and create tools to translate puzzles from one to another. The project is also an excuse to learn about different single page application frameworks.</p>
+<p>I thought it would be a fun exercise to code up browser based "puzzle game" versions of classic CS problems like this, and create tools to translate puzzles from one to another. The project is also an excuse to learn about different single page application frameworks.</p>
 </div>
 <div class="post">
 <h2>The Code</h2>
 <p>available <a href="https://github.com/russellmcc/3-SAT">on GitHub</a>.</p>
-<p>I used the &quot;ember.js&quot; framework for the UI, and coded everything in CoffeeScript.<br />
-My main goal in writing this was to learn a bit about the ember.js framework. Frankly, I wasn't a big fan of ember, as it had the sort of leaky-abstraction &quot;magic&quot; that I've come to deeply fear. By this I mean there are some features where the implementation is not covered in the documentation, but you have to know how everything works to use the framework correctly.</p>
+<p>I used the "ember.js" framework for the UI, and coded everything in CoffeeScript.<br />
+My main goal in writing this was to learn a bit about the ember.js framework. Frankly, I wasn't a big fan of ember, as it had the sort of leaky-abstraction "magic" that I've come to deeply fear. By this I mean there are some features where the implementation is not covered in the documentation, but you have to know how everything works to use the framework correctly.</p>
   </div>
 </article>
 ]]></description>
@@ -43,7 +43,7 @@ My main goal in writing this was to learn a bit about the ember.js framework. Fr
     <title>Pareidoloop In Color</title>
     <link>http://www.russellmcc.com/posts/2012-07-20-pareidoloop-edits.html</link>
     <description><![CDATA[<article itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="post post-title">
+  <div class="post post-title" style="background-image:url(/images/plfacebanner.png);">
     <h1 itemprop="name headline">Pareidoloop In Color</h1>
     <span class="hidden-author" itemprop="author" itemscope="" itemtype="http://schema.org/Person"><span itemprop="name"><a href="http://russellmcc.com" itemprop="url" rel="author">Russell McClellan</a></span></span>
     <time itemprop="datePublished" datetime="2012-07-20">July 20, 2012</time>
@@ -51,10 +51,10 @@ My main goal in writing this was to learn a bit about the ember.js framework. Fr
   <div class="post">
     <h2>The ghost in the machine has a face</h2>
 <p><img src="/images/plface0.png" alt="creepy face 1" /></p>
-<p>Internet citizen Philip McCarthy created <a href="http://iobound.com/2012/08/pareidoloop/">pareidoloop</a>, a &quot;face&quot; generator that was simply a random-image generator hooked up in a loop to a face recognizer program. Things that look more like faces to the computer are kept, and things that look less like faces are discarded. After a long time, something vaguely representing a distorted face appears.</p>
+<p>Internet citizen Philip McCarthy created <a href="http://iobound.com/2012/08/pareidoloop/">pareidoloop</a>, a "face" generator that was simply a random-image generator hooked up in a loop to a face recognizer program. Things that look more like faces to the computer are kept, and things that look less like faces are discarded. After a long time, something vaguely representing a distorted face appears.</p>
 <p><img src="/images/plface1.png" alt="creepy face 1" /></p>
 <p>The images are visually very striking, and there's always something a little cosmically creepy about computer-generated art.</p>
-<p>I made a few modifications to the original formula - the images are now in color, you can work at larger canvas sizes (although this would be slower), and there's a &quot;simulated annealing&quot; process instead of straight randomness to speed the process up while avoiding local maxima.</p>
+<p>I made a few modifications to the original formula - the images are now in color, you can work at larger canvas sizes (although this would be slower), and there's a "simulated annealing" process instead of straight randomness to speed the process up while avoiding local maxima.</p>
 <p><img src="/images/plface2.png" alt="creepy face 3" /></p>
 </div>
 <div class="post">
@@ -71,7 +71,7 @@ My main goal in writing this was to learn a bit about the ember.js framework. Fr
     <title>Creating This Website</title>
     <link>http://www.russellmcc.com/posts/2012-10-04-This-Website.html</link>
     <description><![CDATA[<article itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="post post-title">
+  <div class="post post-title" style="background-image:url(/images/code_hs.png);">
     <h1 itemprop="name headline">Creating This Website</h1>
     <span class="hidden-author" itemprop="author" itemscope="" itemtype="http://schema.org/Person"><span itemprop="name"><a href="http://russellmcc.com" itemprop="url" rel="author">Russell McClellan</a></span></span>
     <time itemprop="datePublished" datetime="2012-10-04">October  4, 2012</time>
@@ -96,7 +96,7 @@ My main goal in writing this was to learn a bit about the ember.js framework. Fr
 <hr />
 <dl>
 <dt><a href="https://github.com/russellmcc/site-gen/blob/master/stylesheets/frameless.scss">frameless.scss</a></dt>
-<dd>includes the CSS used to style the site, heavily based on the <a href="http://framelessgrid.com/">&quot;frameless grid&quot;</a> design concept by Joni Korpi
+<dd>includes the CSS used to style the site, heavily based on the <a href="http://framelessgrid.com/">"frameless grid"</a> design concept by Joni Korpi
 </dd>
 </dl>
 </div>
@@ -114,7 +114,7 @@ My main goal in writing this was to learn a bit about the ember.js framework. Fr
     <title>Eurorack Buffered Multiple</title>
     <link>http://www.russellmcc.com/posts/2013-01-27-hexbuffer.html</link>
     <description><![CDATA[<article itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="post post-title">
+  <div class="post post-title" style="background-image:url(/images/bufferbanner.png);">
     <h1 itemprop="name headline">Eurorack Buffered Multiple</h1>
     <span class="hidden-author" itemprop="author" itemscope="" itemtype="http://schema.org/Person"><span itemprop="name"><a href="http://russellmcc.com" itemprop="url" rel="author">Russell McClellan</a></span></span>
     <time itemprop="datePublished" datetime="2013-01-27">January 27, 2013</time>
@@ -146,7 +146,7 @@ My main goal in writing this was to learn a bit about the ember.js framework. Fr
     <title>Eagle Footprints for Eurorack</title>
     <link>http://www.russellmcc.com/posts/2013-02-07-erthenvar.html</link>
     <description><![CDATA[<article itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="post post-title">
+  <div class="post post-title" style="background-image:url(/images/eaglepcb_euro.png);">
     <h1 itemprop="name headline">Eagle Footprints for Eurorack</h1>
     <span class="hidden-author" itemprop="author" itemscope="" itemtype="http://schema.org/Person"><span itemprop="name"><a href="http://russellmcc.com" itemprop="url" rel="author">Russell McClellan</a></span></span>
     <time itemprop="datePublished" datetime="2013-02-07">February  7, 2013</time>
@@ -177,7 +177,7 @@ My main goal in writing this was to learn a bit about the ember.js framework. Fr
     <title>audiounitjs</title>
     <link>http://www.russellmcc.com/posts/2013-02-24-audiounitjs.html</link>
     <description><![CDATA[<article itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="post post-title">
+  <div class="post post-title" style="background-image:url(/images/fivescope.png);">
     <h1 itemprop="name headline">audiounitjs</h1>
     <span class="hidden-author" itemprop="author" itemscope="" itemtype="http://schema.org/Person"><span itemprop="name"><a href="http://russellmcc.com" itemprop="url" rel="author">Russell McClellan</a></span></span>
     <time itemprop="datePublished" datetime="2013-02-24">February 24, 2013</time>
@@ -210,7 +210,7 @@ My main goal in writing this was to learn a bit about the ember.js framework. Fr
     <title>web-based soundfx generator</title>
     <link>http://www.russellmcc.com/posts/2013-03-08-soundfxweb.html</link>
     <description><![CDATA[<article itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="post post-title">
+  <div class="post post-title" style="background-image:url(/images/soundfxbanner.png);">
     <h1 itemprop="name headline">web-based soundfx generator</h1>
     <span class="hidden-author" itemprop="author" itemscope="" itemtype="http://schema.org/Person"><span itemprop="name"><a href="http://russellmcc.com" itemprop="url" rel="author">Russell McClellan</a></span></span>
     <time itemprop="datePublished" datetime="2013-03-08">March  8, 2013</time>
@@ -232,7 +232,7 @@ My main goal in writing this was to learn a bit about the ember.js framework. Fr
     <title>timeline.js</title>
     <link>http://www.russellmcc.com/posts/2013-03-29-timelinejs.html</link>
     <description><![CDATA[<article itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="post post-title">
+  <div class="post post-title" style="background-image:url(/images/timelinejs.png);">
     <h1 itemprop="name headline">timeline.js</h1>
     <span class="hidden-author" itemprop="author" itemscope="" itemtype="http://schema.org/Person"><span itemprop="name"><a href="http://russellmcc.com" itemprop="url" rel="author">Russell McClellan</a></span></span>
     <time itemprop="datePublished" datetime="2013-03-29">March 29, 2013</time>
@@ -270,7 +270,7 @@ My main goal in writing this was to learn a bit about the ember.js framework. Fr
     <title>Eurorack Headphone Amp</title>
     <link>http://www.russellmcc.com/posts/2013-05-14-headphone.html</link>
     <description><![CDATA[<article itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="post post-title">
+  <div class="post post-title" style="background-image:url(/images/headphonebanner.png);">
     <h1 itemprop="name headline">Eurorack Headphone Amp</h1>
     <span class="hidden-author" itemprop="author" itemscope="" itemtype="http://schema.org/Person"><span itemprop="name"><a href="http://russellmcc.com" itemprop="url" rel="author">Russell McClellan</a></span></span>
     <time itemprop="datePublished" datetime="2013-05-14">May 14, 2013</time>
@@ -281,7 +281,7 @@ My main goal in writing this was to learn a bit about the ember.js framework. Fr
 <p>Continuing my slow but steady progress on my <a href="/posts/2013-01-27-hexbuffer.html">DIY modular synthesizer</a>, I've just finished my second module: an inexpensive headphone and line-level amplifier.</p>
 <p>The humble purpose of this module is to bring signals from eurorack levels to both headphones and other audio equipment.</p>
 <h2>Electronic Design</h2>
-<p>Like my previous multiple module, the design doesn't contain anything novel or at all difficult. It's a totally standard amplifier, with levels set to the eurorack standard. One thing I was careful to do was use a socketed op-amp with a standard dual pinout, so users with <a href="http://tangentsoft.net/audio/opamps.html">discerning tastes</a> can replace the &quot;jellybean&quot; LF353 with a more &quot;smooth&quot; or &quot;laid back&quot; chip.</p>
+<p>Like my previous multiple module, the design doesn't contain anything novel or at all difficult. It's a totally standard amplifier, with levels set to the eurorack standard. One thing I was careful to do was use a socketed op-amp with a standard dual pinout, so users with <a href="http://tangentsoft.net/audio/opamps.html">discerning tastes</a> can replace the "jellybean" LF353 with a more "smooth" or "laid back" chip.</p>
 <p>For the board layout I again used <a href="http://www.cadsoftusa.com/">EAGLE</a>, which is free for non-commercial use. This time, most of the design was SMT, with the exception of the previously mentioned op-amps.</p>
 <p>Again, all of the design files for the project, including a list of all parts required, are <a href="https://github.com/russellmcc/eurorack_headphones">on GitHub</a> under a permissive license.</p>
 <h2>Board Fabrication</h2>
@@ -302,7 +302,7 @@ My main goal in writing this was to learn a bit about the ember.js framework. Fr
     <title>Notes on the CEM3372 VCF</title>
     <link>http://www.russellmcc.com/posts/2013-06-14-CEM3372.html</link>
     <description><![CDATA[<article itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="post post-title">
+  <div class="post post-title" style="background-image:url(/images/cembanner.png);">
     <h1 itemprop="name headline">Notes on the CEM3372 VCF</h1>
     <span class="hidden-author" itemprop="author" itemscope="" itemtype="http://schema.org/Person"><span itemprop="name"><a href="http://russellmcc.com" itemprop="url" rel="author">Russell McClellan</a></span></span>
     <time itemprop="datePublished" datetime="2013-06-14">June 14, 2013</time>
@@ -312,12 +312,12 @@ My main goal in writing this was to learn a bit about the ember.js framework. Fr
 <hr />
 <h1>Background</h1>
 <p>Back in the heyday of the <a href="http://www.youtube.com/watch?v=xq4XOVde1Yk">giant</a> <a href="http://www.youtube.com/watch?v=Yv4EADAHwOA">analog</a> <a href="http://www.youtube.com/watch?v=FfhnF2SZTzE">polysynths</a> (i.e. the early to mid 80s), most synthesizers were powered by analog integrated circuits. The small size of these chips is what enabled synths to have so many voices in such a relatively small amount of space. Generally, each standard synth function (<a href="http://en.wikipedia.org/wiki/Voltage-controlled_oscillator">VCO</a>, <a href="http://en.wikipedia.org/wiki/Voltage-controlled_filter">VCF</a>, <a href="http://en.wikipedia.org/wiki/Voltage-controlled_amplifier">VCA</a>) was implemented by a dedicated chip.</p>
-<p>At first glance, there's nothing incredibly extraordinary about the <a href="http://www.synthtech.com/cem/c3372pdf.pdf">CEM3372</a> VCF chip. It is famous for its use in the wildly flexible <a href="http://www.youtube.com/watch?v=kmfzoHDqPpk">Oberheim</a> <a href="http://www.youtube.com/watch?v=XN6LuK80KrM">Xpander</a> filter circuit, but the flexibility of that filter comes from a <a href="http://manuals.fdiskc.com/flat/Oberheim%20Xpander%20Service%20Manual.pdf">clever circuit trick</a>, not from anything specific to a single chip <a href="#foot1">[1]</a>. The CEM3372 also has an unusual number of &quot;convenience features&quot; - an integrated VCA for the output and two VCAs for voltage-controlled mixing on the input. Perhaps because of these extra features it was marketed as a &quot;signal processor&quot; chip instead of just a &quot;filter&quot;.</p>
+<p>At first glance, there's nothing incredibly extraordinary about the <a href="http://www.synthtech.com/cem/c3372pdf.pdf">CEM3372</a> VCF chip. It is famous for its use in the wildly flexible <a href="http://www.youtube.com/watch?v=kmfzoHDqPpk">Oberheim</a> <a href="http://www.youtube.com/watch?v=XN6LuK80KrM">Xpander</a> filter circuit, but the flexibility of that filter comes from a <a href="http://manuals.fdiskc.com/flat/Oberheim%20Xpander%20Service%20Manual.pdf">clever circuit trick</a>, not from anything specific to a single chip <a href="#foot1">[1]</a>. The CEM3372 also has an unusual number of "convenience features" - an integrated VCA for the output and two VCAs for voltage-controlled mixing on the input. Perhaps because of these extra features it was marketed as a "signal processor" chip instead of just a "filter".</p>
 <p>However, a deeper look reveals that the filtering works through a slightly different technology than the previous generation of VCF chips (e.g. <a href="http://curtiselectromusic.com/uploads/CEM_3320_Long.pdf">CEM3320</a>, SSM2040, IR3109), and I thought it might be worth writing up how it works as the technology has applications for discrete circuits as well.</p>
 </div>
 <div class="post">
 <h1>Low Pass Filters</h1>
-<p>Low pass filters are designed to remove high frequency components from a signal. Any components higher in frequency than a certain &quot;cut-off&quot; frequency will be removed. Musically, filters are one of the most basic electronic &quot;timbre modifiers&quot; and are included in almost all synthesizers. In fact, the &quot;sound&quot; of the synthesizer is often defined by the character of its filter. <a href="http://www.youtube.com/watch?v=b8TdBJDC_9Q">Whole genres</a> have sprung up exploiting the effect created from changing the cut-off frequency over time.</p>
+<p>Low pass filters are designed to remove high frequency components from a signal. Any components higher in frequency than a certain "cut-off" frequency will be removed. Musically, filters are one of the most basic electronic "timbre modifiers" and are included in almost all synthesizers. In fact, the "sound" of the synthesizer is often defined by the character of its filter. <a href="http://www.youtube.com/watch?v=b8TdBJDC_9Q">Whole genres</a> have sprung up exploiting the effect created from changing the cut-off frequency over time.</p>
 <p>WARNING! The rest of this post will probably require some (hopefully basic) familiarity with circuits.</p>
 <p>Perhaps the most basic lowpass filter consists of the following:</p>
 <p><img src="/images/rc_divider.png" alt="RC Divider" /></p>
@@ -325,7 +325,7 @@ My main goal in writing this was to learn a bit about the ember.js framework. Fr
 <p>$$V_{out} = V_{in}\frac{Z_{C}}{{Z_{C}}+{Z_{R}}}$$</p>
 <p>which reduces to</p>
 <p>$$V_{out} = V_{in}\frac{1}{1 + \frac{Z_R}{Z_C}}$$</p>
-<p>If the voltage is constant, \(Z_C\) will become infinite so \(V_{out} = V_{in}\). If the voltage is high frequency, \(Z_C\) will be zero so \(V_{out} = 0\). The exact &quot;cut-off&quot; point turns out to be \(\frac{1}{2\pi RC}\) - but to understand why you'll need some <a href="https://en.wikipedia.org/wiki/RC_circuit">math</a> outside the scope of this blog post.</p>
+<p>If the voltage is constant, \(Z_C\) will become infinite so \(V_{out} = V_{in}\). If the voltage is high frequency, \(Z_C\) will be zero so \(V_{out} = 0\). The exact "cut-off" point turns out to be \(\frac{1}{2\pi RC}\) - but to understand why you'll need some <a href="https://en.wikipedia.org/wiki/RC_circuit">math</a> outside the scope of this blog post.</p>
 <hr />
 <p>While this voltage-in, voltage-out divider is the most common scheme for low pass filtering, there are of course many others. The way the CEM3372 works is by sending the signal through an input <em>current</em> rather than voltage, and then putting the resistor and capacitor in parallel:</p>
 <p><img src="/images/rc_parallel.png" alt="RC Parallel" /></p>
@@ -397,7 +397,7 @@ My main goal in writing this was to learn a bit about the ember.js framework. Fr
     <title>More RTTI, More Problems</title>
     <link>http://www.russellmcc.com/posts/2013-08-03-rtti.html</link>
     <description><![CDATA[<article itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="post post-title">
+  <div class="post post-title" style="background-image:url(/images/rtti.png);">
     <h1 itemprop="name headline">More RTTI, More Problems</h1>
     <span class="hidden-author" itemprop="author" itemscope="" itemtype="http://schema.org/Person"><span itemprop="name"><a href="http://russellmcc.com" itemprop="url" rel="author">Russell McClellan</a></span></span>
     <time itemprop="datePublished" datetime="2013-08-03">August  3, 2013</time>
@@ -408,7 +408,7 @@ My main goal in writing this was to learn a bit about the ember.js framework. Fr
 </div>
 <div class="post">
 <h2>Symbol Visibility</h2>
-<p>While there are is a veritible managerie of symbol types that exist in mach-o binaries (and we will be encountering many of these shortly), there is only one distinction you can make in source code to control which symbol type gets generated during linking: &quot;default&quot; visibility vs &quot;hidden&quot; visibility.</p>
+<p>While there are is a veritible managerie of symbol types that exist in mach-o binaries (and we will be encountering many of these shortly), there is only one distinction you can make in source code to control which symbol type gets generated during linking: "default" visibility vs "hidden" visibility.</p>
 <dl>
 <dt>default visibility</dt>
 <dd><em>default</em> visibility creates what <code>nm -m</code> calls an <em>external</em> symbol. These symbols can be looked up by client libraries during dynamic loading. hidden visibility
@@ -416,10 +416,10 @@ My main goal in writing this was to learn a bit about the ember.js framework. Fr
 <dd><em>hidden</em> visibility creates what <code>nm -m</code> calls a <em>non-external</em> symbol. These cannot be seen anywhere outside of the library where they exist.
 </dd>
 </dl>
-<p>Confusingly, if your app uses best practice, you'll pass the <code>-fvisibility=hidden</code> flag to the linker, which sets the &quot;default&quot; for symbols that are not explicitly marked in source code is <em>hidden</em>. This is a good idea because you don't want all of your private functions in dynamic libraries leaking out to the rest of your program. In fact, this is probably why you wanted to split your program across executables in the first place. Using this flag, for symbols that you want to be accessible to outside libraries, you must explicitly mark them as having <em>default</em> visibility. I don't know any justification for these names - if I were designing gcc, I would have gone with &quot;external&quot; and &quot;private&quot; instead of &quot;default&quot; and &quot;hidden&quot;.</p>
+<p>Confusingly, if your app uses best practice, you'll pass the <code>-fvisibility=hidden</code> flag to the linker, which sets the "default" for symbols that are not explicitly marked in source code is <em>hidden</em>. This is a good idea because you don't want all of your private functions in dynamic libraries leaking out to the rest of your program. In fact, this is probably why you wanted to split your program across executables in the first place. Using this flag, for symbols that you want to be accessible to outside libraries, you must explicitly mark them as having <em>default</em> visibility. I don't know any justification for these names - if I were designing gcc, I would have gone with "external" and "private" instead of "default" and "hidden".</p>
 </div>
 <div class="post">
-<h2>Defining &quot;Undefined&quot; Symbols</h2>
+<h2>Defining "Undefined" Symbols</h2>
 <p>If you give a function a definition, it becomes a <em>defined</em> symbol in your executable or shared library. If the function has no definition, but does have a declaration, it gets marked as an <em>undefined</em> symbol.</p>
 <p><em>defined</em>, <em>non-external</em> symbols are private to the specific library where they were created</p>
 <p><em>defined</em>, <em>external</em> symbols are exported to all other libraries. By default, if you link to any library that has a symbol with the same name, you'll get a linker error.</p>
@@ -442,15 +442,15 @@ My main goal in writing this was to learn a bit about the ember.js framework. Fr
 <hr />
 <h3>Using a <em>hidden</em> class from outside its home binary</h3>
 <p>How could this happen? Well, both clang and g++ happily will mark member functions as <em>default</em> even if the class is <em>hidden</em>. So, you can include the class's header from another binary and use the any of the functions that were marked <em>default</em>. This is a recipe for disaster, because <strong>both binaries</strong> will create a <em>non-external</em>, private copy of the type info and the pointer comparison will fail.</p>
-<p>To detect this, run <code>nm -mo * | c++filt</code> on all your binaries, and ensure that there aren't any duplicate &quot;non-external typeinfo&quot; symbols.</p>
+<p>To detect this, run <code>nm -mo * | c++filt</code> on all your binaries, and ensure that there aren't any duplicate "non-external typeinfo" symbols.</p>
 <hr />
 <h3>Having a class marked <em>hidden</em> in one binary and <em>default</em> in another</h3>
 <p>This can happen if you are using a macro system to mark your classes that breaks down somehow. I've also seen this when template class explicit instantiations are not marked with the correct visibility. This will result in the exact same sort of problems seen above, as the weak symbol loading will <strong>not</strong> coalesce the <em>weak external</em> version with the <em>non-external</em> version.</p>
 <p>Similarly to the last case, to detect this, run <code>nm -mo * | c++filt</code> and ensure that for any typeinfos that have at least one <em>non-external</em> copies, there are no other copies of that typeinfo.</p>
 <hr />
 <h3>Having a class marked <em>hidden</em> in one compilation unit and <em>default</em> in another in the same binary</h3>
-<p>This is sort of the &quot;ultimate screw case&quot;, and I've only seen it happen with template instantiations - if you have an explicit instantiation that's marked <em>default</em>, and somehwhere else, in a different compilation unit in the same binary, you have an implicit instantiation, it will be marked <em>hidden</em>.</p>
-<p>What happens here? Well, in modern (10.7+) versions of <code>ld</code>, this is a warning. (&quot;<code>direct access</code> ... <code>means the weak symbol cannot be overriden at runtime</code>&quot;). The compilation unit with the <em>hidden</em> definition will incorrectly use the local definition, and dynamic casts will fail. Other compilation units will be fine, and the symbol will be marked <em>external</em> in the binary.</p>
+<p>This is sort of the "ultimate screw case", and I've only seen it happen with template instantiations - if you have an explicit instantiation that's marked <em>default</em>, and somehwhere else, in a different compilation unit in the same binary, you have an implicit instantiation, it will be marked <em>hidden</em>.</p>
+<p>What happens here? Well, in modern (10.7+) versions of <code>ld</code>, this is a warning. ("<code>direct access</code> ... <code>means the weak symbol cannot be overriden at runtime</code>"). The compilation unit with the <em>hidden</em> definition will incorrectly use the local definition, and dynamic casts will fail. Other compilation units will be fine, and the symbol will be marked <em>external</em> in the binary.</p>
 <p>On older versions of <code>ld</code> (10.6 and below), things are even worse. The symbol will be <em>non-external</em> in the binary if it's marked <em>hidden</em> for even one compilation unit - making <code>dynamic_cast</code>s fail throughout the entire binary, even in compilation units where the visibility was correct. No meaningful warning is generated.</p>
 <p>To detect this insidious problem, if you're compiling with the 10.7+ linker, I recommend turning <code>fatal_warnings</code> on. If you're using the 10.6 linker, the <code>nm</code> method from before will work because the symbol will be marked <em>non-external</em> in the binary. If you're super-paranoid, you can run <code>nm -om * | c++filt</code> on all your <code>.o</code> files - object files where the visibility was <em>hidden</em> will report <code>weak private external typeinfo</code> where object files with <em>default</em> visibility will report <code>weak external typeinfo</code> (note that if you forget the <code>-m</code> flag on <code>nm</code> these two cases are indistinguishable).</p>
 </div>
@@ -481,7 +481,7 @@ My main goal in writing this was to learn a bit about the ember.js framework. Fr
     <title>Eurorack Digitally Controlled Analog Oscillator</title>
     <link>http://www.russellmcc.com/posts/2013-12-01-DCO.html</link>
     <description><![CDATA[<article itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="post post-title">
+  <div class="post post-title" style="background-image:url(/images/dco_banner.png);">
     <h1 itemprop="name headline">Eurorack Digitally Controlled Analog Oscillator</h1>
     <span class="hidden-author" itemprop="author" itemscope="" itemtype="http://schema.org/Person"><span itemprop="name"><a href="http://russellmcc.com" itemprop="url" rel="author">Russell McClellan</a></span></span>
     <time itemprop="datePublished" datetime="2013-12-01">December  1, 2013</time>
@@ -492,9 +492,9 @@ My main goal in writing this was to learn a bit about the ember.js framework. Fr
 </div>
 <div class="post">
 <h1>What is a DCO?</h1>
-<p><a href="http://en.wikipedia.org/wiki/Digitally_controlled_oscillator">&quot;Digitally Controlled Oscillator&quot;</a> is primarily a marketing term, so it doesn't really have a precise technical definition. Most generally, it's an oscillator that is somehow &quot;more analog&quot; than a fully digital oscillator, where the signal is output direct from a <a href="http://en.wikipedia.org/wiki/Digital-to-analog_converter">DAC</a>, but yet &quot;less analog&quot; than a traditional <a href="http://en.wikipedia.org/wiki/Voltage-controlled_oscillator">VCO</a>. Sometimes a &quot;DCO&quot; is a fully analog oscillator being driven with a control voltage from a DAC, and <a href="http://en.wikipedia.org/wiki/Korg_Poly-800">sometimes</a> &quot;DCO&quot; means a sum of digitally-created square waves. However, the most common definition is the one that this module falls under: a fully analog saw tooth oscillator hard-synced to a digital counter.</p>
+<p><a href="http://en.wikipedia.org/wiki/Digitally_controlled_oscillator">"Digitally Controlled Oscillator"</a> is primarily a marketing term, so it doesn't really have a precise technical definition. Most generally, it's an oscillator that is somehow "more analog" than a fully digital oscillator, where the signal is output direct from a <a href="http://en.wikipedia.org/wiki/Digital-to-analog_converter">DAC</a>, but yet "less analog" than a traditional <a href="http://en.wikipedia.org/wiki/Voltage-controlled_oscillator">VCO</a>. Sometimes a "DCO" is a fully analog oscillator being driven with a control voltage from a DAC, and <a href="http://en.wikipedia.org/wiki/Korg_Poly-800">sometimes</a> "DCO" means a sum of digitally-created square waves. However, the most common definition is the one that this module falls under: a fully analog saw tooth oscillator hard-synced to a digital counter.</p>
 <p>This design (which is the only thing I'll call a 'DCO' from here on out) was first popularized by the Roland <a href="http://en.wikipedia.org/wiki/Roland_Juno-60">Juno</a> series, and became quite popular for a time, especially in <a href="http://www.vintagesynth.com/oberheim/mat6.php">low cost</a> <a href="http://www.vintagesynth.com/misc/bit01.php">polyphonic</a> <a href="http://en.wikipedia.org/wiki/Korg_Poly-61">analogs</a>. During the analog resurgance of the late 2000s/early 2010s, DCOs again became a go-to option, appearing in the <a href="http://en.wikipedia.org/wiki/Prophet_08">Prophet 08</a> and the <a href="http://www.soundonsound.com/sos/may12/articles/moog-minitaur.htm">Moog Minitaur</a>, among others.</p>
-<p>DCOs have a number of differences from the &quot;more analog&quot; VCOs: their tuning is very stable because the frequency ultimately comes from a crystal oscillator. This makes them have less &quot;analog drift&quot;, and generally speaking this makes for better bass tones. The main price you pay for this stability is coarser tuning - since the tone is coming from an integer divide down of a fixed clock, there's a limited number of &quot;tuning steps&quot;, where an analog oscillator would have completely continuous tuning.</p>
+<p>DCOs have a number of differences from the "more analog" VCOs: their tuning is very stable because the frequency ultimately comes from a crystal oscillator. This makes them have less "analog drift", and generally speaking this makes for better bass tones. The main price you pay for this stability is coarser tuning - since the tone is coming from an integer divide down of a fixed clock, there's a limited number of "tuning steps", where an analog oscillator would have completely continuous tuning.</p>
 </div>
 <div class="post">
 <h1>How do they work?</h1>
@@ -519,7 +519,7 @@ My main goal in writing this was to learn a bit about the ember.js framework. Fr
     <title>Collaborative Remixing at a Halloween Party</title>
     <link>http://www.russellmcc.com/posts/2013-12-26-halloween.html</link>
     <description><![CDATA[<article itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="post post-title">
+  <div class="post post-title" style="background-image:url(/images/halloween_banner.png);">
     <h1 itemprop="name headline">Collaborative Remixing at a Halloween Party</h1>
     <span class="hidden-author" itemprop="author" itemscope="" itemtype="http://schema.org/Person"><span itemprop="name"><a href="http://russellmcc.com" itemprop="url" rel="author">Russell McClellan</a></span></span>
     <time itemprop="datePublished" datetime="2013-12-26">December 26, 2013</time>
@@ -546,7 +546,7 @@ My main goal in writing this was to learn a bit about the ember.js framework. Fr
     <title>Eurorack Mixer Module</title>
     <link>http://www.russellmcc.com/posts/2014-01-11-EurorackMixer.html</link>
     <description><![CDATA[<article itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="post post-title">
+  <div class="post post-title" style="background-image:url(/images/euromix_banner.png);">
     <h1 itemprop="name headline">Eurorack Mixer Module</h1>
     <span class="hidden-author" itemprop="author" itemscope="" itemtype="http://schema.org/Person"><span itemprop="name"><a href="http://russellmcc.com" itemprop="url" rel="author">Russell McClellan</a></span></span>
     <time itemprop="datePublished" datetime="2014-01-11">January 11, 2014</time>
@@ -571,13 +571,13 @@ My main goal in writing this was to learn a bit about the ember.js framework. Fr
     <title>Dancing Stick Figures</title>
     <link>http://www.russellmcc.com/posts/2014-01-11-MusicHackDay2013.html</link>
     <description><![CDATA[<article itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="post post-title">
+  <div class="post post-title" style="background-image:url(/images/dancingstick_banner.png);">
     <h1 itemprop="name headline">Dancing Stick Figures</h1>
     <span class="hidden-author" itemprop="author" itemscope="" itemtype="http://schema.org/Person"><span itemprop="name"><a href="http://russellmcc.com" itemprop="url" rel="author">Russell McClellan</a></span></span>
     <time itemprop="datePublished" datetime="2014-01-11">January 11, 2014</time>
   </div>
   <div class="post">
-    <p>Last November, as part of <a href="http://new.musichackday.org/">Music Hack Day</a>, co-worker <a href="https://github.com/AlexPowers">Alex Powers</a> and I created a <a href="http://www.dancingstickfigures.com/">music visualizer</a> involving dancing stick figures. Alex has had the idea of creating an &quot;algorithmic choreography generator&quot; for some time, and music hack day seemed like the perfect time do it. Alex wrote a python program to take analysis from the <a href="http://echonest.com/">echo nest</a> API and generate a &quot;choreography file&quot;, describing a dance routine in completely abstract terms. It was my job to take the choreography file and turn that into something people could look at. This separation of responsibilities worked well, and I think it played to both of our strengths. While Alex didn't have much choreography experience, he ended up writing code that produced fairly logical dances and worked for many different genres of music.</p>
+    <p>Last November, as part of <a href="http://new.musichackday.org/">Music Hack Day</a>, co-worker <a href="https://github.com/AlexPowers">Alex Powers</a> and I created a <a href="http://www.dancingstickfigures.com/">music visualizer</a> involving dancing stick figures. Alex has had the idea of creating an "algorithmic choreography generator" for some time, and music hack day seemed like the perfect time do it. Alex wrote a python program to take analysis from the <a href="http://echonest.com/">echo nest</a> API and generate a "choreography file", describing a dance routine in completely abstract terms. It was my job to take the choreography file and turn that into something people could look at. This separation of responsibilities worked well, and I think it played to both of our strengths. While Alex didn't have much choreography experience, he ended up writing code that produced fairly logical dances and worked for many different genres of music.</p>
 <p><img src="/images/dancingstick.png" alt="dancing stick figures" /></p>
 <p>I learned a lot during the 24 hour hack - I had never touched a 3D modeling program before, so perhaps the hardest part was creating the animated dance moves with <a href="http://www.blender.org/">Blender</a>. I also had my first exposure to 3D rendering in the browser - after trying to use raw webgl, I ended up using the significantly more fully-featured <a href="http://threejs.org/">three.js</a>, which felt quite similar to desktop renderers like opengl. The blender animation integration built into three.js was a total life-saver for our project.</p>
 <p>Our demo was quite a crowd pleaser, and we ended up winning the <a href="http://blog.echonest.com/post/66776489063/the-echo-nests-5th-music-hack-day-boston-was-a-roaring">echo nest prize</a> for best use of the echo nest api. Another victory for whimsy! Code, as usual, is available <a href="https://github.com/AlexPowers/danceomatic">on github</a> under a permissive license. We used both CoffeeScript and Python.</p>
@@ -592,34 +592,34 @@ My main goal in writing this was to learn a bit about the ember.js framework. Fr
     <title>Haskell-style Do Notation in Javascript</title>
     <link>http://www.russellmcc.com/posts/2014-01-18-do-notation-javascript.html</link>
     <description><![CDATA[<article itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="post post-title">
+  <div class="post post-title" style="background-image:url(/images/fantasydo_banner.png);">
     <h1 itemprop="name headline">Haskell-style Do Notation in Javascript</h1>
     <span class="hidden-author" itemprop="author" itemscope="" itemtype="http://schema.org/Person"><span itemprop="name"><a href="http://russellmcc.com" itemprop="url" rel="author">Russell McClellan</a></span></span>
     <time itemprop="datePublished" datetime="2014-01-18">January 18, 2014</time>
   </div>
   <div class="post">
-    <p>A serious problem with callback-based asynchronous environments like browser-based JavaScript or <a href="nodejs.org">node.js</a> is the verbosity required to chain together multiple asynchronous operations (colloquially known as <a href="http://elm-lang.org/learn/Escape-from-Callback-Hell.elm">&quot;callback hell&quot;</a>). Recently, I was delighted to come accross a proposed solution that looked syntactically a lot like Haskell's <a href="http://en.wikibooks.org/wiki/Haskell/do_Notation">do notation</a> for promises. It turns out the same trick can be used to implement something similar to do notation for a wide class of monads. First, though, a bit of background on promises:</p>
+    <p>A serious problem with callback-based asynchronous environments like browser-based JavaScript or <a href="nodejs.org">node.js</a> is the verbosity required to chain together multiple asynchronous operations (colloquially known as <a href="http://elm-lang.org/learn/Escape-from-Callback-Hell.elm">"callback hell"</a>). Recently, I was delighted to come accross a proposed solution that looked syntactically a lot like Haskell's <a href="http://en.wikibooks.org/wiki/Haskell/do_Notation">do notation</a> for promises. It turns out the same trick can be used to implement something similar to do notation for a wide class of monads. First, though, a bit of background on promises:</p>
 </div>
 <div class="post">
 <h2>What is a promise?</h2>
-<p>One of the more interesting recent developments in the world of modern JavaScript is the rise in popularity of the <a href="http://promises-aplus.github.io/promises-spec/">Promises/A+ specification</a>, an attempt to address the common problem of callback hell in web apps by reifying asynchronous actions into objects called &quot;promises&quot;.</p>
-<p>The specification suggests, rather than directly taking callbacks into an asynchronous computation, the function that starts the computation should return a &quot;Promise&quot; object that can have callbacks attached to it. This turns out to be much more easily composable than calback-based functions. The strategy of reification of control flow is one more closely associated with &quot;academic&quot; language like Scala than &quot;workaday&quot; languages like JavaScript, so it's a bit surprising that promises have gained as much traction as they have. The <a href="http://dom.spec.whatwg.org/">next version of the browser DOM</a> will even include wide-spread Promise support.</p>
-<p>As noted by <a href="http://brianmckenna.org/blog/category_theory_promisesaplus">Brian McKenna</a>, promises as defined by the spec look similar<a href="#foot1">[1]</a> to <a href="http://www.haskell.org/tutorial/monads.html">Monads</a>. This observation indirectly led to a train-wreck flame war on a <a href="https://github.com/promises-aplus/promises-spec/issues/94">GitHub Issue</a>. At one point, a functional-programming skeptic claimed that to use the principle of generalization was to &quot;ignore reality in favor of typed-language fantasy land&quot;.</p>
+<p>One of the more interesting recent developments in the world of modern JavaScript is the rise in popularity of the <a href="http://promises-aplus.github.io/promises-spec/">Promises/A+ specification</a>, an attempt to address the common problem of callback hell in web apps by reifying asynchronous actions into objects called "promises".</p>
+<p>The specification suggests, rather than directly taking callbacks into an asynchronous computation, the function that starts the computation should return a "Promise" object that can have callbacks attached to it. This turns out to be much more easily composable than calback-based functions. The strategy of reification of control flow is one more closely associated with "academic" language like Scala than "workaday" languages like JavaScript, so it's a bit surprising that promises have gained as much traction as they have. The <a href="http://dom.spec.whatwg.org/">next version of the browser DOM</a> will even include wide-spread Promise support.</p>
+<p>As noted by <a href="http://brianmckenna.org/blog/category_theory_promisesaplus">Brian McKenna</a>, promises as defined by the spec look similar<a href="#foot1">[1]</a> to <a href="http://www.haskell.org/tutorial/monads.html">Monads</a>. This observation indirectly led to a train-wreck flame war on a <a href="https://github.com/promises-aplus/promises-spec/issues/94">GitHub Issue</a>. At one point, a functional-programming skeptic claimed that to use the principle of generalization was to "ignore reality in favor of typed-language fantasy land".</p>
 </div>
 <div class="post">
 <h2>What about Do Notation?</h2>
-<p>The one positive thing to come out of the flame-war was a specification for various simple algebraic constructs in JavaScript, aptly called <a href="https://github.com/fantasyland/fantasy-land">&quot;Fantasy Land&quot;</a>. I thought I'd join in the fun by providing a sort of &quot;do notation&quot; for Fantasy Land monads using <a href="http://wiki.ecmascript.org/doku.php?id=harmony:generators">harmony generators</a> and ideas from Mozilla's <a href="http://taskjs.org/">task.js</a>. Code and examples are <a href="http://github.com/russellmcc/fantasydo">available on GitHub</a> under the CC0 1.0 license.</p>
+<p>The one positive thing to come out of the flame-war was a specification for various simple algebraic constructs in JavaScript, aptly called <a href="https://github.com/fantasyland/fantasy-land">"Fantasy Land"</a>. I thought I'd join in the fun by providing a sort of "do notation" for Fantasy Land monads using <a href="http://wiki.ecmascript.org/doku.php?id=harmony:generators">harmony generators</a> and ideas from Mozilla's <a href="http://taskjs.org/">task.js</a>. Code and examples are <a href="http://github.com/russellmcc/fantasydo">available on GitHub</a> under the CC0 1.0 license.</p>
 <p>This was my first time working with harmony features of JavaScript. Andy Wingo wrote an <a href="http://wingolog.org/archives/2013/02/25/on-generators">excellent article on the design of generators</a>, which did a great job of explaining why various choices were made.</p>
-<p>One feature I would have really enjoyed while writing this library is a way of cloning a generator's iterator. This would allow easy support for this &quot;Do notation&quot; trick for branching monads (like the List monad). Wingo writes that the main reason for not allowing resumable generators are the &quot;allocation cost&quot;. I don't quite understand this when we already have external iterators, because there's no fundamental reason you'd have to do any extra allocations until a user actually starts cloning the iterator. If anyone could explain this in the comments, I'd be really grateful.</p>
+<p>One feature I would have really enjoyed while writing this library is a way of cloning a generator's iterator. This would allow easy support for this "Do notation" trick for branching monads (like the List monad). Wingo writes that the main reason for not allowing resumable generators are the "allocation cost". I don't quite understand this when we already have external iterators, because there's no fundamental reason you'd have to do any extra allocations until a user actually starts cloning the iterator. If anyone could explain this in the comments, I'd be really grateful.</p>
 </div>
 <div class="post">
 <h2>Footnotes</h2>
 <hr />
 <p><a id="foot1"></a></p>
 <h2>1</h2>
-<p>Promises/A+ defines one operation for promises, called <code>then</code>. Brian McKenna points out that this is similar to a &quot;return-type&quot; overload of <code>fmap</code> and <code>bind</code>. In fact, ignoring the error path, the Promises/A+ <code>then</code> is equivalent to <code>bind</code> in the sense that given one, you can write the other:</p>
+<p>Promises/A+ defines one operation for promises, called <code>then</code>. Brian McKenna points out that this is similar to a "return-type" overload of <code>fmap</code> and <code>bind</code>. In fact, ignoring the error path, the Promises/A+ <code>then</code> is equivalent to <code>bind</code> in the sense that given one, you can write the other:</p>
 <script src="https://gist.github.com/russellmcc/8497511.js"></script>
-<p>Promises/A+ are actually a little more expressive than a monad, in that they have rich operations for error catching in addition to the operations required by the monad structure. One of the authors of the specification <a href="https://github.com/promises-aplus/promises-spec/issues/94#issuecomment-16176966">claims</a> that to ignore or abstract away this extra structure is to &quot;miss the point of promises&quot;. Regardless, the specification seems to share much with <a href="http://www.scala-lang.org/api/current/index.html#scala.concurrent.Future">Scala Futures</a>, and whether the authors like it or not, promises as specified are monads.</p>
+<p>Promises/A+ are actually a little more expressive than a monad, in that they have rich operations for error catching in addition to the operations required by the monad structure. One of the authors of the specification <a href="https://github.com/promises-aplus/promises-spec/issues/94#issuecomment-16176966">claims</a> that to ignore or abstract away this extra structure is to "miss the point of promises". Regardless, the specification seems to share much with <a href="http://www.scala-lang.org/api/current/index.html#scala.concurrent.Future">Scala Futures</a>, and whether the authors like it or not, promises as specified are monads.</p>
   </div>
 </article>
 ]]></description>
@@ -631,7 +631,7 @@ My main goal in writing this was to learn a bit about the ember.js framework. Fr
     <title>knob.js</title>
     <link>http://www.russellmcc.com/posts/2014-02-01-knobjs.html</link>
     <description><![CDATA[<article itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="post post-title">
+  <div class="post post-title" style="background-image:url(/images/knobjs_banner.png);">
     <h1 itemprop="name headline">knob.js</h1>
     <span class="hidden-author" itemprop="author" itemscope="" itemtype="http://schema.org/Person"><span itemprop="name"><a href="http://russellmcc.com" itemprop="url" rel="author">Russell McClellan</a></span></span>
     <time itemprop="datePublished" datetime="2014-02-01">February  1, 2014</time>
@@ -682,7 +682,7 @@ My main goal in writing this was to learn a bit about the ember.js framework. Fr
     <title>An Open-Source Bass Pre-Amp</title>
     <link>http://www.russellmcc.com/posts/2015-01-25-bass-preamp.html</link>
     <description><![CDATA[<article itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="post post-title">
+  <div class="post post-title" style="background-image:url(/images/bass-pre-banner.png);">
     <h1 itemprop="name headline">An Open-Source Bass Pre-Amp</h1>
     <span class="hidden-author" itemprop="author" itemscope="" itemtype="http://schema.org/Person"><span itemprop="name"><a href="http://russellmcc.com" itemprop="url" rel="author">Russell McClellan</a></span></span>
     <time itemprop="datePublished" datetime="2015-01-25">January 25, 2015</time>
@@ -696,7 +696,7 @@ My main goal in writing this was to learn a bit about the ember.js framework. Fr
 <p>Even after changing the pickguard, I wasn't crazy about the sound. It's an active bass, meaning that it has a battery and a pre-amp on-board to shape the sound. Sensing a fun project, I designed a small, cheap pre-amp to replace the existing one. Like all of my electronic designs, the pre-amp is open-source with a permissive license. You can see more details <a href="https://github.com/russellmcc/basspre-mm2">on github</a>.</p>
 <p>The design is heavily based on the first version of the pre-amp included in the <a href="http://en.wikipedia.org/wiki/Music_Man_StingRay">Music Man Stingray</a>, a design overseen by Leo Fender. The first version of the StingRay pre-amp has only two controls, Bass and Treble (really, what else do you need?).</p>
 <p>My version is quite close to that original Music Man design in frequency response, but uses modern components for lower power consumption. In tests, my pre-amp uses about 1.5 milliamps, giving approximately 400 hours of play time with a normal nine volt battery.</p>
-<p>If you're interested in seeing lots of graphs of the response, all settings of interest are <a href="https://github.com/russellmcc/basspre-mm2">on the project's github page</a>, including simulations and real-world tests. My favorite setting is both bass and treble boosted, giving a &quot;scooped&quot; frequency response:</p>
+<p>If you're interested in seeing lots of graphs of the response, all settings of interest are <a href="https://github.com/russellmcc/basspre-mm2">on the project's github page</a>, including simulations and real-world tests. My favorite setting is both bass and treble boosted, giving a "scooped" frequency response:</p>
 <p><img src="/images/bass-both-boost-response.png" alt="Both boost response" /></p>
 </div>
 <div class="post">

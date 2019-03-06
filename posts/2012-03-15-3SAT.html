@@ -26,26 +26,26 @@
       </ul>
     </nav>
     <article itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="post post-title">
+  <div class="post post-title" style="background-image:url(/images/3sat.png);">
     <h1 itemprop="name headline">3-Sat Online Puzzle Game</h1>
     <span class="hidden-author" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name"><a href="http://russellmcc.com" itemprop="url" rel="author">Russell McClellan</a></span></span>
     <time itemprop="datePublished" datetime="2012-03-15">March 15, 2012</time>
   </div>
   <div class="post">
     <h2>The Puzzle</h2>
-<p>3-SAT is a puzzle game. You're presented with a finite number of letter triplets. Some letters are red, and some letters are black. You must pick one letter of each triplet, with the rule that a choice is only valid if you've never picked that particular letter in a different color. So, once you choose a black &quot;A&quot; in a triplet, you are never allowed to choose a red &quot;A&quot; in any other triplet.</p>
+<p>3-SAT is a puzzle game. You're presented with a finite number of letter triplets. Some letters are red, and some letters are black. You must pick one letter of each triplet, with the rule that a choice is only valid if you've never picked that particular letter in a different color. So, once you choose a black "A" in a triplet, you are never allowed to choose a red "A" in any other triplet.</p>
 </div>
 <div class="post">
 <h2>Why</h2>
 <p>3-SAT turns out to be important to computer science because it's perhaps the simplest example of a type of problem called an <em>NP-Complete</em> problem. Generally first or second year computer science majors will learn about these problems in a basic complexity theory class.</p>
 <p>Briefly, an <em>NP-Complete</em> problem is both <em>NP</em> and <em>NP-Hard</em>. Being <em>NP</em> means that given a guess solution, you can quickly verify whether or not the guess is correct. In this case, you can just make sure that each triplet has a letter selected, and there are no copies of the same letters in different colors. Being <em>NP-Hard</em> means you can translate any <em>NP</em> problem into a 3-SAT problem.</p>
-<p>I thought it would be a fun exercise to code up browser based &quot;puzzle game&quot; versions of classic CS problems like this, and create tools to translate puzzles from one to another. The project is also an excuse to learn about different single page application frameworks.</p>
+<p>I thought it would be a fun exercise to code up browser based "puzzle game" versions of classic CS problems like this, and create tools to translate puzzles from one to another. The project is also an excuse to learn about different single page application frameworks.</p>
 </div>
 <div class="post">
 <h2>The Code</h2>
 <p>available <a href="https://github.com/russellmcc/3-SAT">on GitHub</a>.</p>
-<p>I used the &quot;ember.js&quot; framework for the UI, and coded everything in CoffeeScript.<br />
-My main goal in writing this was to learn a bit about the ember.js framework. Frankly, I wasn't a big fan of ember, as it had the sort of leaky-abstraction &quot;magic&quot; that I've come to deeply fear. By this I mean there are some features where the implementation is not covered in the documentation, but you have to know how everything works to use the framework correctly.</p>
+<p>I used the "ember.js" framework for the UI, and coded everything in CoffeeScript.<br />
+My main goal in writing this was to learn a bit about the ember.js framework. Frankly, I wasn't a big fan of ember, as it had the sort of leaky-abstraction "magic" that I've come to deeply fear. By this I mean there are some features where the implementation is not covered in the documentation, but you have to know how everything works to use the framework correctly.</p>
   </div>
 </article>
 

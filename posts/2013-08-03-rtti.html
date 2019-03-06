@@ -26,7 +26,7 @@
       </ul>
     </nav>
     <article itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="post post-title">
+  <div class="post post-title" style="background-image:url(/images/rtti.png);">
     <h1 itemprop="name headline">More RTTI, More Problems</h1>
     <span class="hidden-author" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name"><a href="http://russellmcc.com" itemprop="url" rel="author">Russell McClellan</a></span></span>
     <time itemprop="datePublished" datetime="2013-08-03">August  3, 2013</time>
@@ -37,7 +37,7 @@
 </div>
 <div class="post">
 <h2>Symbol Visibility</h2>
-<p>While there are is a veritible managerie of symbol types that exist in mach-o binaries (and we will be encountering many of these shortly), there is only one distinction you can make in source code to control which symbol type gets generated during linking: &quot;default&quot; visibility vs &quot;hidden&quot; visibility.</p>
+<p>While there are is a veritible managerie of symbol types that exist in mach-o binaries (and we will be encountering many of these shortly), there is only one distinction you can make in source code to control which symbol type gets generated during linking: "default" visibility vs "hidden" visibility.</p>
 <dl>
 <dt>default visibility</dt>
 <dd><em>default</em> visibility creates what <code>nm -m</code> calls an <em>external</em> symbol. These symbols can be looked up by client libraries during dynamic loading. hidden visibility
@@ -45,10 +45,10 @@
 <dd><em>hidden</em> visibility creates what <code>nm -m</code> calls a <em>non-external</em> symbol. These cannot be seen anywhere outside of the library where they exist.
 </dd>
 </dl>
-<p>Confusingly, if your app uses best practice, you'll pass the <code>-fvisibility=hidden</code> flag to the linker, which sets the &quot;default&quot; for symbols that are not explicitly marked in source code is <em>hidden</em>. This is a good idea because you don't want all of your private functions in dynamic libraries leaking out to the rest of your program. In fact, this is probably why you wanted to split your program across executables in the first place. Using this flag, for symbols that you want to be accessible to outside libraries, you must explicitly mark them as having <em>default</em> visibility. I don't know any justification for these names - if I were designing gcc, I would have gone with &quot;external&quot; and &quot;private&quot; instead of &quot;default&quot; and &quot;hidden&quot;.</p>
+<p>Confusingly, if your app uses best practice, you'll pass the <code>-fvisibility=hidden</code> flag to the linker, which sets the "default" for symbols that are not explicitly marked in source code is <em>hidden</em>. This is a good idea because you don't want all of your private functions in dynamic libraries leaking out to the rest of your program. In fact, this is probably why you wanted to split your program across executables in the first place. Using this flag, for symbols that you want to be accessible to outside libraries, you must explicitly mark them as having <em>default</em> visibility. I don't know any justification for these names - if I were designing gcc, I would have gone with "external" and "private" instead of "default" and "hidden".</p>
 </div>
 <div class="post">
-<h2>Defining &quot;Undefined&quot; Symbols</h2>
+<h2>Defining "Undefined" Symbols</h2>
 <p>If you give a function a definition, it becomes a <em>defined</em> symbol in your executable or shared library. If the function has no definition, but does have a declaration, it gets marked as an <em>undefined</em> symbol.</p>
 <p><em>defined</em>, <em>non-external</em> symbols are private to the specific library where they were created</p>
 <p><em>defined</em>, <em>external</em> symbols are exported to all other libraries. By default, if you link to any library that has a symbol with the same name, you'll get a linker error.</p>
@@ -71,15 +71,15 @@
 <hr />
 <h3>Using a <em>hidden</em> class from outside its home binary</h3>
 <p>How could this happen? Well, both clang and g++ happily will mark member functions as <em>default</em> even if the class is <em>hidden</em>. So, you can include the class's header from another binary and use the any of the functions that were marked <em>default</em>. This is a recipe for disaster, because <strong>both binaries</strong> will create a <em>non-external</em>, private copy of the type info and the pointer comparison will fail.</p>
-<p>To detect this, run <code>nm -mo * | c++filt</code> on all your binaries, and ensure that there aren't any duplicate &quot;non-external typeinfo&quot; symbols.</p>
+<p>To detect this, run <code>nm -mo * | c++filt</code> on all your binaries, and ensure that there aren't any duplicate "non-external typeinfo" symbols.</p>
 <hr />
 <h3>Having a class marked <em>hidden</em> in one binary and <em>default</em> in another</h3>
 <p>This can happen if you are using a macro system to mark your classes that breaks down somehow. I've also seen this when template class explicit instantiations are not marked with the correct visibility. This will result in the exact same sort of problems seen above, as the weak symbol loading will <strong>not</strong> coalesce the <em>weak external</em> version with the <em>non-external</em> version.</p>
 <p>Similarly to the last case, to detect this, run <code>nm -mo * | c++filt</code> and ensure that for any typeinfos that have at least one <em>non-external</em> copies, there are no other copies of that typeinfo.</p>
 <hr />
 <h3>Having a class marked <em>hidden</em> in one compilation unit and <em>default</em> in another in the same binary</h3>
-<p>This is sort of the &quot;ultimate screw case&quot;, and I've only seen it happen with template instantiations - if you have an explicit instantiation that's marked <em>default</em>, and somehwhere else, in a different compilation unit in the same binary, you have an implicit instantiation, it will be marked <em>hidden</em>.</p>
-<p>What happens here? Well, in modern (10.7+) versions of <code>ld</code>, this is a warning. (&quot;<code>direct access</code> ... <code>means the weak symbol cannot be overriden at runtime</code>&quot;). The compilation unit with the <em>hidden</em> definition will incorrectly use the local definition, and dynamic casts will fail. Other compilation units will be fine, and the symbol will be marked <em>external</em> in the binary.</p>
+<p>This is sort of the "ultimate screw case", and I've only seen it happen with template instantiations - if you have an explicit instantiation that's marked <em>default</em>, and somehwhere else, in a different compilation unit in the same binary, you have an implicit instantiation, it will be marked <em>hidden</em>.</p>
+<p>What happens here? Well, in modern (10.7+) versions of <code>ld</code>, this is a warning. ("<code>direct access</code> ... <code>means the weak symbol cannot be overriden at runtime</code>"). The compilation unit with the <em>hidden</em> definition will incorrectly use the local definition, and dynamic casts will fail. Other compilation units will be fine, and the symbol will be marked <em>external</em> in the binary.</p>
 <p>On older versions of <code>ld</code> (10.6 and below), things are even worse. The symbol will be <em>non-external</em> in the binary if it's marked <em>hidden</em> for even one compilation unit - making <code>dynamic_cast</code>s fail throughout the entire binary, even in compilation units where the visibility was correct. No meaningful warning is generated.</p>
 <p>To detect this insidious problem, if you're compiling with the 10.7+ linker, I recommend turning <code>fatal_warnings</code> on. If you're using the 10.6 linker, the <code>nm</code> method from before will work because the symbol will be marked <em>non-external</em> in the binary. If you're super-paranoid, you can run <code>nm -om * | c++filt</code> on all your <code>.o</code> files - object files where the visibility was <em>hidden</em> will report <code>weak private external typeinfo</code> where object files with <em>default</em> visibility will report <code>weak external typeinfo</code> (note that if you forget the <code>-m</code> flag on <code>nm</code> these two cases are indistinguishable).</p>
 </div>
