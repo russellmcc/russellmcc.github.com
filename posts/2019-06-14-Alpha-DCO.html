@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Your Name" />
+    <link rel="stylesheet" type="text/css" href="../stylesheets/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="../stylesheets/syntax.css" />
+    <link rel="stylesheet" type="text/css" href="../stylesheets/frameless.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="alternate" type="application/rss+xml" title="SimpleBlog" href="../rss.xml" />
+    <title>Eurorack Digital Oscillator</title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  </head>
+  <body>
+<div id="contact">
+    <h1><a href="../index.html">russell mcclellan</a></h1>
+    <h2>musical hardware and software</h2>
+    russell.mcclellan@gmail.com
+</div>
+<div id="content">
+    <nav id="navbar">
+      <ul>
+      <li><a href="../index.html" class="taglink">index<div class="whitesquare"></div></a></li>
+      <li><a href="https://github.com/russellmcc" class="taglink">github<div class="whitesquare"></div></a></li>
+      </ul>
+    </nav>
+    <article itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="post post-title" style="background-image:url(/images/alphaoscbanner.jpg);">
+    <h1 itemprop="name headline">Eurorack Digital Oscillator</h1>
+    <span class="hidden-author" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name"><a href="http://russellmcc.com" itemprop="url" rel="author">Russell McClellan</a></span></span>
+    <time itemprop="datePublished" datetime="2019-06-14">June 14, 2019</time>
+  </div>
+  <div class="post">
+    <p>It's been a while, but I've released yet another completed eurorack oscillator design. This one is based on another classic 80s design, this time a high-frequency purely digital oscillator.</p>
+<figure>
+<img src="../images/alphaosc.jpg" alt="Eurorack Digital Oscillator" /><figcaption>Eurorack Digital Oscillator</figcaption>
+</figure>
+</div><div class="post">
+
+<h1>background</h1>
+<p>A synthesizer oscillator's job is to create an audio waveform at a controllable frequency. In polyphonic synthesizers, stable tuning is especially important, since the human ear is very sensitive to out-of-tune notes when chords are played. Unfortunately, it's not particularly easy or cost-effective to create an analog oscillator with stable tuning. For a great summary of the techniques engineers have used to stabilize analog oscillators, please see <a href="http://www.openmusiclabs.com/2015/03/temperature-compensation-of-analog-exponential-converters/trackback/index.html">this report by open music labs</a>. The challenges of cheaply stabilizing oscillators led to the designs of <a href="file:///posts/2013-12-01-DCO.html">digitally controlled oscillators</a>, where an analog oscillator is synchronized to a digital oscillator. Roland's <a href="https://en.wikipedia.org/wiki/Roland_Juno-60">juno</a> series of synthesizers initially used DCOs, but switched to a purely digital design for the alpha juno line. This design is heavily inspired by the one from the alpha juno series.</p>
+</div><div class="post">
+
+<h1>why does it go so fast?</h1>
+<p>One traditional problem with digital oscillators is the problem of <em>aliasing</em>. Aliasing usually shows up in the context of digital recordings - if we try to sample audio signals that contain high frequencies, they appear in our recordings as low frequencies. It's impossible to distinguish these "aliased" low frequencies from low frequencies that were actually there, so a proper recording can never be recovered once aliasing is introduced. The normal answer to this is to apply an analog low-pass filter to the signal before sampling so that no high frequencies will remain by the time we get around to sampling.</p>
+<p>So, aliasing can destroy digital recordings, but what do they have to do with digital oscillators? Well, it's a bit of a complicated answer (and one that I hope to answer more fully in a future post), but basically, the first algorithm you'd think of for a digital saw wave is equivalent to sampling an analog saw wave. But, an analog saw wave contains a full harmonic series, which is to say, infinitely high frequencies. So, no matter how high our sampling rate, we'll get some aliasing in our output. There are other algorithms for generating saw waves that don't have this problem, but we'll leave those for another day.</p>
+<p>This oscillator (and the alpha juno it's based on), use this naive algorithm that's equivalent to sampling an analog saw wave. So, how come they don't have audible aliasing? They run the algorithm at a very high sampling rate. Since the amplitudes of each harmonic in a saw wave are lower than the last, by setting our sampling rate to much higher than the rate of the saw wave, we can ensure that any aliased harmonics are fairly low in amplitude. For typical audio rates (say, 400 hertz), the alpha juno runs the oscillator at 2 megahertz! This is much faster than digital to analog converters that we are used to, which run in the low kilohertz (typically 48 kilohertz these days).</p>
+<p>Audio people usually think of using high sampling rates to reproduce high frequency signals; but in this case we're using the high sampling rate to reproduce low frequency signals with a simple algorithm.</p>
+</div><div class="post">
+
+<h1>how does it go so fast?</h1>
+<p>Outputting a signal at 2 megahertz or above is not realistic using a cheap microcontroller, even using recent chips. However, it's totally reasonable for <a href="https://en.wikipedia.org/wiki/Field-programmable_gate_array">fpgas</a> or cplds, which are programmable logic circuits rather than microprocessors. In this case, we have a very inexpensive (a dollar or two) <a href="https://www.latticesemi.com/Products/FPGAandCPLD/MachXO">lattice MachXO CPLD</a>, connected directly to a simple R2R DAC.</p>
+<p>The cpld is programmed using haskell, which can be transpiled to verilog through the <a href="https://clash-lang.org">clash</a> compiler.</p>
+<p>To manage the analog to digital converter, I'm using an avr microcontroller programmed with the arduino tools. This using tuning look tables and sends the cpld tuning data over a bespoke parallel interface.</p>
+<p>The four-layer PCB was designed with kicad.</p>
+<p>As usual, all the design files are available on <a href="https://github.com/russellmcc/alphaosc">github</a>.</p>
+</div><div class="post">
+
+<h1>how does it get tuned?</h1>
+<p>One of my biggest surprises doing this project was the complexity of designing a proper tuning procedure for the oscillator. There's a fair number of parameters in the tuning system, and interesting trade-offs for each choice. This is written up in detail in a <a href="https://github.com/russellmcc/alphaosc/blob/master/design/Frequency%20Accuracy.ipynb">jupyter notebook</a> in the source repo.</p>
+  </div>
+</article>
+
+<div class="post">
+  <p>
+    All images and text are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/us/deed.en_US">Creative Commons Attribution 3.0 United States License</a>, except as noted. Linked code, and embedded code examples are licensed separately.
+  </p>
+</div>
+
+  </div>
+  </body>
+</html>

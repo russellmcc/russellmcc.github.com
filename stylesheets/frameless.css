@@ -70,7 +70,7 @@ display: inline-block;
 height: 0 ;
 content: '';
 }
-.post ,.idyll-text-container ,.postpreview ,.post-title ,.resume-section ,.about-section{
+.post ,.postpreview ,.post-title ,.resume-section ,.about-section{
 background-color: rgb(26 ,26 ,30 );
 margin-top: 1rem ;
 padding-bottom: 1rem ;
@@ -93,7 +93,7 @@ text-transform: lowercase;
 font-size: 1.5rem ;
 margin-bottom: .3rem ;
 }
-.postpreview-title ,.post-title >h1 ,.postpreview h2,.post h2,.idyll-text-container h2,.resume h2{
+.postpreview-title ,.post-title >h1 ,.postpreview h2,.post h2,.resume h2{
 font-family: 'Ubuntu Condensed';
 color: rgb(211 ,41 ,100 );
 text-transform: lowercase;
@@ -102,7 +102,7 @@ padding-bottom: 0 ;
 margin-top: .3rem ;
 margin-bottom: .3rem ;
 }
-.postpreview time,.post time,.resume h3,.post h3,.idyll-text-container h3,.resume dt{
+.postpreview time,.post time,.resume h3,.post h3,.resume dt{
 font-family: 'Ubuntu Condensed';
 color: rgb(211 ,41 ,100 );
 text-transform: lowercase;
@@ -136,7 +136,7 @@ width: 6rem ;
 content: '';
 clear: both;
 }
-.postpreview hr,.post hr.idyll-text-container hr{
+hr{
 height: 1px ;
 background-color: rgba(255 ,189 ,199 ,.22 );
 border-style: none;
@@ -161,7 +161,7 @@ height: 0 ;
 visibility: hidden;
 clear: both;
 }
-.post p,.post ul,.post dt,.post dd,.idyll-text-container p,.idyll-text-container ul,.idyll-text-container dt,.idyll-text-container dd{
+.post p,.post span,.post ul,.post dt,.post dd{
 color: rgb(218 ,200 ,209 );
 font-family: 'Open Sans';
 font-weight: 300 ;
@@ -171,7 +171,7 @@ text-align: left;
 margin-top: 1rem ;
 padding: 0 ;
 }
-.post p:first-child ,.post ul:first-child ,.post dt:first-child ,.post dd:first-child ,.idyll-text-container p:first-child ,.idyll-text-container ul:first-child ,.idyll-text-container dt:first-child ,.idyll-text-container dd:first-child{
+.post p:first-child ,.post span:first-child ,.post ul:first-child ,.post dt:first-child ,.post dd:first-child{
 margin-top: 0 ;
 }
 .post a,.previewtext a{
@@ -182,6 +182,10 @@ font-size: .8rem ;
 line-height: 180%;
 text-align: left;
 color: rgb(211 ,41 ,100 );
+}
+.post .idyll-dynamic{
+color: rgb(211 ,41 ,100 );
+cursor: default;
 }
 .resume p,.resume li{
 color: rgb(218 ,200 ,209 );
@@ -223,7 +227,7 @@ width: 9.5999999999999996rem ;
 margin: 1em auto;
 display: block;
 }
-.post img,.idyll-text-container img{
+.post img{
 width: 100%;
 margin-left: 0 ;
 margin-right: 0 display:block;
@@ -255,7 +259,7 @@ margin-left: 7.20000000000000018rem ;
 .about-section dd{
 padding-left: 3.6000000000000001rem ;
 }
-.about-section h3,.post time,.postpreview time,.idyll-text-container time,.postpreview h3,.post h3,.idyll-text-container h3{
+.about-section h3,.post time,.postpreview time,.postpreview h3,.post h3{
 padding-left: 3.6000000000000001rem ;
 }
 .about-section img,.postpreview img{
@@ -279,24 +283,24 @@ text-align: right;
 width: 16.8000000000000007rem ;
 margin-left: 10.8000000000000007rem ;
 }
-.post h2,.idyll-text-container h2.postpreview h2,.resume h2{
+.post h2,.postpreview h2,.resume h2{
 text-align: left;
 }
-.post dt,.idyll-text-container dt{
+.post dt{
 float: left;
 width: 5.27999999999999936rem ;
 padding-left: .5em ;
 padding-right: .5em ;
 clear: both;
 }
-.post dd,.idyll-text-container dd{
+.post dd{
 float: right;
 padding-bottom: 1rem ;
 padding-top: 0 ;
 margin-top: 0 ;
 width: 18.6000000000000014rem ;
 }
-.post dl:after idyll-text-containerdl{
+.post dl:after{
 content: '.';
 display: block;
 height: 0 ;
