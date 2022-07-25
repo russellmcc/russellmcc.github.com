@@ -15,7 +15,6 @@
   <body>
 <div id="contact">
     <h1><a href="../index.html">russell mcclellan</a></h1>
-    <h2>musical hardware and software</h2>
     russell.mcclellan@gmail.com
 </div>
 <div id="content">
@@ -34,30 +33,44 @@
   <div class="post">
     <h2>Code</h2>
 <p>Code is available <a href="http://www.github.com/russellmcc/site-gen">on GitHub</a></p>
-<p>The code is based on a Haskell blog framework called <a href="http://jaspervdj.be/hakyll/">Hakyll</a>, although there is a CSS processor entirely of my own design.</p>
-<p>If you're interested in how it works, most of the guts are in four short files:</p>
+<p>The code is based on a Haskell blog framework called <a href="http://jaspervdj.be/hakyll/">Hakyll</a>, although there is a CSS
+processor entirely of my own design.</p>
+<p>If you're interested in how it works, most of the guts are in four
+short files:</p>
 <hr />
 <dl>
 <dt><a href="https://github.com/russellmcc/site-gen/blob/master/site.hs">site.hs</a></dt>
-<dd>contains the basic structure of the site. Hakyll 4 has finally removed all usage of the cumbersome <a href="http://www.haskell.org/arrows/">arrows</a> in its API, which are not my favorite abstraction for computation.
+<dd>
+contains the basic structure of the site. Hakyll 4 has finally removed
+all usage of the cumbersome <a href="http://www.haskell.org/arrows/">arrows</a> in its API, which are
+not my favorite abstraction for computation.
 </dd>
 </dl>
 <hr />
 <dl>
-<dt><a href="https://github.com/russellmcc/site-gen/blob/master/cssTokenizer.hs">cssTokenizer.hs</a> and <a href="https://github.com/russellmcc/site-gen/blob/master/cssProcess.hs">cssProcess.hs</a></dt>
-<dd>contain the custom CSS processor used to style the site. Since these files don't make any reference to the Hakyll framework, I was more free to write in a style I prefer. For cssProcess.hs I used <a href="https://personal.cis.strath.ac.uk/conor.mcbride/pub/she/">SHE</a> for the applicative idiom brackets. More syntactic sugar, please!
+<dt><a href="https://github.com/russellmcc/site-gen/blob/master/cssTokenizer.hs">cssTokenizer.hs</a>
+and <a href="https://github.com/russellmcc/site-gen/blob/master/cssProcess.hs">cssProcess.hs</a></dt>
+<dd>
+contain the custom CSS processor used to style the site. Since these
+files don't make any reference to the Hakyll framework, I was more free
+to write in a style I prefer. For cssProcess.hs I used <a href="https://personal.cis.strath.ac.uk/conor.mcbride/pub/she/">SHE</a>
+for the applicative idiom brackets. More syntactic sugar, please!
 </dd>
 </dl>
 <hr />
 <dl>
 <dt><a href="https://github.com/russellmcc/site-gen/blob/master/stylesheets/frameless.scss">frameless.scss</a></dt>
-<dd>includes the CSS used to style the site, heavily based on the <a href="http://framelessgrid.com/">"frameless grid"</a> design concept by Joni Korpi
+<dd>
+includes the CSS used to style the site, heavily based on the <a href="http://framelessgrid.com/">"frameless grid"</a> design concept by
+Joni Korpi
 </dd>
 </dl>
 </div>
 <div class="post">
 <h2>Design</h2>
-<p>Most of the initial design concept was done by my friend <a href="http://www.kate-lindsay.com">Kate Lindsay</a>, although due to time constraints I had to finalize the design and do the mobile layout. Clearly, I'm not much of a designer :-).</p>
+<p>Most of the initial design concept was done by my friend <a href="http://www.kate-lindsay.com">Kate Lindsay</a>, although due to
+time constraints I had to finalize the design and do the mobile layout.
+Clearly, I'm not much of a designer :-).</p>
   </div>
 </article>
 

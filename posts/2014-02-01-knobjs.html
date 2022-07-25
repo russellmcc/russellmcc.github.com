@@ -15,7 +15,6 @@
   <body>
 <div id="contact">
     <h1><a href="../index.html">russell mcclellan</a></h1>
-    <h2>musical hardware and software</h2>
     russell.mcclellan@gmail.com
 </div>
 <div id="content">
@@ -32,15 +31,28 @@
     <time itemprop="datePublished" datetime="2014-02-01">February  1, 2014</time>
   </div>
   <div class="post">
-    <p>For the last few years, whenever <a href="http://www.russellmcc.com/soundfxweb/">I've needed some browser-based knobs</a>, I've used <a href="http://anthonyterrien.com/knob/">Anothy Terrien's excellent jQuery Knob plug-in</a>. However, despite the high quality of that library, the situation has always made me feel a bit uncomfortable.</p>
-<p>I've never really liked the idea of bundling components like this as jQuery plug-ins, since there is no fundamental reason that a widget should need to be tied to a specific DOM-manipulation library. jQuery's bizarre API, muddled concepts, overcomplicated semantics, and totally unique aesthetic sense have always bothered me, and as browsers get more and more compatible, it has become totally viable to ditch jQuery entirely. The one thing that many of my projects still need from jQuery ecosystem is the various UI widgets that have for some reason been forever tied to the jQuery library.</p>
-<p>This project is an attempt to show that distributing widgets without jQuery doesn't have to be painful.</p>
+    <p>For the last few years, whenever <a href="http://www.russellmcc.com/soundfxweb/">I've needed some
+browser-based knobs</a>, I've used <a href="http://anthonyterrien.com/knob/">Anothy Terrien's excellent jQuery
+Knob plug-in</a>. However, despite the high quality of that library, the
+situation has always made me feel a bit uncomfortable.</p>
+<p>I've never really liked the idea of bundling components like this as
+jQuery plug-ins, since there is no fundamental reason that a widget
+should need to be tied to a specific DOM-manipulation library. jQuery's
+bizarre API, muddled concepts, overcomplicated semantics, and totally
+unique aesthetic sense have always bothered me, and as browsers get more
+and more compatible, it has become totally viable to ditch jQuery
+entirely. The one thing that many of my projects still need from jQuery
+ecosystem is the various UI widgets that have for some reason been
+forever tied to the jQuery library.</p>
+<p>This project is an attempt to show that distributing widgets without
+jQuery doesn't have to be painful.</p>
 </div>
 <div class="post">
 <h2>live demo</h2>
 <link rel="stylesheet" href="http://www.russellmcc.com/knobjs/knobjs.css">
 <script src="http://www.russellmcc.com/knobjs/knob.min.js"></script>
-<x-knobjs-knob id="knob"></x-knobjs-knob> <input id="input" style="vertical-align:top;">
+<x-knobjs-knob id="knob"></x-knobjs-knob>
+<input id="input" style="vertical-align:top;">
 <script type="text/javascript">
   window.onload = function(){
     var knob = document.getElementById("knob");
@@ -61,11 +73,21 @@
 </div>
 <div class="post">
 <h2>technical details</h2>
-<p>The project uses google's <a href="https://github.com/polymer/platform">polymer platform</a> to polyfill some <a href="http://www.w3.org/TR/components-intro/">web component</a> features. For now, it requires some non-semantic markup (i.e. the <code>&lt;x-knobjs-knob&gt;</code> tag is presentational and not semantic), but that will change once browsers start supporting the <a href="http://w3c.github.io/webcomponents/spec/shadow/">shadow DOM</a> in earnest. In the future, I'm hoping <code>knob.js</code> can simply become an alternate shadow-dom for the <code>&lt;input type='range'&gt;</code> element.</p>
+<p>The project uses google's <a href="https://github.com/polymer/platform">polymer platform</a> to
+polyfill some <a href="http://www.w3.org/TR/components-intro/">web
+component</a> features. For now, it requires some non-semantic markup
+(i.e. the <code>&lt;x-knobjs-knob&gt;</code> tag is presentational and
+not semantic), but that will change once browsers start supporting the
+<a href="http://w3c.github.io/webcomponents/spec/shadow/">shadow DOM</a>
+in earnest. In the future, I'm hoping <code>knob.js</code> can simply
+become an alternate shadow-dom for the
+<code>&lt;input type='range'&gt;</code> element.</p>
 </div>
 <div class="post">
 <h2>more info</h2>
-<p>Documentation, along with code under a permissive license, is available <a href="https://github.com/russellmcc/knobjs">on GitHub</a></p>
+<p>Documentation, along with code under a permissive license, is
+available <a href="https://github.com/russellmcc/knobjs">on
+GitHub</a></p>
   </div>
 </article>
 

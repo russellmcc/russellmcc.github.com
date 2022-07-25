@@ -15,7 +15,6 @@
   <body>
 <div id="contact">
     <h1><a href="../index.html">russell mcclellan</a></h1>
-    <h2>musical hardware and software</h2>
     russell.mcclellan@gmail.com
 </div>
 <div id="content">
@@ -33,21 +32,43 @@
   </div>
   <div class="post">
     <h1>Background</h1>
-<p><a href="https://www.github.com/russellmcc/audiounitjs">audiounitjs</a> was borne out of frustration with two issues: audio plug-in UIs are annoying to write, and iOS audio programming is difficult even to those with much audio programming experience, due to poorly documented APIs.</p>
-<p>In audiounitjs, you write a CoreAudio Audio Unit, and an HTML UI, and you get a Mac App, an iOS App, and a Audio Unit plug-in all using that UI, for free.</p>
+<p><a href="https://www.github.com/russellmcc/audiounitjs">audiounitjs</a> was
+borne out of frustration with two issues: audio plug-in UIs are annoying
+to write, and iOS audio programming is difficult even to those with much
+audio programming experience, due to poorly documented APIs.</p>
+<p>In audiounitjs, you write a CoreAudio Audio Unit, and an HTML UI, and
+you get a Mac App, an iOS App, and a Audio Unit plug-in all using that
+UI, for free.</p>
 </div>
 <div class="post">
 <h1>In Use</h1>
-<p>audiounitjs is simply a scaffolding script. You create a simple configuration <code>.json</code> file, and then the script will produce an Xcode project filled with boilerplate. Then, you can edit the <code>audio.cpp</code> file to create audio processing source, and also the <code>ui</code> folder to create the HTML UI. Full documentation is available <a href="https://www.github.com/russellmcc/audiounitjs">on GitHub</a></p>
+<p>audiounitjs is simply a scaffolding script. You create a simple
+configuration <code>.json</code> file, and then the script will produce
+an Xcode project filled with boilerplate. Then, you can edit the
+<code>audio.cpp</code> file to create audio processing source, and also
+the <code>ui</code> folder to create the HTML UI. Full documentation is
+available <a href="https://www.github.com/russellmcc/audiounitjs">on
+GitHub</a></p>
 </div>
 <div class="post">
 <h1>Getting it</h1>
-<p>Install via npm with <code>npm install -g audiounitjs</code>. I made a <a href="http://youtu.be/tqxOLf8EmdU">quick screencast</a> of the install process.</p>
+<p>Install via npm with <code>npm install -g audiounitjs</code>. I made
+a <a href="http://youtu.be/tqxOLf8EmdU">quick screencast</a> of the
+install process.</p>
 </div>
 <div class="post">
 <h1>Future Features</h1>
-<p>Currently, this is an extremely niche project, because it requires the user to be able to create Audio Unit C++ code. In the future I'd like to relax this requirement by adding some sort of JavaScript audio API. Perhaps the easiest way to do this would be to implement the WebAudio API for CoreAudio. If I did that, the JavaScript code would control all of the audio processing, and I could add the browser as a fourth target.</p>
-<p>Another feature that might be fun would be to automatically support OSC messages mapped to Audio Unit parameters. This would be not difficult to implement and would allow the stand alone and iphone versions to be automated by something like <a href="http://www.duration.cc/">duration.cc</a>.</p>
+<p>Currently, this is an extremely niche project, because it requires
+the user to be able to create Audio Unit C++ code. In the future I'd
+like to relax this requirement by adding some sort of JavaScript audio
+API. Perhaps the easiest way to do this would be to implement the
+WebAudio API for CoreAudio. If I did that, the JavaScript code would
+control all of the audio processing, and I could add the browser as a
+fourth target.</p>
+<p>Another feature that might be fun would be to automatically support
+OSC messages mapped to Audio Unit parameters. This would be not
+difficult to implement and would allow the stand alone and iphone
+versions to be automated by something like <a href="http://www.duration.cc/">duration.cc</a>.</p>
   </div>
 </article>
 

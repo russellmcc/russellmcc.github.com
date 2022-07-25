@@ -15,7 +15,6 @@
   <body>
 <div id="contact">
     <h1><a href="../index.html">russell mcclellan</a></h1>
-    <h2>musical hardware and software</h2>
     russell.mcclellan@gmail.com
 </div>
 <div id="content">
@@ -32,19 +31,57 @@
     <time itemprop="datePublished" datetime="2019-06-30">June 30, 2019</time>
   </div>
   <div class="post">
-    <p>Today I released <a href="https://github.com/russellmcc/brinicle">brinicle</a>, a toy framework for building audio effects using <a href="https://www.rust-lang.org">rust</a> and <a href="https://facebook.github.io/react-native/">react-native</a>.</p>
-<p>I've long been interested in better ways of writing audio software than the traditional method, which involves using C++ for both signal processing and user interface code. Since audio software usually has to work in real-time, certain language features like pausing garbage collection and locking thread synchronization (including dynamic memory allocation on most OSes) aren't available. This means languages that depend on these features for their basic functionality won't work. One of the few modern languages that's capable of working in a real time environment is Rust.</p>
-<p>Rust has many of the niceties you'd expect from a language designed in the 21st century, such as <a href="https://en.wikipedia.org/wiki/Tagged_union">native sum types</a> and <a href="https://doc.rust-lang.org/rust-by-example/trait.html">haskell-style polymorphism</a>, but with a low-level focus and commitment to zero-cost abstractions that even exceeds that of C++ (for example, the recommended error handling mechanism in Rust is zero-cost, while that of C++ is not). Additionally, Rust has a novel <a href="https://doc.rust-lang.org/1.8.0/book/references-and-borrowing.html">borrow checker</a> which saves you from common C/C++ headaches like use-after-free and race-conditions. I've been using Rust since 2015, but this is the first project I've shared outside of a small group of friends.</p>
-<p>Most of the work of brinicle was completed in early 2017, but I spent a month or two of side-project time this year porting it to the newer versions of Rust and C++ that are currently available.</p>
+    <p>Today I released <a href="https://github.com/russellmcc/brinicle">brinicle</a>, a toy
+framework for building audio effects using <a href="https://www.rust-lang.org">rust</a> and <a href="https://facebook.github.io/react-native/">react-native</a>.</p>
+<p>I've long been interested in better ways of writing audio software
+than the traditional method, which involves using C++ for both signal
+processing and user interface code. Since audio software usually has to
+work in real-time, certain language features like pausing garbage
+collection and locking thread synchronization (including dynamic memory
+allocation on most OSes) aren't available. This means languages that
+depend on these features for their basic functionality won't work. One
+of the few modern languages that's capable of working in a real time
+environment is Rust.</p>
+<p>Rust has many of the niceties you'd expect from a language designed
+in the 21st century, such as <a href="https://en.wikipedia.org/wiki/Tagged_union">native sum types</a>
+and <a href="https://doc.rust-lang.org/rust-by-example/trait.html">haskell-style
+polymorphism</a>, but with a low-level focus and commitment to zero-cost
+abstractions that even exceeds that of C++ (for example, the recommended
+error handling mechanism in Rust is zero-cost, while that of C++ is
+not). Additionally, Rust has a novel <a href="https://doc.rust-lang.org/1.8.0/book/references-and-borrowing.html">borrow
+checker</a> which saves you from common C/C++ headaches like
+use-after-free and race-conditions. I've been using Rust since 2015, but
+this is the first project I've shared outside of a small group of
+friends.</p>
+<p>Most of the work of brinicle was completed in early 2017, but I spent
+a month or two of side-project time this year porting it to the newer
+versions of Rust and C++ that are currently available.</p>
 </div><div class="post">
 
-<p>For the UI, brinicle uses react-native. In the current release, brinicle only supports audio plug-ins in macOS (although I have some hacked branches lying around which support iOS). This means it uses the somewhat half-baked react-native-macos port. While react-native is conceptually much clearer than other desktop UI libraries, it does have a lot of layers to it, which makes it complex to work with and debug.</p>
+<p>For the UI, brinicle uses react-native. In the current release,
+brinicle only supports audio plug-ins in macOS (although I have some
+hacked branches lying around which support iOS). This means it uses the
+somewhat half-baked react-native-macos port. While react-native is
+conceptually much clearer than other desktop UI libraries, it does have
+a lot of layers to it, which makes it complex to work with and
+debug.</p>
 <p>The knobs in the example app created by the scaffolding script use <a href="https://airbnb.io/lottie/#/">lottie</a> for smooth operation.</p>
 <p><img src="../images/brinicle-example.png" alt="Demo app" /></p>
 </div><div class="post">
 
-<p>Most of the work in this project was in the <span class="underline">interfaces</span> between the different pieces of technology. Rust is particularly difficult to interface with C++, since everything has to go through a C interop layer. For things like sum-types, I represented these as enums on the Rust side, and <code>std::variant</code>'s on the C++-side, each wrapping a C interface. Once in C++, it was fairly easy to interface with react-native through Objective-C++.</p>
-<p>Hopefully, this project inspires someone to dream about better ways to write audio software. While I'm not planning on investing in this project in the near future, I may well come back to it at some point. Obvious ways to extend it include: iOS support, virtual instrument support in addition to virtual effect support, and fleshing out the signal-processing library on the rust side.</p>
+<p>Most of the work in this project was in the <u>interfaces</u> between
+the different pieces of technology. Rust is particularly difficult to
+interface with C++, since everything has to go through a C interop
+layer. For things like sum-types, I represented these as enums on the
+Rust side, and <code>std::variant</code>'s on the C++-side, each
+wrapping a C interface. Once in C++, it was fairly easy to interface
+with react-native through Objective-C++.</p>
+<p>Hopefully, this project inspires someone to dream about better ways
+to write audio software. While I'm not planning on investing in this
+project in the near future, I may well come back to it at some point.
+Obvious ways to extend it include: iOS support, virtual instrument
+support in addition to virtual effect support, and fleshing out the
+signal-processing library on the rust side.</p>
   </div>
 </article>
 

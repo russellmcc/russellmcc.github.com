@@ -106,7 +106,9 @@ margin-bottom: .3rem ;
 font-family: 'Ubuntu Condensed';
 color: rgb(211 ,41 ,100 );
 text-transform: lowercase;
-font-size: 0.8rem ;
+font-size: 1.19999999999999996rem ;
+margin-top: .3rem ;
+margin-bottom: .3rem ;
 text-align: left;
 }
 .postpreview time,.post time,.postpreview-title{
@@ -205,7 +207,7 @@ margin: 1em auto;
 width: 9.5999999999999996rem ;
 }
 .resume p{
-margin: 0 1em ;
+margin: 0.6em 1em ;
 line-height: 1.6000000000000001em ;
 }
 .resume li{
@@ -213,14 +215,10 @@ margin-left: 1rem ;
 margin-bottom: .8rem ;
 }
 .resume ul{
-list-style-type: none;
 margin-bottom: .8rem ;
 }
 .resume a{
 text-decoration: underline;
-}
-.resume .pdflink{
-margin-left: 3.6000000000000001rem ;
 }
 .postpreview img{
 width: 9.5999999999999996rem ;

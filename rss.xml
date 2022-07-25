@@ -19,19 +19,44 @@
   </div>
   <div class="post">
     <h2>The Puzzle</h2>
-<p>3-SAT is a puzzle game. You're presented with a finite number of letter triplets. Some letters are red, and some letters are black. You must pick one letter of each triplet, with the rule that a choice is only valid if you've never picked that particular letter in a different color. So, once you choose a black "A" in a triplet, you are never allowed to choose a red "A" in any other triplet.</p>
+<p>3-SAT is a puzzle game. You're presented with a finite number of
+letter triplets. Some letters are red, and some letters are black. You
+must pick one letter of each triplet, with the rule that a choice is
+only valid if you've never picked that particular letter in a different
+color. So, once you choose a black "A" in a triplet, you are never
+allowed to choose a red "A" in any other triplet.</p>
 </div>
 <div class="post">
 <h2>Why</h2>
-<p>3-SAT turns out to be important to computer science because it's perhaps the simplest example of a type of problem called an <em>NP-Complete</em> problem. Generally first or second year computer science majors will learn about these problems in a basic complexity theory class.</p>
-<p>Briefly, an <em>NP-Complete</em> problem is both <em>NP</em> and <em>NP-Hard</em>. Being <em>NP</em> means that given a guess solution, you can quickly verify whether or not the guess is correct. In this case, you can just make sure that each triplet has a letter selected, and there are no copies of the same letters in different colors. Being <em>NP-Hard</em> means you can translate any <em>NP</em> problem into a 3-SAT problem.</p>
-<p>I thought it would be a fun exercise to code up browser based "puzzle game" versions of classic CS problems like this, and create tools to translate puzzles from one to another. The project is also an excuse to learn about different single page application frameworks.</p>
+<p>3-SAT turns out to be important to computer science because it's
+perhaps the simplest example of a type of problem called an
+<em>NP-Complete</em> problem. Generally first or second year computer
+science majors will learn about these problems in a basic complexity
+theory class.</p>
+<p>Briefly, an <em>NP-Complete</em> problem is both <em>NP</em> and
+<em>NP-Hard</em>. Being <em>NP</em> means that given a guess solution,
+you can quickly verify whether or not the guess is correct. In this
+case, you can just make sure that each triplet has a letter selected,
+and there are no copies of the same letters in different colors. Being
+<em>NP-Hard</em> means you can translate any <em>NP</em> problem into a
+3-SAT problem.</p>
+<p>I thought it would be a fun exercise to code up browser based "puzzle
+game" versions of classic CS problems like this, and create tools to
+translate puzzles from one to another. The project is also an excuse to
+learn about different single page application frameworks.</p>
 </div>
 <div class="post">
 <h2>The Code</h2>
-<p>available <a href="https://github.com/russellmcc/3-SAT">on GitHub</a>.</p>
-<p>I used the "ember.js" framework for the UI, and coded everything in CoffeeScript.<br />
-My main goal in writing this was to learn a bit about the ember.js framework. Frankly, I wasn't a big fan of ember, as it had the sort of leaky-abstraction "magic" that I've come to deeply fear. By this I mean there are some features where the implementation is not covered in the documentation, but you have to know how everything works to use the framework correctly.</p>
+<p>available <a href="https://github.com/russellmcc/3-SAT">on
+GitHub</a>.</p>
+<p>I used the "ember.js" framework for the UI, and coded everything in
+CoffeeScript.<br />
+My main goal in writing this was to learn a bit about the ember.js
+framework. Frankly, I wasn't a big fan of ember, as it had the sort of
+leaky-abstraction "magic" that I've come to deeply fear. By this I mean
+there are some features where the implementation is not covered in the
+documentation, but you have to know how everything works to use the
+framework correctly.</p>
   </div>
 </article>
 ]]></description>
@@ -51,15 +76,27 @@ My main goal in writing this was to learn a bit about the ember.js framework. Fr
   <div class="post">
     <h2>The ghost in the machine has a face</h2>
 <p><img src="/images/plface0.png" alt="creepy face 1" /></p>
-<p>Internet citizen Philip McCarthy created <a href="http://iobound.com/2012/08/pareidoloop/">pareidoloop</a>, a "face" generator that was simply a random-image generator hooked up in a loop to a face recognizer program. Things that look more like faces to the computer are kept, and things that look less like faces are discarded. After a long time, something vaguely representing a distorted face appears.</p>
+<p>Internet citizen Philip McCarthy created <a
+href="http://iobound.com/2012/08/pareidoloop/">pareidoloop</a>, a "face"
+generator that was simply a random-image generator hooked up in a loop
+to a face recognizer program. Things that look more like faces to the
+computer are kept, and things that look less like faces are discarded.
+After a long time, something vaguely representing a distorted face
+appears.</p>
 <p><img src="/images/plface1.png" alt="creepy face 1" /></p>
-<p>The images are visually very striking, and there's always something a little cosmically creepy about computer-generated art.</p>
-<p>I made a few modifications to the original formula - the images are now in color, you can work at larger canvas sizes (although this would be slower), and there's a "simulated annealing" process instead of straight randomness to speed the process up while avoiding local maxima.</p>
+<p>The images are visually very striking, and there's always something a
+little cosmically creepy about computer-generated art.</p>
+<p>I made a few modifications to the original formula - the images are
+now in color, you can work at larger canvas sizes (although this would
+be slower), and there's a "simulated annealing" process instead of
+straight randomness to speed the process up while avoiding local
+maxima.</p>
 <p><img src="/images/plface2.png" alt="creepy face 3" /></p>
 </div>
 <div class="post">
 <h2>The code</h2>
-<p>Avaiable <a href="https://github.com/russellmcc/pareidoloop">on GitHub</a>.</p>
+<p>Avaiable <a href="https://github.com/russellmcc/pareidoloop">on
+GitHub</a>.</p>
   </div>
 </article>
 ]]></description>
@@ -78,31 +115,55 @@ My main goal in writing this was to learn a bit about the ember.js framework. Fr
   </div>
   <div class="post">
     <h2>Code</h2>
-<p>Code is available <a href="http://www.github.com/russellmcc/site-gen">on GitHub</a></p>
-<p>The code is based on a Haskell blog framework called <a href="http://jaspervdj.be/hakyll/">Hakyll</a>, although there is a CSS processor entirely of my own design.</p>
-<p>If you're interested in how it works, most of the guts are in four short files:</p>
+<p>Code is available <a
+href="http://www.github.com/russellmcc/site-gen">on GitHub</a></p>
+<p>The code is based on a Haskell blog framework called <a
+href="http://jaspervdj.be/hakyll/">Hakyll</a>, although there is a CSS
+processor entirely of my own design.</p>
+<p>If you're interested in how it works, most of the guts are in four
+short files:</p>
 <hr />
 <dl>
-<dt><a href="https://github.com/russellmcc/site-gen/blob/master/site.hs">site.hs</a></dt>
-<dd>contains the basic structure of the site. Hakyll 4 has finally removed all usage of the cumbersome <a href="http://www.haskell.org/arrows/">arrows</a> in its API, which are not my favorite abstraction for computation.
+<dt><a
+href="https://github.com/russellmcc/site-gen/blob/master/site.hs">site.hs</a></dt>
+<dd>
+contains the basic structure of the site. Hakyll 4 has finally removed
+all usage of the cumbersome <a
+href="http://www.haskell.org/arrows/">arrows</a> in its API, which are
+not my favorite abstraction for computation.
 </dd>
 </dl>
 <hr />
 <dl>
-<dt><a href="https://github.com/russellmcc/site-gen/blob/master/cssTokenizer.hs">cssTokenizer.hs</a> and <a href="https://github.com/russellmcc/site-gen/blob/master/cssProcess.hs">cssProcess.hs</a></dt>
-<dd>contain the custom CSS processor used to style the site. Since these files don't make any reference to the Hakyll framework, I was more free to write in a style I prefer. For cssProcess.hs I used <a href="https://personal.cis.strath.ac.uk/conor.mcbride/pub/she/">SHE</a> for the applicative idiom brackets. More syntactic sugar, please!
+<dt><a
+href="https://github.com/russellmcc/site-gen/blob/master/cssTokenizer.hs">cssTokenizer.hs</a>
+and <a
+href="https://github.com/russellmcc/site-gen/blob/master/cssProcess.hs">cssProcess.hs</a></dt>
+<dd>
+contain the custom CSS processor used to style the site. Since these
+files don't make any reference to the Hakyll framework, I was more free
+to write in a style I prefer. For cssProcess.hs I used <a
+href="https://personal.cis.strath.ac.uk/conor.mcbride/pub/she/">SHE</a>
+for the applicative idiom brackets. More syntactic sugar, please!
 </dd>
 </dl>
 <hr />
 <dl>
-<dt><a href="https://github.com/russellmcc/site-gen/blob/master/stylesheets/frameless.scss">frameless.scss</a></dt>
-<dd>includes the CSS used to style the site, heavily based on the <a href="http://framelessgrid.com/">"frameless grid"</a> design concept by Joni Korpi
+<dt><a
+href="https://github.com/russellmcc/site-gen/blob/master/stylesheets/frameless.scss">frameless.scss</a></dt>
+<dd>
+includes the CSS used to style the site, heavily based on the <a
+href="http://framelessgrid.com/">"frameless grid"</a> design concept by
+Joni Korpi
 </dd>
 </dl>
 </div>
 <div class="post">
 <h2>Design</h2>
-<p>Most of the initial design concept was done by my friend <a href="http://www.kate-lindsay.com">Kate Lindsay</a>, although due to time constraints I had to finalize the design and do the mobile layout. Clearly, I'm not much of a designer :-).</p>
+<p>Most of the initial design concept was done by my friend <a
+href="http://www.kate-lindsay.com">Kate Lindsay</a>, although due to
+time constraints I had to finalize the design and do the mobile layout.
+Clearly, I'm not much of a designer :-).</p>
   </div>
 </article>
 ]]></description>
@@ -121,20 +182,48 @@ My main goal in writing this was to learn a bit about the ember.js framework. Fr
   </div>
   <div class="post">
     <h2>background</h2>
-<p><a href="http://www.youtube.com/watch?v=GCyiDaM3boc">Modular synthesizers</a> are musical instruments made out of removable, replacable building blocks. Each module in a synth is able to interact with all the others to create unique sonic landscapes. While precise, <a href="http://www.soundonsound.com/sos/allsynthsecrets.htm">engineered</a> sounds are possible, the tactile physical nature of the system tends to encourage organic, creative exploration of the rich parameter space.</p>
-<p>I've been interested in designing modules for this ecosystem for a long time, and now I've finally found a comfortable design and fabrication stack for it. As a proof of concept, I've created a very simple type of module called a buffered multiple.</p>
-<p>A multiple is just a signal splitter, allowing the user to connect one output into multiple inputs of other modules.</p>
+<p><a href="http://www.youtube.com/watch?v=GCyiDaM3boc">Modular
+synthesizers</a> are musical instruments made out of removable,
+replacable building blocks. Each module in a synth is able to interact
+with all the others to create unique sonic landscapes. While precise, <a
+href="http://www.soundonsound.com/sos/allsynthsecrets.htm">engineered</a>
+sounds are possible, the tactile physical nature of the system tends to
+encourage organic, creative exploration of the rich parameter space.</p>
+<p>I've been interested in designing modules for this ecosystem for a
+long time, and now I've finally found a comfortable design and
+fabrication stack for it. As a proof of concept, I've created a very
+simple type of module called a buffered multiple.</p>
+<p>A multiple is just a signal splitter, allowing the user to connect
+one output into multiple inputs of other modules.</p>
 <h2>Electronic Design</h2>
-<p>The electronics of a multiple are quite simple, really just consisting of a single op amp stage per output. There are two inputs, each providing three buffered clones of the input signal. If there is no jack plugged into the second input, all the outputs follow the first input signal.</p>
-<p>For the board layout I used <a href="http://www.cadsoftusa.com/">EAGLE</a>, which is free for non-commercial use and does the job. The learning curve was quite difficult, and I probably wouldn't have been able to use it without the support of some experienced friends. While there are other electronic CAD choices out there, none are nearly as ubiquitous for hobbiests.</p>
-<p>All of the design files for the project, including a list of all parts required, are <a href="https://github.com/russellmcc/hexbuffer">on GitHub</a> under a permissive license.</p>
+<p>The electronics of a multiple are quite simple, really just
+consisting of a single op amp stage per output. There are two inputs,
+each providing three buffered clones of the input signal. If there is no
+jack plugged into the second input, all the outputs follow the first
+input signal.</p>
+<p>For the board layout I used <a
+href="http://www.cadsoftusa.com/">EAGLE</a>, which is free for
+non-commercial use and does the job. The learning curve was quite
+difficult, and I probably wouldn't have been able to use it without the
+support of some experienced friends. While there are other electronic
+CAD choices out there, none are nearly as ubiquitous for hobbiests.</p>
+<p>All of the design files for the project, including a list of all
+parts required, are <a href="https://github.com/russellmcc/hexbuffer">on
+GitHub</a> under a permissive license.</p>
 <h2>Board Fabrication</h2>
 <p><img src="/images/buffer_board.jpg" alt="PCB" /></p>
-<p>The board was fabricated by <a href="http://oshpark.com/">OSH Park</a>, which was quite affordable at $6 per board. A nice feature of OSH Park is that they support EAGLE files, so no export to the more-standard gerber files is needed.</p>
-<p>I hand assembled the boards with parts from <a href="http://www.mouser.com/ProjectManager/ProjectDetail.aspx?AccessID=8b942c2668">mouser</a>.</p>
+<p>The board was fabricated by <a href="http://oshpark.com/">OSH
+Park</a>, which was quite affordable at $6 per board. A nice feature of
+OSH Park is that they support EAGLE files, so no export to the
+more-standard gerber files is needed.</p>
+<p>I hand assembled the boards with parts from <a
+href="http://www.mouser.com/ProjectManager/ProjectDetail.aspx?AccessID=8b942c2668">mouser</a>.</p>
 <h2>Front Panel</h2>
 <p><img src="/images/buffer_insitu.jpg" alt="completed buffer" /></p>
-<p>The panel was lasercut out of acrylic from <a href="https://www.inventables.com/">Inventables</a> at a <a href="http://dangerawesome.co/">local lasercutting shop</a>. The design files were done in InkScape.</p>
+<p>The panel was lasercut out of acrylic from <a
+href="https://www.inventables.com/">Inventables</a> at a <a
+href="http://dangerawesome.co/">local lasercutting shop</a>. The design
+files were done in InkScape.</p>
   </div>
 </article>
 ]]></description>
@@ -153,17 +242,25 @@ My main goal in writing this was to learn a bit about the ember.js framework. Fr
   </div>
   <div class="post">
     <h1>Libraries</h1>
-<p>These are available on <a href="https://github.com/russellmcc/eurorack_eagle">github</a></p>
+<p>These are available on <a
+href="https://github.com/russellmcc/eurorack_eagle">github</a></p>
 <hr />
 <dl>
-<dt><a href="https://raw.github.com/russellmcc/eurorack_eagle/master/erthenvar.lbr">erthenvar.lbr</a></dt>
-<dd>Contains tested footprints for the wonderfully made <a href="http://erthenvar.com/store/eurodiy/35hardware">erthenvar</a> vertical mount jacks.
+<dt><a
+href="https://raw.github.com/russellmcc/eurorack_eagle/master/erthenvar.lbr">erthenvar.lbr</a></dt>
+<dd>
+Contains tested footprints for the wonderfully made <a
+href="http://erthenvar.com/store/eurodiy/35hardware">erthenvar</a>
+vertical mount jacks.
 </dd>
 </dl>
 <hr />
 <dl>
-<dt><a href="https://raw.github.com/russellmcc/eurorack_eagle/master/eurorack.lbr">eurorack.lbr</a></dt>
-<dd>Contains tested footprints for doepfer-style power connectors in both 10 and 16 pin.
+<dt><a
+href="https://raw.github.com/russellmcc/eurorack_eagle/master/eurorack.lbr">eurorack.lbr</a></dt>
+<dd>
+Contains tested footprints for doepfer-style power connectors in both 10
+and 16 pin.
 </dd>
 </dl>
   </div>
@@ -184,21 +281,45 @@ My main goal in writing this was to learn a bit about the ember.js framework. Fr
   </div>
   <div class="post">
     <h1>Background</h1>
-<p><a href="https://www.github.com/russellmcc/audiounitjs">audiounitjs</a> was borne out of frustration with two issues: audio plug-in UIs are annoying to write, and iOS audio programming is difficult even to those with much audio programming experience, due to poorly documented APIs.</p>
-<p>In audiounitjs, you write a CoreAudio Audio Unit, and an HTML UI, and you get a Mac App, an iOS App, and a Audio Unit plug-in all using that UI, for free.</p>
+<p><a
+href="https://www.github.com/russellmcc/audiounitjs">audiounitjs</a> was
+borne out of frustration with two issues: audio plug-in UIs are annoying
+to write, and iOS audio programming is difficult even to those with much
+audio programming experience, due to poorly documented APIs.</p>
+<p>In audiounitjs, you write a CoreAudio Audio Unit, and an HTML UI, and
+you get a Mac App, an iOS App, and a Audio Unit plug-in all using that
+UI, for free.</p>
 </div>
 <div class="post">
 <h1>In Use</h1>
-<p>audiounitjs is simply a scaffolding script. You create a simple configuration <code>.json</code> file, and then the script will produce an Xcode project filled with boilerplate. Then, you can edit the <code>audio.cpp</code> file to create audio processing source, and also the <code>ui</code> folder to create the HTML UI. Full documentation is available <a href="https://www.github.com/russellmcc/audiounitjs">on GitHub</a></p>
+<p>audiounitjs is simply a scaffolding script. You create a simple
+configuration <code>.json</code> file, and then the script will produce
+an Xcode project filled with boilerplate. Then, you can edit the
+<code>audio.cpp</code> file to create audio processing source, and also
+the <code>ui</code> folder to create the HTML UI. Full documentation is
+available <a href="https://www.github.com/russellmcc/audiounitjs">on
+GitHub</a></p>
 </div>
 <div class="post">
 <h1>Getting it</h1>
-<p>Install via npm with <code>npm install -g audiounitjs</code>. I made a <a href="http://youtu.be/tqxOLf8EmdU">quick screencast</a> of the install process.</p>
+<p>Install via npm with <code>npm install -g audiounitjs</code>. I made
+a <a href="http://youtu.be/tqxOLf8EmdU">quick screencast</a> of the
+install process.</p>
 </div>
 <div class="post">
 <h1>Future Features</h1>
-<p>Currently, this is an extremely niche project, because it requires the user to be able to create Audio Unit C++ code. In the future I'd like to relax this requirement by adding some sort of JavaScript audio API. Perhaps the easiest way to do this would be to implement the WebAudio API for CoreAudio. If I did that, the JavaScript code would control all of the audio processing, and I could add the browser as a fourth target.</p>
-<p>Another feature that might be fun would be to automatically support OSC messages mapped to Audio Unit parameters. This would be not difficult to implement and would allow the stand alone and iphone versions to be automated by something like <a href="http://www.duration.cc/">duration.cc</a>.</p>
+<p>Currently, this is an extremely niche project, because it requires
+the user to be able to create Audio Unit C++ code. In the future I'd
+like to relax this requirement by adding some sort of JavaScript audio
+API. Perhaps the easiest way to do this would be to implement the
+WebAudio API for CoreAudio. If I did that, the JavaScript code would
+control all of the audio processing, and I could add the browser as a
+fourth target.</p>
+<p>Another feature that might be fun would be to automatically support
+OSC messages mapped to Audio Unit parameters. This would be not
+difficult to implement and would allow the stand alone and iphone
+versions to be automated by something like <a
+href="http://www.duration.cc/">duration.cc</a>.</p>
   </div>
 </article>
 ]]></description>
@@ -216,11 +337,29 @@ My main goal in writing this was to learn a bit about the ember.js framework. Fr
     <time itemprop="datePublished" datetime="2013-03-08">March  8, 2013</time>
   </div>
   <div class="post">
-    <p><a href="http://www.russellmcc.com/soundfxweb/">Here</a> is <a href="http://www.ghostfact.com/soundfx-machine">another emulation</a> of the <a href="http://www.youtube.com/watch?&amp;v=kokFu2xZt44">Remco soundfx machine</a>, this time for HTML5 audio.</p>
+    <p><a href="http://www.russellmcc.com/soundfxweb/">Here</a> is <a
+href="http://www.ghostfact.com/soundfx-machine">another emulation</a> of
+the <a href="http://www.youtube.com/watch?&amp;v=kokFu2xZt44">Remco
+soundfx machine</a>, this time for HTML5 audio.</p>
 <p><img src="/images/soundfx_ss.png" alt="screen shot" /></p>
-<p>The soundfx machine is a pretty weird toy. It's basically a <a href="http://en.wikipedia.org/wiki/Texas_Instruments_SN76477">noise generating chip</a> in a box, with each pin pulled out to a knob on the front panel. It's the same chip that was used to create the <a href="http://www.youtube.com/watch?v=KgJmRZ_oNmI">space invaders</a> sounds, among others classic video games. I still don't know who thought it was a good idea to give this to children!</p>
-<p>I had a lot of fun playing with my previous emulation, so I thought I'd build a web-based one as a way to learn about the current state of Web Audio. The main audio coding only took a few hours, which is a testament to how well thought out and efficiently designed the Web Audio API is. I ran into a few nasty bugs (the most embarassing was <a href="https://code.google.com/p/chromium/issues/detail?id=82795">this</a>, which has existed since May 2011 on both Chrome and Safari), but basically it was smooth sailing.</p>
-<p>Check out the <a href="http://www.coffeescript.org">coffeescript</a> code <a href="https://github.com/russellmcc/soundfxweb">on github</a>!</p>
+<p>The soundfx machine is a pretty weird toy. It's basically a <a
+href="http://en.wikipedia.org/wiki/Texas_Instruments_SN76477">noise
+generating chip</a> in a box, with each pin pulled out to a knob on the
+front panel. It's the same chip that was used to create the <a
+href="http://www.youtube.com/watch?v=KgJmRZ_oNmI">space invaders</a>
+sounds, among others classic video games. I still don't know who thought
+it was a good idea to give this to children!</p>
+<p>I had a lot of fun playing with my previous emulation, so I thought
+I'd build a web-based one as a way to learn about the current state of
+Web Audio. The main audio coding only took a few hours, which is a
+testament to how well thought out and efficiently designed the Web Audio
+API is. I ran into a few nasty bugs (the most embarassing was <a
+href="https://code.google.com/p/chromium/issues/detail?id=82795">this</a>,
+which has existed since May 2011 on both Chrome and Safari), but
+basically it was smooth sailing.</p>
+<p>Check out the <a href="http://www.coffeescript.org">coffeescript</a>
+code <a href="https://github.com/russellmcc/soundfxweb">on
+github</a>!</p>
   </div>
 </article>
 ]]></description>
@@ -256,8 +395,11 @@ My main goal in writing this was to learn a bit about the ember.js framework. Fr
 </script>
 </div>
 <div class="post">
-<p><a href="http://russellmcc.com/timelinejs/">Timeline.js</a> is a jquery plug-in/html5 widget that allows you to add mult-touch and mouse enabled line editing to your web app. Retina screens welcome.</p>
-<p>I plan to use it in future sequencer/synth projects for envelope editing.</p>
+<p><a href="http://russellmcc.com/timelinejs/">Timeline.js</a> is a
+jquery plug-in/html5 widget that allows you to add mult-touch and mouse
+enabled line editing to your web app. Retina screens welcome.</p>
+<p>I plan to use it in future sequencer/synth projects for envelope
+editing.</p>
 <p>Inspired by <a href="http://www.duration.cc/">duration.cc</a></p>
   </div>
 </article>
@@ -278,19 +420,42 @@ My main goal in writing this was to learn a bit about the ember.js framework. Fr
   <div class="post">
     <p><img src="/images/headphone_side.jpg" alt="PCB" /></p>
 <h2>background</h2>
-<p>Continuing my slow but steady progress on my <a href="/posts/2013-01-27-hexbuffer.html">DIY modular synthesizer</a>, I've just finished my second module: an inexpensive headphone and line-level amplifier.</p>
-<p>The humble purpose of this module is to bring signals from eurorack levels to both headphones and other audio equipment.</p>
+<p>Continuing my slow but steady progress on my <a
+href="/posts/2013-01-27-hexbuffer.html">DIY modular synthesizer</a>,
+I've just finished my second module: an inexpensive headphone and
+line-level amplifier.</p>
+<p>The humble purpose of this module is to bring signals from eurorack
+levels to both headphones and other audio equipment.</p>
 <h2>Electronic Design</h2>
-<p>Like my previous multiple module, the design doesn't contain anything novel or at all difficult. It's a totally standard amplifier, with levels set to the eurorack standard. One thing I was careful to do was use a socketed op-amp with a standard dual pinout, so users with <a href="http://tangentsoft.net/audio/opamps.html">discerning tastes</a> can replace the "jellybean" LF353 with a more "smooth" or "laid back" chip.</p>
-<p>For the board layout I again used <a href="http://www.cadsoftusa.com/">EAGLE</a>, which is free for non-commercial use. This time, most of the design was SMT, with the exception of the previously mentioned op-amps.</p>
-<p>Again, all of the design files for the project, including a list of all parts required, are <a href="https://github.com/russellmcc/eurorack_headphones">on GitHub</a> under a permissive license.</p>
+<p>Like my previous multiple module, the design doesn't contain anything
+novel or at all difficult. It's a totally standard amplifier, with
+levels set to the eurorack standard. One thing I was careful to do was
+use a socketed op-amp with a standard dual pinout, so users with <a
+href="http://tangentsoft.net/audio/opamps.html">discerning tastes</a>
+can replace the "jellybean" LF353 with a more "smooth" or "laid back"
+chip.</p>
+<p>For the board layout I again used <a
+href="http://www.cadsoftusa.com/">EAGLE</a>, which is free for
+non-commercial use. This time, most of the design was SMT, with the
+exception of the previously mentioned op-amps.</p>
+<p>Again, all of the design files for the project, including a list of
+all parts required, are <a
+href="https://github.com/russellmcc/eurorack_headphones">on GitHub</a>
+under a permissive license.</p>
 <h2>Board Fabrication</h2>
 <p><img src="/images/headphone_board.jpg" alt="PCB" /></p>
-<p>Like last time, The board was fabricated by <a href="http://oshpark.com/">OSH Park</a>.</p>
-<p>I'll write a future post on the SMT soldering technique I used, which involves lasers, toaster ovens, and a home-made stencil rig that I designed with my friend <a href="https://twitter.com/brendan0powers">Brendan</a>.</p>
+<p>Like last time, The board was fabricated by <a
+href="http://oshpark.com/">OSH Park</a>.</p>
+<p>I'll write a future post on the SMT soldering technique I used, which
+involves lasers, toaster ovens, and a home-made stencil rig that I
+designed with my friend <a
+href="https://twitter.com/brendan0powers">Brendan</a>.</p>
 <h2>Front Panel</h2>
 <p><img src="/images/headphone_front.jpg" alt="completed buffer" /></p>
-<p>Again, the panel was lasercut out of acrylic from <a href="https://www.inventables.com/">Inventables</a> at a <a href="http://dangerawesome.co/">local lasercutting shop</a>. The design files were done in InkScape.</p>
+<p>Again, the panel was lasercut out of acrylic from <a
+href="https://www.inventables.com/">Inventables</a> at a <a
+href="http://dangerawesome.co/">local lasercutting shop</a>. The design
+files were done in InkScape.</p>
   </div>
 </article>
 ]]></description>
@@ -311,79 +476,215 @@ My main goal in writing this was to learn a bit about the ember.js framework. Fr
     <p><a href="/images/cem3372.pdf">view as pdf</a></p>
 <hr />
 <h1>Background</h1>
-<p>Back in the heyday of the <a href="http://www.youtube.com/watch?v=xq4XOVde1Yk">giant</a> <a href="http://www.youtube.com/watch?v=Yv4EADAHwOA">analog</a> <a href="http://www.youtube.com/watch?v=FfhnF2SZTzE">polysynths</a> (i.e. the early to mid 80s), most synthesizers were powered by analog integrated circuits. The small size of these chips is what enabled synths to have so many voices in such a relatively small amount of space. Generally, each standard synth function (<a href="http://en.wikipedia.org/wiki/Voltage-controlled_oscillator">VCO</a>, <a href="http://en.wikipedia.org/wiki/Voltage-controlled_filter">VCF</a>, <a href="http://en.wikipedia.org/wiki/Voltage-controlled_amplifier">VCA</a>) was implemented by a dedicated chip.</p>
-<p>At first glance, there's nothing incredibly extraordinary about the <a href="http://www.synthtech.com/cem/c3372pdf.pdf">CEM3372</a> VCF chip. It is famous for its use in the wildly flexible <a href="http://www.youtube.com/watch?v=kmfzoHDqPpk">Oberheim</a> <a href="http://www.youtube.com/watch?v=XN6LuK80KrM">Xpander</a> filter circuit, but the flexibility of that filter comes from a <a href="http://manuals.fdiskc.com/flat/Oberheim%20Xpander%20Service%20Manual.pdf">clever circuit trick</a>, not from anything specific to a single chip <a href="#foot1">[1]</a>. The CEM3372 also has an unusual number of "convenience features" - an integrated VCA for the output and two VCAs for voltage-controlled mixing on the input. Perhaps because of these extra features it was marketed as a "signal processor" chip instead of just a "filter".</p>
-<p>However, a deeper look reveals that the filtering works through a slightly different technology than the previous generation of VCF chips (e.g. <a href="http://curtiselectromusic.com/uploads/CEM_3320_Long.pdf">CEM3320</a>, SSM2040, IR3109), and I thought it might be worth writing up how it works as the technology has applications for discrete circuits as well.</p>
+<p>Back in the heyday of the <a
+href="http://www.youtube.com/watch?v=xq4XOVde1Yk">giant</a> <a
+href="http://www.youtube.com/watch?v=Yv4EADAHwOA">analog</a> <a
+href="http://www.youtube.com/watch?v=FfhnF2SZTzE">polysynths</a> (i.e.
+the early to mid 80s), most synthesizers were powered by analog
+integrated circuits. The small size of these chips is what enabled
+synths to have so many voices in such a relatively small amount of
+space. Generally, each standard synth function (<a
+href="http://en.wikipedia.org/wiki/Voltage-controlled_oscillator">VCO</a>,
+<a
+href="http://en.wikipedia.org/wiki/Voltage-controlled_filter">VCF</a>,
+<a
+href="http://en.wikipedia.org/wiki/Voltage-controlled_amplifier">VCA</a>)
+was implemented by a dedicated chip.</p>
+<p>At first glance, there's nothing incredibly extraordinary about the
+<a href="http://www.synthtech.com/cem/c3372pdf.pdf">CEM3372</a> VCF
+chip. It is famous for its use in the wildly flexible <a
+href="http://www.youtube.com/watch?v=kmfzoHDqPpk">Oberheim</a> <a
+href="http://www.youtube.com/watch?v=XN6LuK80KrM">Xpander</a> filter
+circuit, but the flexibility of that filter comes from a <a
+href="http://manuals.fdiskc.com/flat/Oberheim%20Xpander%20Service%20Manual.pdf">clever
+circuit trick</a>, not from anything specific to a single chip <a
+href="#foot1">[1]</a>. The CEM3372 also has an unusual number of
+"convenience features" - an integrated VCA for the output and two VCAs
+for voltage-controlled mixing on the input. Perhaps because of these
+extra features it was marketed as a "signal processor" chip instead of
+just a "filter".</p>
+<p>However, a deeper look reveals that the filtering works through a
+slightly different technology than the previous generation of VCF chips
+(e.g. <a
+href="http://curtiselectromusic.com/uploads/CEM_3320_Long.pdf">CEM3320</a>,
+SSM2040, IR3109), and I thought it might be worth writing up how it
+works as the technology has applications for discrete circuits as
+well.</p>
 </div>
 <div class="post">
 <h1>Low Pass Filters</h1>
-<p>Low pass filters are designed to remove high frequency components from a signal. Any components higher in frequency than a certain "cut-off" frequency will be removed. Musically, filters are one of the most basic electronic "timbre modifiers" and are included in almost all synthesizers. In fact, the "sound" of the synthesizer is often defined by the character of its filter. <a href="http://www.youtube.com/watch?v=b8TdBJDC_9Q">Whole genres</a> have sprung up exploiting the effect created from changing the cut-off frequency over time.</p>
-<p>WARNING! The rest of this post will probably require some (hopefully basic) familiarity with circuits.</p>
+<p>Low pass filters are designed to remove high frequency components
+from a signal. Any components higher in frequency than a certain
+"cut-off" frequency will be removed. Musically, filters are one of the
+most basic electronic "timbre modifiers" and are included in almost all
+synthesizers. In fact, the "sound" of the synthesizer is often defined
+by the character of its filter. <a
+href="http://www.youtube.com/watch?v=b8TdBJDC_9Q">Whole genres</a> have
+sprung up exploiting the effect created from changing the cut-off
+frequency over time.</p>
+<p>WARNING! The rest of this post will probably require some (hopefully
+basic) familiarity with circuits.</p>
 <p>Perhaps the most basic lowpass filter consists of the following:</p>
 <p><img src="/images/rc_divider.png" alt="RC Divider" /></p>
-<p>This is a classic <a href="http://en.wikipedia.org/wiki/Voltage_divider">voltage divider</a>, with one of the resistors replaced with a capacitor. In fact, we can use the concept of <a href="http://en.wikipedia.org/wiki/Electrical_impedance">impedence</a> to treat the capacitor as a sort of frequency-dependent resistor<a href="#foot2">[2]</a>. For voltages that don't change, the capacitor acts as an open circuit; for high frequencies, it acts as a short; and for medium frequencies, somewhere in between. Just like a classic resistive voltage divider, when we put the capacitor in a divider the output voltage is:</p>
+<p>This is a classic <a
+href="http://en.wikipedia.org/wiki/Voltage_divider">voltage divider</a>,
+with one of the resistors replaced with a capacitor. In fact, we can use
+the concept of <a
+href="http://en.wikipedia.org/wiki/Electrical_impedance">impedence</a>
+to treat the capacitor as a sort of frequency-dependent resistor<a
+href="#foot2">[2]</a>. For voltages that don't change, the capacitor
+acts as an open circuit; for high frequencies, it acts as a short; and
+for medium frequencies, somewhere in between. Just like a classic
+resistive voltage divider, when we put the capacitor in a divider the
+output voltage is:</p>
 <p>$$V_{out} = V_{in}\frac{Z_{C}}{{Z_{C}}+{Z_{R}}}$$</p>
 <p>which reduces to</p>
 <p>$$V_{out} = V_{in}\frac{1}{1 + \frac{Z_R}{Z_C}}$$</p>
-<p>If the voltage is constant, \(Z_C\) will become infinite so \(V_{out} = V_{in}\). If the voltage is high frequency, \(Z_C\) will be zero so \(V_{out} = 0\). The exact "cut-off" point turns out to be \(\frac{1}{2\pi RC}\) - but to understand why you'll need some <a href="https://en.wikipedia.org/wiki/RC_circuit">math</a> outside the scope of this blog post.</p>
+<p>If the voltage is constant, \(Z_C\) will become infinite so \(V_{out}
+= V_{in}\). If the voltage is high frequency, \(Z_C\) will be zero so
+\(V_{out} = 0\). The exact "cut-off" point turns out to be
+\(\frac{1}{2\pi RC}\) - but to understand why you'll need some <a
+href="https://en.wikipedia.org/wiki/RC_circuit">math</a> outside the
+scope of this blog post.</p>
 <hr />
-<p>While this voltage-in, voltage-out divider is the most common scheme for low pass filtering, there are of course many others. The way the CEM3372 works is by sending the signal through an input <em>current</em> rather than voltage, and then putting the resistor and capacitor in parallel:</p>
+<p>While this voltage-in, voltage-out divider is the most common scheme
+for low pass filtering, there are of course many others. The way the
+CEM3372 works is by sending the signal through an input <em>current</em>
+rather than voltage, and then putting the resistor and capacitor in
+parallel:</p>
 <p><img src="/images/rc_parallel.png" alt="RC Parallel" /></p>
-<p>To analyze this arrangement, we use the <a href="http://en.wikipedia.org/wiki/Parallel_circuit">familiar formula</a> for parallel impedence:</p>
+<p>To analyze this arrangement, we use the <a
+href="http://en.wikipedia.org/wiki/Parallel_circuit">familiar
+formula</a> for parallel impedence:</p>
 <p>$$V_{out}= I_{in}\frac{Z_RZ_C}{Z_C + Z_R}$$</p>
 <p>or, after some alegbra</p>
 <p>$$V_{out}= I_{in}Z_R\frac{1}{1 + \frac{Z_R}{Z_C}}$$</p>
-<p>So, since \(Z_R\) does not vary with frequency, this is the exact same sort of lowpass filter as the first one we considered. In synthesizer filters, unlike most analog circuits, you need to be able to change the cut-off point of the filter based on electrical signals. To do this, we need some way to electronically control either the resistance or the capacitance.</p>
+<p>So, since \(Z_R\) does not vary with frequency, this is the exact
+same sort of lowpass filter as the first one we considered. In
+synthesizer filters, unlike most analog circuits, you need to be able to
+change the cut-off point of the filter based on electrical signals. To
+do this, we need some way to electronically control either the
+resistance or the capacitance.</p>
 </div>
 <div class="post">
 <h1>The CEM3372 Circuit</h1>
-<p>As described in <a href="http://www.google.com/patents/US4514704">this patent</a>, in the CEM3372, we simulate a current-controlled resistor by sending a large, steady current through a diode, and then sending a very small current as the signal. At a small enough signal current, the diode behaves as a voltage source followed by a resistor whose value is set by the large, steady current going through it. This is often called the diode's <a href="http://www.youtube.com/watch?v=QF6V74D2hbY">dynamic resistance.</a>. This is approximately \(\frac{26mV}{I_{steady}}\).</p>
-<p>Since synthesizers generally send audio signals as voltages, the CEM3372 circuit also includes voltage-to-current converters for both the audio and control input. Here's the circuit with control signal's voltage-to-current converter not shown.</p>
+<p>As described in <a
+href="http://www.google.com/patents/US4514704">this patent</a>, in the
+CEM3372, we simulate a current-controlled resistor by sending a large,
+steady current through a diode, and then sending a very small current as
+the signal. At a small enough signal current, the diode behaves as a
+voltage source followed by a resistor whose value is set by the large,
+steady current going through it. This is often called the diode's <a
+href="http://www.youtube.com/watch?v=QF6V74D2hbY">dynamic
+resistance.</a>. This is approximately \(\frac{26mV}{I_{steady}}\).</p>
+<p>Since synthesizers generally send audio signals as voltages, the
+CEM3372 circuit also includes voltage-to-current converters for both the
+audio and control input. Here's the circuit with control signal's
+voltage-to-current converter not shown.</p>
 <p><img src="/images/cem3372.png" alt="CEM3372 circuit" /></p>
-<p>The control signal is sent as a current \(I_{control}\), and the audio input is \(V_{in}\). D1 and Q1 comprise a common circuit idiom called a <a href="http://en.wikipedia.org/wiki/Current_mirror">current mirror</a>, which mirrors the current through D1 out the collector of Q1. In this case, with \(V_{in}\) steady, both D1 and Q1 will have \(\frac{I_{control}}{2}\) going through them.</p>
-<p>Now, let's assume \(V_{in}\) is quite small. Then increasing \(V_{in}\) will create a small increase of the current through Q1's collector. Let's call this small-scale current \(i_{in}\). Then this is mirrored by D1 and Q1, such that the same current as Q2's collector, i.e. \(\frac{I_{control}}{2}+i_{in}\) appears at Q1's collector. Since \(\frac{I_{control}}{2}\) is steady, none of it flows through C1, and it all goes through D2. Since the steady current is so much larger than \(i_{in}\), we can treat D2 as a dynamic resistor with resistance set by the steady current. So, in practice, we now have a very similar situation to the parallel low pass filter considered above, with the input current being the small-scale \(i_{in}\).</p>
+<p>The control signal is sent as a current \(I_{control}\), and the
+audio input is \(V_{in}\). D1 and Q1 comprise a common circuit idiom
+called a <a href="http://en.wikipedia.org/wiki/Current_mirror">current
+mirror</a>, which mirrors the current through D1 out the collector of
+Q1. In this case, with \(V_{in}\) steady, both D1 and Q1 will have
+\(\frac{I_{control}}{2}\) going through them.</p>
+<p>Now, let's assume \(V_{in}\) is quite small. Then increasing
+\(V_{in}\) will create a small increase of the current through Q1's
+collector. Let's call this small-scale current \(i_{in}\). Then this is
+mirrored by D1 and Q1, such that the same current as Q2's collector,
+i.e. \(\frac{I_{control}}{2}+i_{in}\) appears at Q1's collector. Since
+\(\frac{I_{control}}{2}\) is steady, none of it flows through C1, and it
+all goes through D2. Since the steady current is so much larger than
+\(i_{in}\), we can treat D2 as a dynamic resistor with resistance set by
+the steady current. So, in practice, we now have a very similar
+situation to the parallel low pass filter considered above, with the
+input current being the small-scale \(i_{in}\).</p>
 </div>
 <div class="post">
 <h1>more advanced analysis</h1>
-<p>The rest of the post will be a slightly more detailed analysis of this situation. The main result here is the transfer function is more-or-less the same as the RC filter case, except the amplitude of the output does not depend on the resistance.</p>
-<p>The main difference in the CEM3372 situation from the currentbased- RC filter above is that in the RC filter, both the resistance and the capacitor are tied to ground. That's not true here, as D2 goes accross \(V_{out}\) to \(V_{in} - V_{Q2be}\), where \(V_{Q2be}\) is the base-emitter voltage of Q1. This acts as afeedback loop and eliminates the awkward effect of increasing the output amplitude when the resistance increases.</p>
-<p>Let's recall first that for small signals, the diode acts as a resistor in series with a voltage source - call the voltage \(V_{D}\), and the resistance \(Z_{D}\). Since Q2 and D2 are matched, and the large-scale currents are the same, they have the same resistance <a href="#foot3">[3]</a> and voltage. So, the voltage accross D2 is given by \(V_{D} + i_{D2} Z_{D}\), and \(V_{Q2be} = V_{D} + i_{in} Z_{D}\)</p>
+<p>The rest of the post will be a slightly more detailed analysis of
+this situation. The main result here is the transfer function is
+more-or-less the same as the RC filter case, except the amplitude of the
+output does not depend on the resistance.</p>
+<p>The main difference in the CEM3372 situation from the currentbased-
+RC filter above is that in the RC filter, both the resistance and the
+capacitor are tied to ground. That's not true here, as D2 goes accross
+\(V_{out}\) to \(V_{in} - V_{Q2be}\), where \(V_{Q2be}\) is the
+base-emitter voltage of Q1. This acts as afeedback loop and eliminates
+the awkward effect of increasing the output amplitude when the
+resistance increases.</p>
+<p>Let's recall first that for small signals, the diode acts as a
+resistor in series with a voltage source - call the voltage \(V_{D}\),
+and the resistance \(Z_{D}\). Since Q2 and D2 are matched, and the
+large-scale currents are the same, they have the same resistance <a
+href="#foot3">[3]</a> and voltage. So, the voltage accross D2 is given
+by \(V_{D} + i_{D2} Z_{D}\), and \(V_{Q2be} = V_{D} + i_{in} Z_{D}\)</p>
 <p>So, to sum up, we have a system of equations:</p>
-<p>$$i_{D2} + i_{C1} = i_{in}$$ $$V_{D2} = V_{D} + i_{D2}Z_{D}$$ $$V_{Q2be} = V_{D} + i_{in}Z_{D}$$ $$V_{out} = V_{D2} + V_{in} - V_{Q2be} = i_{C1} Z_{C1}$$</p>
+<p>$$i_{D2} + i_{C1} = i_{in}$$ $$V_{D2} = V_{D} + i_{D2}Z_{D}$$
+$$V_{Q2be} = V_{D} + i_{in}Z_{D}$$ $$V_{out} = V_{D2} + V_{in} -
+V_{Q2be} = i_{C1} Z_{C1}$$</p>
 <p>which can be solved with basic algebra to</p>
 <p>$$V_{out} = V_{in}\frac{1}{1 + \frac{Z_{D}}{Z_{C1}}}$$</p>
-<p>as we were trying to show. Using the formula for an RC filter's frequency cut-off from above, we have</p>
+<p>as we were trying to show. Using the formula for an RC filter's
+frequency cut-off from above, we have</p>
 <p>$$f_{c} = \frac{I_{control}}{4 C \pi \cdot 26mV}$$</p>
-<p>which, as we hoped, is directly controllable from the control current.</p>
+<p>which, as we hoped, is directly controllable from the control
+current.</p>
 </div>
 <div class="post">
 <h1>advantages</h1>
-<p>Using a diode's dynamic resistance inside the differential pair arrangement provides many advantages over the standard <a href="http://en.wikipedia.org/wiki/Operational_transconductance_amplifier">OTA</a> based low-pass filter. The main one is that in the CEM3372, unlike competitor chips, the stages themselves don't need to have feedback. This means far fewer external components and less trimming required. The signal is passed in as a voltage and comes out as a voltage, so the stages can be cascaded without ever converting from current to voltage <a href="#foot4">[4]</a>.</p>
-<p>The downside to all this is that you lose the ability to make a voltage-controlled integrator, which is a necessary part of the popular <a href="http://en.wikipedia.org/wiki/State_variable_filter">state variable</a> filter used in the <a href="http://www.youtube.com/watch?v=mTC4EM9DefQ">Oberheim SEM</a>, Jupiter 6, and many other synthesizers.</p>
+<p>Using a diode's dynamic resistance inside the differential pair
+arrangement provides many advantages over the standard <a
+href="http://en.wikipedia.org/wiki/Operational_transconductance_amplifier">OTA</a>
+based low-pass filter. The main one is that in the CEM3372, unlike
+competitor chips, the stages themselves don't need to have feedback.
+This means far fewer external components and less trimming required. The
+signal is passed in as a voltage and comes out as a voltage, so the
+stages can be cascaded without ever converting from current to voltage
+<a href="#foot4">[4]</a>.</p>
+<p>The downside to all this is that you lose the ability to make a
+voltage-controlled integrator, which is a necessary part of the popular
+<a href="http://en.wikipedia.org/wiki/State_variable_filter">state
+variable</a> filter used in the <a
+href="http://www.youtube.com/watch?v=mTC4EM9DefQ">Oberheim SEM</a>,
+Jupiter 6, and many other synthesizers.</p>
 </div>
 <div class="post">
 <h1>footnotes</h1>
 <dl>
 <dt><a id="foot1"></a> 1</dt>
-<dd>Like many synthesizer-related tricks, its origin can be <a href="http://electronotes.netfirms.com/EN85VCF.PDF">traced back</a> to Bernie Hutchin's <a href="http://electronotes.netfirms.com/">ElectroNotes</a> newsletter.
+<dd>
+Like many synthesizer-related tricks, its origin can be <a
+href="http://electronotes.netfirms.com/EN85VCF.PDF">traced back</a> to
+Bernie Hutchin's <a
+href="http://electronotes.netfirms.com/">ElectroNotes</a> newsletter.
 </dd>
 </dl>
 <hr />
 <dl>
 <dt><a id="foot2"></a> 2</dt>
-<dd>Of course, experienced circuiteers will recognize that in addition to having an effect on the amplitude, capacitors also have an effect on the phase.s
+<dd>
+Of course, experienced circuiteers will recognize that in addition to
+having an effect on the amplitude, capacitors also have an effect on the
+phase.s
 </dd>
 </dl>
 <hr />
 <dl>
 <dt><a id="foot3"></a> 3</dt>
-<dd>Of course, for Q2, this is actually the so-called <a href="http://en.wikipedia.org/wiki/Transconductance">transimpedence</a>, the base-emitter voltage change per amp of collector-emitter current. Base currents aren't considered in this quick-and-dirty analysis.
+<dd>
+Of course, for Q2, this is actually the so-called <a
+href="http://en.wikipedia.org/wiki/Transconductance">transimpedence</a>,
+the base-emitter voltage change per amp of collector-emitter current.
+Base currents aren't considered in this quick-and-dirty analysis.
 </dd>
 </dl>
 <hr />
 <dl>
 <dt><a id="foot4"></a> 4</dt>
-<dd>As mentioned in the patent, base currents will create errors that will have to be compensated when the stages are connected directly.
+<dd>
+As mentioned in the patent, base currents will create errors that will
+have to be compensated when the stages are connected directly.
 </dd>
 </dl>
   </div>
@@ -403,73 +704,212 @@ My main goal in writing this was to learn a bit about the ember.js framework. Fr
     <time itemprop="datePublished" datetime="2013-08-03">August  3, 2013</time>
   </div>
   <div class="post">
-    <h2>or, <em>An Elementary Explanation of Mach-o Linkage with Applications to Having Your C++ Program Not Constantly Crash in <code>dynamic_cast</code></em></h2>
-<p>Sometimes it seems like a good idea to split your large program into multiple dynamic libraries, and share C++ objects across dylib boundaries. While this approach is certainly feasible, the waters are surprisingly treacherous, especially for apps that use C++ RTTI. This guide is meant for deploying to Apple Platforms ca. Mavericks/iOS7, but it probably applies to any mach-o platform with clang as a compiler, and the ELF case is similar enough that this guide will probably still be useful.</p>
+    <h2>or, <em>An Elementary Explanation of Mach-o Linkage with
+Applications to Having Your C++ Program Not Constantly Crash in
+<code>dynamic_cast</code></em></h2>
+<p>Sometimes it seems like a good idea to split your large program into
+multiple dynamic libraries, and share C++ objects across dylib
+boundaries. While this approach is certainly feasible, the waters are
+surprisingly treacherous, especially for apps that use C++ RTTI. This
+guide is meant for deploying to Apple Platforms ca. Mavericks/iOS7, but
+it probably applies to any mach-o platform with clang as a compiler, and
+the ELF case is similar enough that this guide will probably still be
+useful.</p>
 </div>
 <div class="post">
 <h2>Symbol Visibility</h2>
-<p>While there are is a veritible managerie of symbol types that exist in mach-o binaries (and we will be encountering many of these shortly), there is only one distinction you can make in source code to control which symbol type gets generated during linking: "default" visibility vs "hidden" visibility.</p>
+<p>While there are is a veritible managerie of symbol types that exist
+in mach-o binaries (and we will be encountering many of these shortly),
+there is only one distinction you can make in source code to control
+which symbol type gets generated during linking: "default" visibility vs
+"hidden" visibility.</p>
 <dl>
 <dt>default visibility</dt>
-<dd><em>default</em> visibility creates what <code>nm -m</code> calls an <em>external</em> symbol. These symbols can be looked up by client libraries during dynamic loading. hidden visibility
+<dd>
+<em>default</em> visibility creates what <code>nm -m</code> calls an
+<em>external</em> symbol. These symbols can be looked up by client
+libraries during dynamic loading. hidden visibility
 </dd>
-<dd><em>hidden</em> visibility creates what <code>nm -m</code> calls a <em>non-external</em> symbol. These cannot be seen anywhere outside of the library where they exist.
+<dd>
+<em>hidden</em> visibility creates what <code>nm -m</code> calls a
+<em>non-external</em> symbol. These cannot be seen anywhere outside of
+the library where they exist.
 </dd>
 </dl>
-<p>Confusingly, if your app uses best practice, you'll pass the <code>-fvisibility=hidden</code> flag to the linker, which sets the "default" for symbols that are not explicitly marked in source code is <em>hidden</em>. This is a good idea because you don't want all of your private functions in dynamic libraries leaking out to the rest of your program. In fact, this is probably why you wanted to split your program across executables in the first place. Using this flag, for symbols that you want to be accessible to outside libraries, you must explicitly mark them as having <em>default</em> visibility. I don't know any justification for these names - if I were designing gcc, I would have gone with "external" and "private" instead of "default" and "hidden".</p>
+<p>Confusingly, if your app uses best practice, you'll pass the
+<code>-fvisibility=hidden</code> flag to the linker, which sets the
+"default" for symbols that are not explicitly marked in source code is
+<em>hidden</em>. This is a good idea because you don't want all of your
+private functions in dynamic libraries leaking out to the rest of your
+program. In fact, this is probably why you wanted to split your program
+across executables in the first place. Using this flag, for symbols that
+you want to be accessible to outside libraries, you must explicitly mark
+them as having <em>default</em> visibility. I don't know any
+justification for these names - if I were designing gcc, I would have
+gone with "external" and "private" instead of "default" and
+"hidden".</p>
 </div>
 <div class="post">
 <h2>Defining "Undefined" Symbols</h2>
-<p>If you give a function a definition, it becomes a <em>defined</em> symbol in your executable or shared library. If the function has no definition, but does have a declaration, it gets marked as an <em>undefined</em> symbol.</p>
-<p><em>defined</em>, <em>non-external</em> symbols are private to the specific library where they were created</p>
-<p><em>defined</em>, <em>external</em> symbols are exported to all other libraries. By default, if you link to any library that has a symbol with the same name, you'll get a linker error.</p>
-<p><em>undefined</em>, <em>non-external</em> symbols are an immediate linker error</p>
-<p><em>undefined</em>, <em>external</em> symbols will be looked up at runtime. By default, the linker will check to make sure that some dynamic library that you've linked to contains the symbol in question, and if it's missing it will issue an error. This behavior can be disabled, causing a runtime error in the missing symbol case.</p>
-<p>So far, so boring. Hopefully everything up until now has been a review if you are even remotely considering breaking your program up into multiple binaries.</p>
+<p>If you give a function a definition, it becomes a <em>defined</em>
+symbol in your executable or shared library. If the function has no
+definition, but does have a declaration, it gets marked as an
+<em>undefined</em> symbol.</p>
+<p><em>defined</em>, <em>non-external</em> symbols are private to the
+specific library where they were created</p>
+<p><em>defined</em>, <em>external</em> symbols are exported to all other
+libraries. By default, if you link to any library that has a symbol with
+the same name, you'll get a linker error.</p>
+<p><em>undefined</em>, <em>non-external</em> symbols are an immediate
+linker error</p>
+<p><em>undefined</em>, <em>external</em> symbols will be looked up at
+runtime. By default, the linker will check to make sure that some
+dynamic library that you've linked to contains the symbol in question,
+and if it's missing it will issue an error. This behavior can be
+disabled, causing a runtime error in the missing symbol case.</p>
+<p>So far, so boring. Hopefully everything up until now has been a
+review if you are even remotely considering breaking your program up
+into multiple binaries.</p>
 </div>
 <div class="post">
-<h2>A Root of Some Evil: stdc++ <code>dynamic_cast</code> Implementation Details</h2>
-<p>To understand why any of these linker specifics is even relevant to keeping your program crash-free, we need to understand an important detail about how <code>dynamic_cast</code> is implemented in stdc++ and c++abi - two type infos are detected as equal through a <em>pointer compare</em> <a href="#foot1">[1]</a>. This means that <code>dynamic_cast</code> can be <strong>wrong</strong> if there's more than one copy of the type info structure - the structures may be identical, but it doesn't matter because only their locations in memory are being compared. So, because of this optimization, we actually have to care about how and when these type info objects get generated, and how they behave at runtime.</p>
+<h2>A Root of Some Evil: stdc++ <code>dynamic_cast</code> Implementation
+Details</h2>
+<p>To understand why any of these linker specifics is even relevant to
+keeping your program crash-free, we need to understand an important
+detail about how <code>dynamic_cast</code> is implemented in stdc++ and
+c++abi - two type infos are detected as equal through a <em>pointer
+compare</em> <a href="#foot1">[1]</a>. This means that
+<code>dynamic_cast</code> can be <strong>wrong</strong> if there's more
+than one copy of the type info structure - the structures may be
+identical, but it doesn't matter because only their locations in memory
+are being compared. So, because of this optimization, we actually have
+to care about how and when these type info objects get generated, and
+how they behave at runtime.</p>
 </div>
 <div class="post">
 <h2>Vague Linkage (Yes, That's Actually What It's Called)</h2>
-<p>The way type infos work in gcc and clang is that each <code>.o</code> file (that is, compiled <code>.cpp</code> file) generates a <em>weak</em> version of each class's type info. This is called <em>vague linkage</em> in the docs (such as there are docs for this low-level crap). At link time, these are combined into a single copy of that type info. For classes that are marked in code to be <em>hidden</em>, that's more or less the end of the story - the typeinfo is marked <em>non-external</em>, and of course <code>dynamic_cast</code>s within that binary work, and since the class was hidden, you aren't supposed to be able to use it outside of that binary, so in theory <code>dynamic_cast</code>s outside of the binary aren't a concern. In practice, this requires some discipline from programmers to avoid disaster - if you mark a class as <em>hidden</em>, you <strong>really can't</strong> use it safely outside of the binary where it was defined.</p>
-<p>For classes that are marked <em>default</em>, the story is a bit more complicated as it involves an entirely new symbol type, called a <em>weak external</em> symbol. These symbols are <strong>coalesced</strong> at runtime such that there is only one copy of each in a given program (which may comprise several binaries). This is precisely the behavior that enables the pointer compare in <code>dynamic_cast</code> - without this, there would be no way to share types across dynamic library boundaries.</p>
+<p>The way type infos work in gcc and clang is that each <code>.o</code>
+file (that is, compiled <code>.cpp</code> file) generates a
+<em>weak</em> version of each class's type info. This is called
+<em>vague linkage</em> in the docs (such as there are docs for this
+low-level crap). At link time, these are combined into a single copy of
+that type info. For classes that are marked in code to be
+<em>hidden</em>, that's more or less the end of the story - the typeinfo
+is marked <em>non-external</em>, and of course
+<code>dynamic_cast</code>s within that binary work, and since the class
+was hidden, you aren't supposed to be able to use it outside of that
+binary, so in theory <code>dynamic_cast</code>s outside of the binary
+aren't a concern. In practice, this requires some discipline from
+programmers to avoid disaster - if you mark a class as <em>hidden</em>,
+you <strong>really can't</strong> use it safely outside of the binary
+where it was defined.</p>
+<p>For classes that are marked <em>default</em>, the story is a bit more
+complicated as it involves an entirely new symbol type, called a
+<em>weak external</em> symbol. These symbols are
+<strong>coalesced</strong> at runtime such that there is only one copy
+of each in a given program (which may comprise several binaries). This
+is precisely the behavior that enables the pointer compare in
+<code>dynamic_cast</code> - without this, there would be no way to share
+types across dynamic library boundaries.</p>
 </div>
 <div class="post">
 <h2>Sounds Great, What Could Go Wrong?</h2>
-<p>Well, if you've programmed carefully, you should be safe from any <code>dynamic_cast</code> problems. The issue is, if you've programmed slightly sloppily, in the current toolchain, you'll get no major errors at compile time, and your only indication is that something is wrong is that <code>dynamic_cast</code> will sometimes inexplicitly return zero, probably causing a crash. Here are three common cases that I've seen:</p>
+<p>Well, if you've programmed carefully, you should be safe from any
+<code>dynamic_cast</code> problems. The issue is, if you've programmed
+slightly sloppily, in the current toolchain, you'll get no major errors
+at compile time, and your only indication is that something is wrong is
+that <code>dynamic_cast</code> will sometimes inexplicitly return zero,
+probably causing a crash. Here are three common cases that I've
+seen:</p>
 <hr />
 <h3>Using a <em>hidden</em> class from outside its home binary</h3>
-<p>How could this happen? Well, both clang and g++ happily will mark member functions as <em>default</em> even if the class is <em>hidden</em>. So, you can include the class's header from another binary and use the any of the functions that were marked <em>default</em>. This is a recipe for disaster, because <strong>both binaries</strong> will create a <em>non-external</em>, private copy of the type info and the pointer comparison will fail.</p>
-<p>To detect this, run <code>nm -mo * | c++filt</code> on all your binaries, and ensure that there aren't any duplicate "non-external typeinfo" symbols.</p>
+<p>How could this happen? Well, both clang and g++ happily will mark
+member functions as <em>default</em> even if the class is
+<em>hidden</em>. So, you can include the class's header from another
+binary and use the any of the functions that were marked
+<em>default</em>. This is a recipe for disaster, because <strong>both
+binaries</strong> will create a <em>non-external</em>, private copy of
+the type info and the pointer comparison will fail.</p>
+<p>To detect this, run <code>nm -mo * | c++filt</code> on all your
+binaries, and ensure that there aren't any duplicate "non-external
+typeinfo" symbols.</p>
 <hr />
-<h3>Having a class marked <em>hidden</em> in one binary and <em>default</em> in another</h3>
-<p>This can happen if you are using a macro system to mark your classes that breaks down somehow. I've also seen this when template class explicit instantiations are not marked with the correct visibility. This will result in the exact same sort of problems seen above, as the weak symbol loading will <strong>not</strong> coalesce the <em>weak external</em> version with the <em>non-external</em> version.</p>
-<p>Similarly to the last case, to detect this, run <code>nm -mo * | c++filt</code> and ensure that for any typeinfos that have at least one <em>non-external</em> copies, there are no other copies of that typeinfo.</p>
+<h3>Having a class marked <em>hidden</em> in one binary and
+<em>default</em> in another</h3>
+<p>This can happen if you are using a macro system to mark your classes
+that breaks down somehow. I've also seen this when template class
+explicit instantiations are not marked with the correct visibility. This
+will result in the exact same sort of problems seen above, as the weak
+symbol loading will <strong>not</strong> coalesce the <em>weak
+external</em> version with the <em>non-external</em> version.</p>
+<p>Similarly to the last case, to detect this, run
+<code>nm -mo * | c++filt</code> and ensure that for any typeinfos that
+have at least one <em>non-external</em> copies, there are no other
+copies of that typeinfo.</p>
 <hr />
-<h3>Having a class marked <em>hidden</em> in one compilation unit and <em>default</em> in another in the same binary</h3>
-<p>This is sort of the "ultimate screw case", and I've only seen it happen with template instantiations - if you have an explicit instantiation that's marked <em>default</em>, and somehwhere else, in a different compilation unit in the same binary, you have an implicit instantiation, it will be marked <em>hidden</em>.</p>
-<p>What happens here? Well, in modern (10.7+) versions of <code>ld</code>, this is a warning. ("<code>direct access</code> ... <code>means the weak symbol cannot be overriden at runtime</code>"). The compilation unit with the <em>hidden</em> definition will incorrectly use the local definition, and dynamic casts will fail. Other compilation units will be fine, and the symbol will be marked <em>external</em> in the binary.</p>
-<p>On older versions of <code>ld</code> (10.6 and below), things are even worse. The symbol will be <em>non-external</em> in the binary if it's marked <em>hidden</em> for even one compilation unit - making <code>dynamic_cast</code>s fail throughout the entire binary, even in compilation units where the visibility was correct. No meaningful warning is generated.</p>
-<p>To detect this insidious problem, if you're compiling with the 10.7+ linker, I recommend turning <code>fatal_warnings</code> on. If you're using the 10.6 linker, the <code>nm</code> method from before will work because the symbol will be marked <em>non-external</em> in the binary. If you're super-paranoid, you can run <code>nm -om * | c++filt</code> on all your <code>.o</code> files - object files where the visibility was <em>hidden</em> will report <code>weak private external typeinfo</code> where object files with <em>default</em> visibility will report <code>weak external typeinfo</code> (note that if you forget the <code>-m</code> flag on <code>nm</code> these two cases are indistinguishable).</p>
+<h3>Having a class marked <em>hidden</em> in one compilation unit and
+<em>default</em> in another in the same binary</h3>
+<p>This is sort of the "ultimate screw case", and I've only seen it
+happen with template instantiations - if you have an explicit
+instantiation that's marked <em>default</em>, and somehwhere else, in a
+different compilation unit in the same binary, you have an implicit
+instantiation, it will be marked <em>hidden</em>.</p>
+<p>What happens here? Well, in modern (10.7+) versions of
+<code>ld</code>, this is a warning. ("<code>direct access</code> ...
+<code>means the weak symbol cannot be overriden at runtime</code>"). The
+compilation unit with the <em>hidden</em> definition will incorrectly
+use the local definition, and dynamic casts will fail. Other compilation
+units will be fine, and the symbol will be marked <em>external</em> in
+the binary.</p>
+<p>On older versions of <code>ld</code> (10.6 and below), things are
+even worse. The symbol will be <em>non-external</em> in the binary if
+it's marked <em>hidden</em> for even one compilation unit - making
+<code>dynamic_cast</code>s fail throughout the entire binary, even in
+compilation units where the visibility was correct. No meaningful
+warning is generated.</p>
+<p>To detect this insidious problem, if you're compiling with the 10.7+
+linker, I recommend turning <code>fatal_warnings</code> on. If you're
+using the 10.6 linker, the <code>nm</code> method from before will work
+because the symbol will be marked <em>non-external</em> in the binary.
+If you're super-paranoid, you can run <code>nm -om * | c++filt</code> on
+all your <code>.o</code> files - object files where the visibility was
+<em>hidden</em> will report <code>weak private external typeinfo</code>
+where object files with <em>default</em> visibility will report
+<code>weak external typeinfo</code> (note that if you forget the
+<code>-m</code> flag on <code>nm</code> these two cases are
+indistinguishable).</p>
 </div>
 <div class="post">
 <h2>What Have We Learned?</h2>
 <hr />
-<h3>Be careful when sharing C++ objects across binary boundaries - this is something that's a lot more dangerous than perhaps it should be.</h3>
+<h3>Be careful when sharing C++ objects across binary boundaries - this
+is something that's a lot more dangerous than perhaps it should be.</h3>
 <hr />
-<h3>If you are sharing C++ across binary boundaries, consider if the risks of using RTTI are worth it.</h3>
+<h3>If you are sharing C++ across binary boundaries, consider if the
+risks of using RTTI are worth it.</h3>
 <hr />
-<h3>If you're using RTTI, make sure that each class that's used by multiple binaries is marked with <em>default</em> visibility wherever it is used.</h3>
+<h3>If you're using RTTI, make sure that each class that's used by
+multiple binaries is marked with <em>default</em> visibility wherever it
+is used.</h3>
 <hr />
-<h3>If you're using a modern <code>ld</code>, turn on <code>fatal_warnings</code></h3>
+<h3>If you're using a modern <code>ld</code>, turn on
+<code>fatal_warnings</code></h3>
 <hr />
-<h3>Write a script using <code>nm</code> to ensure that if a typeinfo symbol is duplicated between binaries, all copies of it are marked <em>weak external</em>, and add this script to your unit tests.</h3>
+<h3>Write a script using <code>nm</code> to ensure that if a typeinfo
+symbol is duplicated between binaries, all copies of it are marked
+<em>weak external</em>, and add this script to your unit tests.</h3>
 </div>
 <div class="post">
 <h2>footnote</h2>
-<p><a id="foot1"></a> [1]: You can verify this yourself <a href="http://llvm.org/svn/llvm-project/libcxxabi/trunk/src/private_typeinfo.cpp">by looking at the easy-to-read llvm source</a> (check the <code>is_equal</code> function implementation). This is actually determined by a compile-time flag called <code>_LIBCXX_DYNAMIC_FALLBACK</code>. If this flag is on, a string compare occurs during <code>dynamic_cast</code>. This is intended to allow c++abi to be used on platforms that don't allow for weak symbols or COMDAT. This flag is off in apple-provided builds of c++abi.</p>
+<p><a id="foot1"></a> [1]: You can verify this yourself <a
+href="http://llvm.org/svn/llvm-project/libcxxabi/trunk/src/private_typeinfo.cpp">by
+looking at the easy-to-read llvm source</a> (check the
+<code>is_equal</code> function implementation). This is actually
+determined by a compile-time flag called
+<code>_LIBCXX_DYNAMIC_FALLBACK</code>. If this flag is on, a string
+compare occurs during <code>dynamic_cast</code>. This is intended to
+allow c++abi to be used on platforms that don't allow for weak symbols
+or COMDAT. This flag is off in apple-provided builds of c++abi.</p>
   </div>
 </article>
 ]]></description>
@@ -487,27 +927,97 @@ My main goal in writing this was to learn a bit about the ember.js framework. Fr
     <time itemprop="datePublished" datetime="2013-12-01">December  1, 2013</time>
   </div>
   <div class="post">
-    <p>The latest installment in my open-source eurorack series (see previous installments <a href="/posts/2013-01-27-hexbuffer.html">here</a> and <a href="2013-05-14-headphone.html">here</a>) is an 80s-style digitally controlled oscillator. Since a DCO is perhaps a bit less familiar than my previous modules, I'll first describe a bit of its history and design. If you're curious about the fabrication process or eager to access the schematics, skip ahead to the <a href="#fabrication">fabrication</a> section below.</p>
+    <p>The latest installment in my open-source eurorack series (see
+previous installments <a
+href="/posts/2013-01-27-hexbuffer.html">here</a> and <a
+href="2013-05-14-headphone.html">here</a>) is an 80s-style digitally
+controlled oscillator. Since a DCO is perhaps a bit less familiar than
+my previous modules, I'll first describe a bit of its history and
+design. If you're curious about the fabrication process or eager to
+access the schematics, skip ahead to the <a
+href="#fabrication">fabrication</a> section below.</p>
 <p><img src="/images/dco_front.jpg" alt="DCO front" /></p>
 </div>
 <div class="post">
 <h1>What is a DCO?</h1>
-<p><a href="http://en.wikipedia.org/wiki/Digitally_controlled_oscillator">"Digitally Controlled Oscillator"</a> is primarily a marketing term, so it doesn't really have a precise technical definition. Most generally, it's an oscillator that is somehow "more analog" than a fully digital oscillator, where the signal is output direct from a <a href="http://en.wikipedia.org/wiki/Digital-to-analog_converter">DAC</a>, but yet "less analog" than a traditional <a href="http://en.wikipedia.org/wiki/Voltage-controlled_oscillator">VCO</a>. Sometimes a "DCO" is a fully analog oscillator being driven with a control voltage from a DAC, and <a href="http://en.wikipedia.org/wiki/Korg_Poly-800">sometimes</a> "DCO" means a sum of digitally-created square waves. However, the most common definition is the one that this module falls under: a fully analog saw tooth oscillator hard-synced to a digital counter.</p>
-<p>This design (which is the only thing I'll call a 'DCO' from here on out) was first popularized by the Roland <a href="http://en.wikipedia.org/wiki/Roland_Juno-60">Juno</a> series, and became quite popular for a time, especially in <a href="http://www.vintagesynth.com/oberheim/mat6.php">low cost</a> <a href="http://www.vintagesynth.com/misc/bit01.php">polyphonic</a> <a href="http://en.wikipedia.org/wiki/Korg_Poly-61">analogs</a>. During the analog resurgance of the late 2000s/early 2010s, DCOs again became a go-to option, appearing in the <a href="http://en.wikipedia.org/wiki/Prophet_08">Prophet 08</a> and the <a href="http://www.soundonsound.com/sos/may12/articles/moog-minitaur.htm">Moog Minitaur</a>, among others.</p>
-<p>DCOs have a number of differences from the "more analog" VCOs: their tuning is very stable because the frequency ultimately comes from a crystal oscillator. This makes them have less "analog drift", and generally speaking this makes for better bass tones. The main price you pay for this stability is coarser tuning - since the tone is coming from an integer divide down of a fixed clock, there's a limited number of "tuning steps", where an analog oscillator would have completely continuous tuning.</p>
+<p><a
+href="http://en.wikipedia.org/wiki/Digitally_controlled_oscillator">"Digitally
+Controlled Oscillator"</a> is primarily a marketing term, so it doesn't
+really have a precise technical definition. Most generally, it's an
+oscillator that is somehow "more analog" than a fully digital
+oscillator, where the signal is output direct from a <a
+href="http://en.wikipedia.org/wiki/Digital-to-analog_converter">DAC</a>,
+but yet "less analog" than a traditional <a
+href="http://en.wikipedia.org/wiki/Voltage-controlled_oscillator">VCO</a>.
+Sometimes a "DCO" is a fully analog oscillator being driven with a
+control voltage from a DAC, and <a
+href="http://en.wikipedia.org/wiki/Korg_Poly-800">sometimes</a> "DCO"
+means a sum of digitally-created square waves. However, the most common
+definition is the one that this module falls under: a fully analog saw
+tooth oscillator hard-synced to a digital counter.</p>
+<p>This design (which is the only thing I'll call a 'DCO' from here on
+out) was first popularized by the Roland <a
+href="http://en.wikipedia.org/wiki/Roland_Juno-60">Juno</a> series, and
+became quite popular for a time, especially in <a
+href="http://www.vintagesynth.com/oberheim/mat6.php">low cost</a> <a
+href="http://www.vintagesynth.com/misc/bit01.php">polyphonic</a> <a
+href="http://en.wikipedia.org/wiki/Korg_Poly-61">analogs</a>. During the
+analog resurgance of the late 2000s/early 2010s, DCOs again became a
+go-to option, appearing in the <a
+href="http://en.wikipedia.org/wiki/Prophet_08">Prophet 08</a> and the <a
+href="http://www.soundonsound.com/sos/may12/articles/moog-minitaur.htm">Moog
+Minitaur</a>, among others.</p>
+<p>DCOs have a number of differences from the "more analog" VCOs: their
+tuning is very stable because the frequency ultimately comes from a
+crystal oscillator. This makes them have less "analog drift", and
+generally speaking this makes for better bass tones. The main price you
+pay for this stability is coarser tuning - since the tone is coming from
+an integer divide down of a fixed clock, there's a limited number of
+"tuning steps", where an analog oscillator would have completely
+continuous tuning.</p>
 </div>
 <div class="post">
 <h1>How do they work?</h1>
-<p>The core of a DCO is a high speed (usually in the low megahertz) digital clock. This clock is then fed into a <a href="http://en.wikipedia.org/wiki/Programmable_interval_timer">counter</a>, which emits a pulse each time the count reaches a certain value. That pulse then is connected to a switch that will short accross a charging capacitor, resetting the capacitor's voltage back to zero. This creates a saw-tooth wave across the capacitor, whose frequency is set by the count value.</p>
+<p>The core of a DCO is a high speed (usually in the low megahertz)
+digital clock. This clock is then fed into a <a
+href="http://en.wikipedia.org/wiki/Programmable_interval_timer">counter</a>,
+which emits a pulse each time the count reaches a certain value. That
+pulse then is connected to a switch that will short accross a charging
+capacitor, resetting the capacitor's voltage back to zero. This creates
+a saw-tooth wave across the capacitor, whose frequency is set by the
+count value.</p>
 </div>
 <div class="post">
 <p><a id="fabrication"></a></p>
 <h1>Design and Fabrication</h1>
 <p><img src="/images/dco_back.jpg" alt="DCO back" /></p>
-<p>As always, all schematics and source code are available under a permissive license at <a href="https://github.com/russellmcc/dco">github</a>.</p>
-<p>The microcontroller I used was an AVR <a href="http://www.atmel.com/devices/ATXMEGA32A4U.aspx?tab=documents">xmega32A4U</a>, programmed using an Arduino port forked from the <a href="https://github.com/akafugu/Xmegaduino">Xmegaduino</a> project by myself and <a href="https://twitter.com/brendan0powers">Brendan Powers</a>, located <a href="https://github.com/brendan0powers/Xmegaduino">here</a>. If you're interested in Arduino programming on the xmega, I highly recommend you check out our port as it contains numerous bug fixes over the original, now unmaintained Xmegaduino project.</p>
-<p>In addition to an arduino sketch, my design includes a <a href="https://github.com/russellmcc/dco/blob/master/firmware/tablegen.hs">haskell pre-processor</a> to generate look-up tables for the tuning. Anyone developing a DCO may find the code helpful.</p>
-<p>The fabrication stack was the same as last time, that is, laser-cut stencils from <a href="http://dangerawesome.co/">danger awesome</a>, and PCBs from <a href="http://oshpark.com/">OSH Park</a>. Everything worked quite well, except for the <a href="http://en.wikipedia.org/wiki/Quad-flat_no-leads_package">TQFN</a> package I originally spec'ed for the microcontroller - TQFNs are quite hard to work with at home. If you're a hobbiest assembling boards at home, I highly recommend choosing the much more friendly <a href="http://en.wikipedia.org/wiki/Quad_Flat_Package">TQFP</a> package, if you have the option.</p>
+<p>As always, all schematics and source code are available under a
+permissive license at <a
+href="https://github.com/russellmcc/dco">github</a>.</p>
+<p>The microcontroller I used was an AVR <a
+href="http://www.atmel.com/devices/ATXMEGA32A4U.aspx?tab=documents">xmega32A4U</a>,
+programmed using an Arduino port forked from the <a
+href="https://github.com/akafugu/Xmegaduino">Xmegaduino</a> project by
+myself and <a href="https://twitter.com/brendan0powers">Brendan
+Powers</a>, located <a
+href="https://github.com/brendan0powers/Xmegaduino">here</a>. If you're
+interested in Arduino programming on the xmega, I highly recommend you
+check out our port as it contains numerous bug fixes over the original,
+now unmaintained Xmegaduino project.</p>
+<p>In addition to an arduino sketch, my design includes a <a
+href="https://github.com/russellmcc/dco/blob/master/firmware/tablegen.hs">haskell
+pre-processor</a> to generate look-up tables for the tuning. Anyone
+developing a DCO may find the code helpful.</p>
+<p>The fabrication stack was the same as last time, that is, laser-cut
+stencils from <a href="http://dangerawesome.co/">danger awesome</a>, and
+PCBs from <a href="http://oshpark.com/">OSH Park</a>. Everything worked
+quite well, except for the <a
+href="http://en.wikipedia.org/wiki/Quad-flat_no-leads_package">TQFN</a>
+package I originally spec'ed for the microcontroller - TQFNs are quite
+hard to work with at home. If you're a hobbiest assembling boards at
+home, I highly recommend choosing the much more friendly <a
+href="http://en.wikipedia.org/wiki/Quad_Flat_Package">TQFP</a> package,
+if you have the option.</p>
   </div>
 </article>
 ]]></description>
@@ -525,16 +1035,45 @@ My main goal in writing this was to learn a bit about the ember.js framework. Fr
     <time itemprop="datePublished" datetime="2013-12-26">December 26, 2013</time>
   </div>
   <div class="post">
-    <p>For the last few years, my roommates and I have hosted costumed dance parties every Halloween weekend. This year, we decided to add a twist by allowing guests with smart phones to take part in remixing the music while they dance!</p>
-<p>To accomplish this, I built a web server in <a href="www.nodejs.org">node</a> to serve a web page with some simple controls with the most common remixing tasks - a knob to filter high and low frequencies, an X-Y pad to create stutter effects, and most critically, a button to sound the all important <a href="http://blog.dubspot.com/contraption/">air-horn</a>. These controls were adapted from a jQuery plug-in called <a href="https://github.com/russellmcc/jQuery-Kontrol">jQuery-kontrol</a> by GitHub user <a href="https://github.com/aterrien"><code>aterrien</code></a>.</p>
+    <p>For the last few years, my roommates and I have hosted costumed dance
+parties every Halloween weekend. This year, we decided to add a twist by
+allowing guests with smart phones to take part in remixing the music
+while they dance!</p>
+<p>To accomplish this, I built a web server in <a
+href="www.nodejs.org">node</a> to serve a web page with some simple
+controls with the most common remixing tasks - a knob to filter high and
+low frequencies, an X-Y pad to create stutter effects, and most
+critically, a button to sound the all important <a
+href="http://blog.dubspot.com/contraption/">air-horn</a>. These controls
+were adapted from a jQuery plug-in called <a
+href="https://github.com/russellmcc/jQuery-Kontrol">jQuery-kontrol</a>
+by GitHub user <a
+href="https://github.com/aterrien"><code>aterrien</code></a>.</p>
 </div>
 <div class="post">
 <p><img src="/images/halloween_example.png" alt="example" /></p>
 </div>
 <div class="post">
-<p>Each browser control (i.e., knob, pad, or button) communicated over WebSockets (via <a href="http://socket.io/">socket.io</a>) to the server, which then translated the message into an <a href="http://opensoundcontrol.org/">OSC</a> message, which was in turn sent to the effects hosted in the DJ software. Changes to the positions of the controls were broadcast to all other clients via WebSockets so that guests could watch as others moved the controls. Also, UDP messages were sent from the server to an Arduino that my roommate <a href="http://tamas-szalay.squarespace.com/">Tamas</a> programmed with amazing lighting effects.</p>
-<p>We printed QR code posters linking to the public URL of the site, and included a simple password authorization lest mischeivous internet users stumble upon the site. I was impressed with the responsiveness of websockets over the internet: latency was low enough for the remixing tools to be a lot of fun.</p>
-<p>Code for the project is available <a href="https://github.com/russellmcc/halloweenparty2013">on GitHub</a> under the CC0 license, and while it probably won't be directly applicable for your project, I hope it can serve as starting-off point for similar parties.</p>
+<p>Each browser control (i.e., knob, pad, or button) communicated over
+WebSockets (via <a href="http://socket.io/">socket.io</a>) to the
+server, which then translated the message into an <a
+href="http://opensoundcontrol.org/">OSC</a> message, which was in turn
+sent to the effects hosted in the DJ software. Changes to the positions
+of the controls were broadcast to all other clients via WebSockets so
+that guests could watch as others moved the controls. Also, UDP messages
+were sent from the server to an Arduino that my roommate <a
+href="http://tamas-szalay.squarespace.com/">Tamas</a> programmed with
+amazing lighting effects.</p>
+<p>We printed QR code posters linking to the public URL of the site, and
+included a simple password authorization lest mischeivous internet users
+stumble upon the site. I was impressed with the responsiveness of
+websockets over the internet: latency was low enough for the remixing
+tools to be a lot of fun.</p>
+<p>Code for the project is available <a
+href="https://github.com/russellmcc/halloweenparty2013">on GitHub</a>
+under the CC0 license, and while it probably won't be directly
+applicable for your project, I hope it can serve as starting-off point
+for similar parties.</p>
   </div>
 </article>
 ]]></description>
@@ -552,14 +1091,36 @@ My main goal in writing this was to learn a bit about the ember.js framework. Fr
     <time itemprop="datePublished" datetime="2014-01-11">January 11, 2014</time>
   </div>
   <div class="post">
-    <p>That's right! I've made <a href="/posts/2013-01-27-hexbuffer.html">yet</a> <a href="2013-05-14-headphone.html">another</a> <a href="/posts/2013-12-01-DCO.html">open-source</a> eurorack module! This one is a simple mixing utility module that mixes up to four inputs together into one output. It's suitable for both CV and audio signals.</p>
+    <p>That's right! I've made <a
+href="/posts/2013-01-27-hexbuffer.html">yet</a> <a
+href="2013-05-14-headphone.html">another</a> <a
+href="/posts/2013-12-01-DCO.html">open-source</a> eurorack module! This
+one is a simple mixing utility module that mixes up to four inputs
+together into one output. It's suitable for both CV and audio
+signals.</p>
 <p><img src="/images/euromix_panel.png" alt="back view" /></p>
-<p>Unlike the DCO, but like my other modules, this one is a very simple circuit with easy assembly. It was a nice break from all the complication of my last module.</p>
+<p>Unlike the DCO, but like my other modules, this one is a very simple
+circuit with easy assembly. It was a nice break from all the
+complication of my last module.</p>
 <p><img src="/images/euromix_front.png" alt="back view" /></p>
-<p>The fabrication stack was the almost exactly same as the last few times, with designs done in <a href="http://www.cadsoftusa.com/">Eagle</a>, fabrication by <a href="http://oshpark.com/">OSH Park</a>, assembly done at home with <a href="http://www.dangerawesome.co/">laser-cut</a> stencils with the help of <a href="https://github.com/brendan0powers">my friend Brendan</a>. The only new step was desigining the front panels with the <a href="http://www.rhino3d.com/">rhino for mac</a> beta. Even though this was a 3D program, it worked much better for technical 2D designs than <a href="http://www.inkscape.org/en/">inkscape</a>, with the exception of format support.</p>
-<p>Panels were again laser-cut out of <a href="https://www.inventables.com/">acrylic</a> with the paper mask still on, and then spray-painted.</p>
+<p>The fabrication stack was the almost exactly same as the last few
+times, with designs done in <a
+href="http://www.cadsoftusa.com/">Eagle</a>, fabrication by <a
+href="http://oshpark.com/">OSH Park</a>, assembly done at home with <a
+href="http://www.dangerawesome.co/">laser-cut</a> stencils with the help
+of <a href="https://github.com/brendan0powers">my friend Brendan</a>.
+The only new step was desigining the front panels with the <a
+href="http://www.rhino3d.com/">rhino for mac</a> beta. Even though this
+was a 3D program, it worked much better for technical 2D designs than <a
+href="http://www.inkscape.org/en/">inkscape</a>, with the exception of
+format support.</p>
+<p>Panels were again laser-cut out of <a
+href="https://www.inventables.com/">acrylic</a> with the paper mask
+still on, and then spray-painted.</p>
 <p><img src="/images/euromix_back.png" alt="back view" /></p>
-<p>As always, design files, BOMs, and mouser orders are available <a href="https://github.com/russellmcc/euromixer">on github</a>, under a permissive license. Enjoy!</p>
+<p>As always, design files, BOMs, and mouser orders are available <a
+href="https://github.com/russellmcc/euromixer">on github</a>, under a
+permissive license. Enjoy!</p>
   </div>
 </article>
 ]]></description>
@@ -577,10 +1138,38 @@ My main goal in writing this was to learn a bit about the ember.js framework. Fr
     <time itemprop="datePublished" datetime="2014-01-11">January 11, 2014</time>
   </div>
   <div class="post">
-    <p>Last November, as part of <a href="http://new.musichackday.org/">Music Hack Day</a>, co-worker <a href="https://github.com/AlexPowers">Alex Powers</a> and I created a <a href="http://www.dancingstickfigures.com/">music visualizer</a> involving dancing stick figures. Alex has had the idea of creating an "algorithmic choreography generator" for some time, and music hack day seemed like the perfect time do it. Alex wrote a python program to take analysis from the <a href="http://echonest.com/">echo nest</a> API and generate a "choreography file", describing a dance routine in completely abstract terms. It was my job to take the choreography file and turn that into something people could look at. This separation of responsibilities worked well, and I think it played to both of our strengths. While Alex didn't have much choreography experience, he ended up writing code that produced fairly logical dances and worked for many different genres of music.</p>
-<p><img src="/images/dancingstick.png" alt="dancing stick figures" /></p>
-<p>I learned a lot during the 24 hour hack - I had never touched a 3D modeling program before, so perhaps the hardest part was creating the animated dance moves with <a href="http://www.blender.org/">Blender</a>. I also had my first exposure to 3D rendering in the browser - after trying to use raw webgl, I ended up using the significantly more fully-featured <a href="http://threejs.org/">three.js</a>, which felt quite similar to desktop renderers like opengl. The blender animation integration built into three.js was a total life-saver for our project.</p>
-<p>Our demo was quite a crowd pleaser, and we ended up winning the <a href="http://blog.echonest.com/post/66776489063/the-echo-nests-5th-music-hack-day-boston-was-a-roaring">echo nest prize</a> for best use of the echo nest api. Another victory for whimsy! Code, as usual, is available <a href="https://github.com/AlexPowers/danceomatic">on github</a> under a permissive license. We used both CoffeeScript and Python.</p>
+    <p>Last November, as part of <a
+href="http://new.musichackday.org/">Music Hack Day</a>, co-worker <a
+href="https://github.com/AlexPowers">Alex Powers</a> and I created a <a
+href="http://www.dancingstickfigures.com/">music visualizer</a>
+involving dancing stick figures. Alex has had the idea of creating an
+"algorithmic choreography generator" for some time, and music hack day
+seemed like the perfect time do it. Alex wrote a python program to take
+analysis from the <a href="http://echonest.com/">echo nest</a> API and
+generate a "choreography file", describing a dance routine in completely
+abstract terms. It was my job to take the choreography file and turn
+that into something people could look at. This separation of
+responsibilities worked well, and I think it played to both of our
+strengths. While Alex didn't have much choreography experience, he ended
+up writing code that produced fairly logical dances and worked for many
+different genres of music.</p>
+<p><img src="/images/dancingstick.png"
+alt="dancing stick figures" /></p>
+<p>I learned a lot during the 24 hour hack - I had never touched a 3D
+modeling program before, so perhaps the hardest part was creating the
+animated dance moves with <a href="http://www.blender.org/">Blender</a>.
+I also had my first exposure to 3D rendering in the browser - after
+trying to use raw webgl, I ended up using the significantly more
+fully-featured <a href="http://threejs.org/">three.js</a>, which felt
+quite similar to desktop renderers like opengl. The blender animation
+integration built into three.js was a total life-saver for our
+project.</p>
+<p>Our demo was quite a crowd pleaser, and we ended up winning the <a
+href="http://blog.echonest.com/post/66776489063/the-echo-nests-5th-music-hack-day-boston-was-a-roaring">echo
+nest prize</a> for best use of the echo nest api. Another victory for
+whimsy! Code, as usual, is available <a
+href="https://github.com/AlexPowers/danceomatic">on github</a> under a
+permissive license. We used both CoffeeScript and Python.</p>
   </div>
 </article>
 ]]></description>
@@ -598,28 +1187,98 @@ My main goal in writing this was to learn a bit about the ember.js framework. Fr
     <time itemprop="datePublished" datetime="2014-01-18">January 18, 2014</time>
   </div>
   <div class="post">
-    <p>A serious problem with callback-based asynchronous environments like browser-based JavaScript or <a href="nodejs.org">node.js</a> is the verbosity required to chain together multiple asynchronous operations (colloquially known as <a href="http://elm-lang.org/learn/Escape-from-Callback-Hell.elm">"callback hell"</a>). Recently, I was delighted to come accross a proposed solution that looked syntactically a lot like Haskell's <a href="http://en.wikibooks.org/wiki/Haskell/do_Notation">do notation</a> for promises. It turns out the same trick can be used to implement something similar to do notation for a wide class of monads. First, though, a bit of background on promises:</p>
+    <p>A serious problem with callback-based asynchronous environments like
+browser-based JavaScript or <a href="nodejs.org">node.js</a> is the
+verbosity required to chain together multiple asynchronous operations
+(colloquially known as <a
+href="http://elm-lang.org/learn/Escape-from-Callback-Hell.elm">"callback
+hell"</a>). Recently, I was delighted to come accross a proposed
+solution that looked syntactically a lot like Haskell's <a
+href="http://en.wikibooks.org/wiki/Haskell/do_Notation">do notation</a>
+for promises. It turns out the same trick can be used to implement
+something similar to do notation for a wide class of monads. First,
+though, a bit of background on promises:</p>
 </div>
 <div class="post">
 <h2>What is a promise?</h2>
-<p>One of the more interesting recent developments in the world of modern JavaScript is the rise in popularity of the <a href="http://promises-aplus.github.io/promises-spec/">Promises/A+ specification</a>, an attempt to address the common problem of callback hell in web apps by reifying asynchronous actions into objects called "promises".</p>
-<p>The specification suggests, rather than directly taking callbacks into an asynchronous computation, the function that starts the computation should return a "Promise" object that can have callbacks attached to it. This turns out to be much more easily composable than calback-based functions. The strategy of reification of control flow is one more closely associated with "academic" language like Scala than "workaday" languages like JavaScript, so it's a bit surprising that promises have gained as much traction as they have. The <a href="http://dom.spec.whatwg.org/">next version of the browser DOM</a> will even include wide-spread Promise support.</p>
-<p>As noted by <a href="http://brianmckenna.org/blog/category_theory_promisesaplus">Brian McKenna</a>, promises as defined by the spec look similar<a href="#foot1">[1]</a> to <a href="http://www.haskell.org/tutorial/monads.html">Monads</a>. This observation indirectly led to a train-wreck flame war on a <a href="https://github.com/promises-aplus/promises-spec/issues/94">GitHub Issue</a>. At one point, a functional-programming skeptic claimed that to use the principle of generalization was to "ignore reality in favor of typed-language fantasy land".</p>
+<p>One of the more interesting recent developments in the world of
+modern JavaScript is the rise in popularity of the <a
+href="http://promises-aplus.github.io/promises-spec/">Promises/A+
+specification</a>, an attempt to address the common problem of callback
+hell in web apps by reifying asynchronous actions into objects called
+"promises".</p>
+<p>The specification suggests, rather than directly taking callbacks
+into an asynchronous computation, the function that starts the
+computation should return a "Promise" object that can have callbacks
+attached to it. This turns out to be much more easily composable than
+calback-based functions. The strategy of reification of control flow is
+one more closely associated with "academic" language like Scala than
+"workaday" languages like JavaScript, so it's a bit surprising that
+promises have gained as much traction as they have. The <a
+href="http://dom.spec.whatwg.org/">next version of the browser DOM</a>
+will even include wide-spread Promise support.</p>
+<p>As noted by <a
+href="http://brianmckenna.org/blog/category_theory_promisesaplus">Brian
+McKenna</a>, promises as defined by the spec look similar<a
+href="#foot1">[1]</a> to <a
+href="http://www.haskell.org/tutorial/monads.html">Monads</a>. This
+observation indirectly led to a train-wreck flame war on a <a
+href="https://github.com/promises-aplus/promises-spec/issues/94">GitHub
+Issue</a>. At one point, a functional-programming skeptic claimed that
+to use the principle of generalization was to "ignore reality in favor
+of typed-language fantasy land".</p>
 </div>
 <div class="post">
 <h2>What about Do Notation?</h2>
-<p>The one positive thing to come out of the flame-war was a specification for various simple algebraic constructs in JavaScript, aptly called <a href="https://github.com/fantasyland/fantasy-land">"Fantasy Land"</a>. I thought I'd join in the fun by providing a sort of "do notation" for Fantasy Land monads using <a href="http://wiki.ecmascript.org/doku.php?id=harmony:generators">harmony generators</a> and ideas from Mozilla's <a href="http://taskjs.org/">task.js</a>. Code and examples are <a href="http://github.com/russellmcc/fantasydo">available on GitHub</a> under the CC0 1.0 license.</p>
-<p>This was my first time working with harmony features of JavaScript. Andy Wingo wrote an <a href="http://wingolog.org/archives/2013/02/25/on-generators">excellent article on the design of generators</a>, which did a great job of explaining why various choices were made.</p>
-<p>One feature I would have really enjoyed while writing this library is a way of cloning a generator's iterator. This would allow easy support for this "Do notation" trick for branching monads (like the List monad). Wingo writes that the main reason for not allowing resumable generators are the "allocation cost". I don't quite understand this when we already have external iterators, because there's no fundamental reason you'd have to do any extra allocations until a user actually starts cloning the iterator. If anyone could explain this in the comments, I'd be really grateful.</p>
+<p>The one positive thing to come out of the flame-war was a
+specification for various simple algebraic constructs in JavaScript,
+aptly called <a
+href="https://github.com/fantasyland/fantasy-land">"Fantasy Land"</a>. I
+thought I'd join in the fun by providing a sort of "do notation" for
+Fantasy Land monads using <a
+href="http://wiki.ecmascript.org/doku.php?id=harmony:generators">harmony
+generators</a> and ideas from Mozilla's <a
+href="http://taskjs.org/">task.js</a>. Code and examples are <a
+href="http://github.com/russellmcc/fantasydo">available on GitHub</a>
+under the CC0 1.0 license.</p>
+<p>This was my first time working with harmony features of JavaScript.
+Andy Wingo wrote an <a
+href="http://wingolog.org/archives/2013/02/25/on-generators">excellent
+article on the design of generators</a>, which did a great job of
+explaining why various choices were made.</p>
+<p>One feature I would have really enjoyed while writing this library is
+a way of cloning a generator's iterator. This would allow easy support
+for this "Do notation" trick for branching monads (like the List monad).
+Wingo writes that the main reason for not allowing resumable generators
+are the "allocation cost". I don't quite understand this when we already
+have external iterators, because there's no fundamental reason you'd
+have to do any extra allocations until a user actually starts cloning
+the iterator. If anyone could explain this in the comments, I'd be
+really grateful.</p>
 </div>
 <div class="post">
 <h2>Footnotes</h2>
 <hr />
 <p><a id="foot1"></a></p>
 <h2>1</h2>
-<p>Promises/A+ defines one operation for promises, called <code>then</code>. Brian McKenna points out that this is similar to a "return-type" overload of <code>fmap</code> and <code>bind</code>. In fact, ignoring the error path, the Promises/A+ <code>then</code> is equivalent to <code>bind</code> in the sense that given one, you can write the other:</p>
+<p>Promises/A+ defines one operation for promises, called
+<code>then</code>. Brian McKenna points out that this is similar to a
+"return-type" overload of <code>fmap</code> and <code>bind</code>. In
+fact, ignoring the error path, the Promises/A+ <code>then</code> is
+equivalent to <code>bind</code> in the sense that given one, you can
+write the other:</p>
 <script src="https://gist.github.com/russellmcc/8497511.js"></script>
-<p>Promises/A+ are actually a little more expressive than a monad, in that they have rich operations for error catching in addition to the operations required by the monad structure. One of the authors of the specification <a href="https://github.com/promises-aplus/promises-spec/issues/94#issuecomment-16176966">claims</a> that to ignore or abstract away this extra structure is to "miss the point of promises". Regardless, the specification seems to share much with <a href="http://www.scala-lang.org/api/current/index.html#scala.concurrent.Future">Scala Futures</a>, and whether the authors like it or not, promises as specified are monads.</p>
+<p>Promises/A+ are actually a little more expressive than a monad, in
+that they have rich operations for error catching in addition to the
+operations required by the monad structure. One of the authors of the
+specification <a
+href="https://github.com/promises-aplus/promises-spec/issues/94#issuecomment-16176966">claims</a>
+that to ignore or abstract away this extra structure is to "miss the
+point of promises". Regardless, the specification seems to share much
+with <a
+href="http://www.scala-lang.org/api/current/index.html#scala.concurrent.Future">Scala
+Futures</a>, and whether the authors like it or not, promises as
+specified are monads.</p>
   </div>
 </article>
 ]]></description>
@@ -637,15 +1296,30 @@ My main goal in writing this was to learn a bit about the ember.js framework. Fr
     <time itemprop="datePublished" datetime="2014-02-01">February  1, 2014</time>
   </div>
   <div class="post">
-    <p>For the last few years, whenever <a href="http://www.russellmcc.com/soundfxweb/">I've needed some browser-based knobs</a>, I've used <a href="http://anthonyterrien.com/knob/">Anothy Terrien's excellent jQuery Knob plug-in</a>. However, despite the high quality of that library, the situation has always made me feel a bit uncomfortable.</p>
-<p>I've never really liked the idea of bundling components like this as jQuery plug-ins, since there is no fundamental reason that a widget should need to be tied to a specific DOM-manipulation library. jQuery's bizarre API, muddled concepts, overcomplicated semantics, and totally unique aesthetic sense have always bothered me, and as browsers get more and more compatible, it has become totally viable to ditch jQuery entirely. The one thing that many of my projects still need from jQuery ecosystem is the various UI widgets that have for some reason been forever tied to the jQuery library.</p>
-<p>This project is an attempt to show that distributing widgets without jQuery doesn't have to be painful.</p>
+    <p>For the last few years, whenever <a
+href="http://www.russellmcc.com/soundfxweb/">I've needed some
+browser-based knobs</a>, I've used <a
+href="http://anthonyterrien.com/knob/">Anothy Terrien's excellent jQuery
+Knob plug-in</a>. However, despite the high quality of that library, the
+situation has always made me feel a bit uncomfortable.</p>
+<p>I've never really liked the idea of bundling components like this as
+jQuery plug-ins, since there is no fundamental reason that a widget
+should need to be tied to a specific DOM-manipulation library. jQuery's
+bizarre API, muddled concepts, overcomplicated semantics, and totally
+unique aesthetic sense have always bothered me, and as browsers get more
+and more compatible, it has become totally viable to ditch jQuery
+entirely. The one thing that many of my projects still need from jQuery
+ecosystem is the various UI widgets that have for some reason been
+forever tied to the jQuery library.</p>
+<p>This project is an attempt to show that distributing widgets without
+jQuery doesn't have to be painful.</p>
 </div>
 <div class="post">
 <h2>live demo</h2>
 <link rel='stylesheet' href='http://www.russellmcc.com/knobjs/knobjs.css'>
 <script src="http://www.russellmcc.com/knobjs/knob.min.js"></script>
-<x-knobjs-knob id="knob"></x-knobjs-knob> <input id="input" style="vertical-align:top;">
+<x-knobjs-knob id="knob"></x-knobjs-knob>
+<input id="input" style="vertical-align:top;">
 <script type="text/javascript">
   window.onload = function(){
     var knob = document.getElementById("knob");
@@ -666,11 +1340,22 @@ My main goal in writing this was to learn a bit about the ember.js framework. Fr
 </div>
 <div class="post">
 <h2>technical details</h2>
-<p>The project uses google's <a href="https://github.com/polymer/platform">polymer platform</a> to polyfill some <a href="http://www.w3.org/TR/components-intro/">web component</a> features. For now, it requires some non-semantic markup (i.e. the <code>&lt;x-knobjs-knob&gt;</code> tag is presentational and not semantic), but that will change once browsers start supporting the <a href="http://w3c.github.io/webcomponents/spec/shadow/">shadow DOM</a> in earnest. In the future, I'm hoping <code>knob.js</code> can simply become an alternate shadow-dom for the <code>&lt;input type='range'&gt;</code> element.</p>
+<p>The project uses google's <a
+href="https://github.com/polymer/platform">polymer platform</a> to
+polyfill some <a href="http://www.w3.org/TR/components-intro/">web
+component</a> features. For now, it requires some non-semantic markup
+(i.e. the <code>&lt;x-knobjs-knob&gt;</code> tag is presentational and
+not semantic), but that will change once browsers start supporting the
+<a href="http://w3c.github.io/webcomponents/spec/shadow/">shadow DOM</a>
+in earnest. In the future, I'm hoping <code>knob.js</code> can simply
+become an alternate shadow-dom for the
+<code>&lt;input type='range'&gt;</code> element.</p>
 </div>
 <div class="post">
 <h2>more info</h2>
-<p>Documentation, along with code under a permissive license, is available <a href="https://github.com/russellmcc/knobjs">on GitHub</a></p>
+<p>Documentation, along with code under a permissive license, is
+available <a href="https://github.com/russellmcc/knobjs">on
+GitHub</a></p>
   </div>
 </article>
 ]]></description>
@@ -688,22 +1373,56 @@ My main goal in writing this was to learn a bit about the ember.js framework. Fr
     <time itemprop="datePublished" datetime="2015-01-25">January 25, 2015</time>
   </div>
   <div class="post">
-    <p>Some time ago, I bought an Epiphone Thunderbird Pro bass. I love the look of this bass, kind of a mix of the <a href="http://en.wikipedia.org/wiki/Gibson_Thunderbird">Gibson Thunderbird</a> and the <a href="http://www.matsumoku.org/models/ariaproii/bass/sb/sb.html">Aria Pro II</a> basses from the 80s.</p>
-<p>There were a few things I didn't like about it though - first of all, the pickguard was a bit ugly, so I replaced it with one lasercut from <a href="https://www.inventables.com/technologies/leopardwood--2">leopardwood</a>.</p>
+    <p>Some time ago, I bought an Epiphone Thunderbird Pro bass. I love the
+look of this bass, kind of a mix of the <a
+href="http://en.wikipedia.org/wiki/Gibson_Thunderbird">Gibson
+Thunderbird</a> and the <a
+href="http://www.matsumoku.org/models/ariaproii/bass/sb/sb.html">Aria
+Pro II</a> basses from the 80s.</p>
+<p>There were a few things I didn't like about it though - first of all,
+the pickguard was a bit ugly, so I replaced it with one lasercut from <a
+href="https://www.inventables.com/technologies/leopardwood--2">leopardwood</a>.</p>
 <p><img src="/images/bass-pickguard.jpg" alt="New pickguard" /></p>
 </div>
 <div class="post">
-<p>Even after changing the pickguard, I wasn't crazy about the sound. It's an active bass, meaning that it has a battery and a pre-amp on-board to shape the sound. Sensing a fun project, I designed a small, cheap pre-amp to replace the existing one. Like all of my electronic designs, the pre-amp is open-source with a permissive license. You can see more details <a href="https://github.com/russellmcc/basspre-mm2">on github</a>.</p>
-<p>The design is heavily based on the first version of the pre-amp included in the <a href="http://en.wikipedia.org/wiki/Music_Man_StingRay">Music Man Stingray</a>, a design overseen by Leo Fender. The first version of the StingRay pre-amp has only two controls, Bass and Treble (really, what else do you need?).</p>
-<p>My version is quite close to that original Music Man design in frequency response, but uses modern components for lower power consumption. In tests, my pre-amp uses about 1.5 milliamps, giving approximately 400 hours of play time with a normal nine volt battery.</p>
-<p>If you're interested in seeing lots of graphs of the response, all settings of interest are <a href="https://github.com/russellmcc/basspre-mm2">on the project's github page</a>, including simulations and real-world tests. My favorite setting is both bass and treble boosted, giving a "scooped" frequency response:</p>
-<p><img src="/images/bass-both-boost-response.png" alt="Both boost response" /></p>
+<p>Even after changing the pickguard, I wasn't crazy about the sound.
+It's an active bass, meaning that it has a battery and a pre-amp
+on-board to shape the sound. Sensing a fun project, I designed a small,
+cheap pre-amp to replace the existing one. Like all of my electronic
+designs, the pre-amp is open-source with a permissive license. You can
+see more details <a href="https://github.com/russellmcc/basspre-mm2">on
+github</a>.</p>
+<p>The design is heavily based on the first version of the pre-amp
+included in the <a
+href="http://en.wikipedia.org/wiki/Music_Man_StingRay">Music Man
+Stingray</a>, a design overseen by Leo Fender. The first version of the
+StingRay pre-amp has only two controls, Bass and Treble (really, what
+else do you need?).</p>
+<p>My version is quite close to that original Music Man design in
+frequency response, but uses modern components for lower power
+consumption. In tests, my pre-amp uses about 1.5 milliamps, giving
+approximately 400 hours of play time with a normal nine volt
+battery.</p>
+<p>If you're interested in seeing lots of graphs of the response, all
+settings of interest are <a
+href="https://github.com/russellmcc/basspre-mm2">on the project's github
+page</a>, including simulations and real-world tests. My favorite
+setting is both bass and treble boosted, giving a "scooped" frequency
+response:</p>
+<p><img src="/images/bass-both-boost-response.png"
+alt="Both boost response" /></p>
 </div>
 <div class="post">
-<p>The build process was identical to my last few electronics projects, with boards printed by the still-awesome <a href="https://oshpark.com">OSH Park</a>, and then built by me using laser-cut stencils and a toaster oven. Here's a few pictures of the completed board in the bass:</p>
+<p>The build process was identical to my last few electronics projects,
+with boards printed by the still-awesome <a
+href="https://oshpark.com">OSH Park</a>, and then built by me using
+laser-cut stencils and a toaster oven. Here's a few pictures of the
+completed board in the bass:</p>
 <p><img src="/images/bass-built-board.jpg" alt="Built board" /></p>
 <p><img src="/images/bass-wire-mess.jpg" alt="Mess of Wires" /></p>
-<p>Installing the pre-amp was fairly easy, but I did have to wrap the entire board in electrical tape to prevent it from rubbing against the conductive walls of the electronics chamber and causing noise.</p>
+<p>Installing the pre-amp was fairly easy, but I did have to wrap the
+entire board in electrical tape to prevent it from rubbing against the
+conductive walls of the electronics chamber and causing noise.</p>
   </div>
 </article>
 ]]></description>
@@ -721,33 +1440,99 @@ My main goal in writing this was to learn a bit about the ember.js framework. Fr
     <time itemprop="datePublished" datetime="2019-06-14">June 14, 2019</time>
   </div>
   <div class="post">
-    <p>It's been a while, but I've released yet another completed eurorack oscillator design. This one is based on another classic 80s design, this time a high-frequency purely digital oscillator.</p>
+    <p>It's been a while, but I've released yet another completed eurorack
+oscillator design. This one is based on another classic 80s design, this
+time a high-frequency purely digital oscillator.</p>
 <figure>
-<img src="../images/alphaosc.jpg" alt="Eurorack Digital Oscillator" /><figcaption>Eurorack Digital Oscillator</figcaption>
+<img src="../images/alphaosc.jpg" alt="Eurorack Digital Oscillator" />
+<figcaption aria-hidden="true">Eurorack Digital Oscillator</figcaption>
 </figure>
 </div><div class="post">
 
 <h1>background</h1>
-<p>A synthesizer oscillator's job is to create an audio waveform at a controllable frequency. In polyphonic synthesizers, stable tuning is especially important, since the human ear is very sensitive to out-of-tune notes when chords are played. Unfortunately, it's not particularly easy or cost-effective to create an analog oscillator with stable tuning. For a great summary of the techniques engineers have used to stabilize analog oscillators, please see <a href="http://www.openmusiclabs.com/2015/03/temperature-compensation-of-analog-exponential-converters/trackback/index.html">this report by open music labs</a>. The challenges of cheaply stabilizing oscillators led to the designs of <a href="file:///posts/2013-12-01-DCO.html">digitally controlled oscillators</a>, where an analog oscillator is synchronized to a digital oscillator. Roland's <a href="https://en.wikipedia.org/wiki/Roland_Juno-60">juno</a> series of synthesizers initially used DCOs, but switched to a purely digital design for the alpha juno line. This design is heavily inspired by the one from the alpha juno series.</p>
+<p>A synthesizer oscillator's job is to create an audio waveform at a
+controllable frequency. In polyphonic synthesizers, stable tuning is
+especially important, since the human ear is very sensitive to
+out-of-tune notes when chords are played. Unfortunately, it's not
+particularly easy or cost-effective to create an analog oscillator with
+stable tuning. For a great summary of the techniques engineers have used
+to stabilize analog oscillators, please see <a
+href="http://www.openmusiclabs.com/2015/03/temperature-compensation-of-analog-exponential-converters/trackback/index.html">this
+report by open music labs</a>. The challenges of cheaply stabilizing
+oscillators led to the designs of <a
+href="file:///posts/2013-12-01-DCO.html">digitally controlled
+oscillators</a>, where an analog oscillator is synchronized to a digital
+oscillator. Roland's <a
+href="https://en.wikipedia.org/wiki/Roland_Juno-60">juno</a> series of
+synthesizers initially used DCOs, but switched to a purely digital
+design for the alpha juno line. This design is heavily inspired by the
+one from the alpha juno series.</p>
 </div><div class="post">
 
 <h1>why does it go so fast?</h1>
-<p>One traditional problem with digital oscillators is the problem of <em>aliasing</em>. Aliasing usually shows up in the context of digital recordings - if we try to sample audio signals that contain high frequencies, they appear in our recordings as low frequencies. It's impossible to distinguish these "aliased" low frequencies from low frequencies that were actually there, so a proper recording can never be recovered once aliasing is introduced. The normal answer to this is to apply an analog low-pass filter to the signal before sampling so that no high frequencies will remain by the time we get around to sampling.</p>
-<p>So, aliasing can destroy digital recordings, but what do they have to do with digital oscillators? Well, it's a bit of a complicated answer (and one that I hope to answer more fully in a future post), but basically, the first algorithm you'd think of for a digital saw wave is equivalent to sampling an analog saw wave. But, an analog saw wave contains a full harmonic series, which is to say, infinitely high frequencies. So, no matter how high our sampling rate, we'll get some aliasing in our output. There are other algorithms for generating saw waves that don't have this problem, but we'll leave those for another day.</p>
-<p>This oscillator (and the alpha juno it's based on), use this naive algorithm that's equivalent to sampling an analog saw wave. So, how come they don't have audible aliasing? They run the algorithm at a very high sampling rate. Since the amplitudes of each harmonic in a saw wave are lower than the last, by setting our sampling rate to much higher than the rate of the saw wave, we can ensure that any aliased harmonics are fairly low in amplitude. For typical audio rates (say, 400 hertz), the alpha juno runs the oscillator at 2 megahertz! This is much faster than digital to analog converters that we are used to, which run in the low kilohertz (typically 48 kilohertz these days).</p>
-<p>Audio people usually think of using high sampling rates to reproduce high frequency signals; but in this case we're using the high sampling rate to reproduce low frequency signals with a simple algorithm.</p>
+<p>One traditional problem with digital oscillators is the problem of
+<em>aliasing</em>. Aliasing usually shows up in the context of digital
+recordings - if we try to sample audio signals that contain high
+frequencies, they appear in our recordings as low frequencies. It's
+impossible to distinguish these "aliased" low frequencies from low
+frequencies that were actually there, so a proper recording can never be
+recovered once aliasing is introduced. The normal answer to this is to
+apply an analog low-pass filter to the signal before sampling so that no
+high frequencies will remain by the time we get around to sampling.</p>
+<p>So, aliasing can destroy digital recordings, but what do they have to
+do with digital oscillators? Well, it's a bit of a complicated answer
+(and one that I hope to answer more fully in a future post), but
+basically, the first algorithm you'd think of for a digital saw wave is
+equivalent to sampling an analog saw wave. But, an analog saw wave
+contains a full harmonic series, which is to say, infinitely high
+frequencies. So, no matter how high our sampling rate, we'll get some
+aliasing in our output. There are other algorithms for generating saw
+waves that don't have this problem, but we'll leave those for another
+day.</p>
+<p>This oscillator (and the alpha juno it's based on), use this naive
+algorithm that's equivalent to sampling an analog saw wave. So, how come
+they don't have audible aliasing? They run the algorithm at a very high
+sampling rate. Since the amplitudes of each harmonic in a saw wave are
+lower than the last, by setting our sampling rate to much higher than
+the rate of the saw wave, we can ensure that any aliased harmonics are
+fairly low in amplitude. For typical audio rates (say, 400 hertz), the
+alpha juno runs the oscillator at 2 megahertz! This is much faster than
+digital to analog converters that we are used to, which run in the low
+kilohertz (typically 48 kilohertz these days).</p>
+<p>Audio people usually think of using high sampling rates to reproduce
+high frequency signals; but in this case we're using the high sampling
+rate to reproduce low frequency signals with a simple algorithm.</p>
 </div><div class="post">
 
 <h1>how does it go so fast?</h1>
-<p>Outputting a signal at 2 megahertz or above is not realistic using a cheap microcontroller, even using recent chips. However, it's totally reasonable for <a href="https://en.wikipedia.org/wiki/Field-programmable_gate_array">fpgas</a> or cplds, which are programmable logic circuits rather than microprocessors. In this case, we have a very inexpensive (a dollar or two) <a href="https://www.latticesemi.com/Products/FPGAandCPLD/MachXO">lattice MachXO CPLD</a>, connected directly to a simple R2R DAC.</p>
-<p>The cpld is programmed using haskell, which can be transpiled to verilog through the <a href="https://clash-lang.org">clash</a> compiler.</p>
-<p>To manage the analog to digital converter, I'm using an avr microcontroller programmed with the arduino tools. This using tuning look tables and sends the cpld tuning data over a bespoke parallel interface.</p>
+<p>Outputting a signal at 2 megahertz or above is not realistic using a
+cheap microcontroller, even using recent chips. However, it's totally
+reasonable for <a
+href="https://en.wikipedia.org/wiki/Field-programmable_gate_array">fpgas</a>
+or cplds, which are programmable logic circuits rather than
+microprocessors. In this case, we have a very inexpensive (a dollar or
+two) <a
+href="https://www.latticesemi.com/Products/FPGAandCPLD/MachXO">lattice
+MachXO CPLD</a>, connected directly to a simple R2R DAC.</p>
+<p>The cpld is programmed using haskell, which can be transpiled to
+verilog through the <a href="https://clash-lang.org">clash</a>
+compiler.</p>
+<p>To manage the analog to digital converter, I'm using an avr
+microcontroller programmed with the arduino tools. This using tuning
+look tables and sends the cpld tuning data over a bespoke parallel
+interface.</p>
 <p>The four-layer PCB was designed with kicad.</p>
-<p>As usual, all the design files are available on <a href="https://github.com/russellmcc/alphaosc">github</a>.</p>
+<p>As usual, all the design files are available on <a
+href="https://github.com/russellmcc/alphaosc">github</a>.</p>
 </div><div class="post">
 
 <h1>how does it get tuned?</h1>
-<p>One of my biggest surprises doing this project was the complexity of designing a proper tuning procedure for the oscillator. There's a fair number of parameters in the tuning system, and interesting trade-offs for each choice. This is written up in detail in a <a href="https://github.com/russellmcc/alphaosc/blob/master/design/Frequency%20Accuracy.ipynb">jupyter notebook</a> in the source repo.</p>
+<p>One of my biggest surprises doing this project was the complexity of
+designing a proper tuning procedure for the oscillator. There's a fair
+number of parameters in the tuning system, and interesting trade-offs
+for each choice. This is written up in detail in a <a
+href="https://github.com/russellmcc/alphaosc/blob/master/design/Frequency%20Accuracy.ipynb">jupyter
+notebook</a> in the source repo.</p>
   </div>
 </article>
 ]]></description>
@@ -765,19 +1550,64 @@ My main goal in writing this was to learn a bit about the ember.js framework. Fr
     <time itemprop="datePublished" datetime="2019-06-30">June 30, 2019</time>
   </div>
   <div class="post">
-    <p>Today I released <a href="https://github.com/russellmcc/brinicle">brinicle</a>, a toy framework for building audio effects using <a href="https://www.rust-lang.org">rust</a> and <a href="https://facebook.github.io/react-native/">react-native</a>.</p>
-<p>I've long been interested in better ways of writing audio software than the traditional method, which involves using C++ for both signal processing and user interface code. Since audio software usually has to work in real-time, certain language features like pausing garbage collection and locking thread synchronization (including dynamic memory allocation on most OSes) aren't available. This means languages that depend on these features for their basic functionality won't work. One of the few modern languages that's capable of working in a real time environment is Rust.</p>
-<p>Rust has many of the niceties you'd expect from a language designed in the 21st century, such as <a href="https://en.wikipedia.org/wiki/Tagged_union">native sum types</a> and <a href="https://doc.rust-lang.org/rust-by-example/trait.html">haskell-style polymorphism</a>, but with a low-level focus and commitment to zero-cost abstractions that even exceeds that of C++ (for example, the recommended error handling mechanism in Rust is zero-cost, while that of C++ is not). Additionally, Rust has a novel <a href="https://doc.rust-lang.org/1.8.0/book/references-and-borrowing.html">borrow checker</a> which saves you from common C/C++ headaches like use-after-free and race-conditions. I've been using Rust since 2015, but this is the first project I've shared outside of a small group of friends.</p>
-<p>Most of the work of brinicle was completed in early 2017, but I spent a month or two of side-project time this year porting it to the newer versions of Rust and C++ that are currently available.</p>
+    <p>Today I released <a
+href="https://github.com/russellmcc/brinicle">brinicle</a>, a toy
+framework for building audio effects using <a
+href="https://www.rust-lang.org">rust</a> and <a
+href="https://facebook.github.io/react-native/">react-native</a>.</p>
+<p>I've long been interested in better ways of writing audio software
+than the traditional method, which involves using C++ for both signal
+processing and user interface code. Since audio software usually has to
+work in real-time, certain language features like pausing garbage
+collection and locking thread synchronization (including dynamic memory
+allocation on most OSes) aren't available. This means languages that
+depend on these features for their basic functionality won't work. One
+of the few modern languages that's capable of working in a real time
+environment is Rust.</p>
+<p>Rust has many of the niceties you'd expect from a language designed
+in the 21st century, such as <a
+href="https://en.wikipedia.org/wiki/Tagged_union">native sum types</a>
+and <a
+href="https://doc.rust-lang.org/rust-by-example/trait.html">haskell-style
+polymorphism</a>, but with a low-level focus and commitment to zero-cost
+abstractions that even exceeds that of C++ (for example, the recommended
+error handling mechanism in Rust is zero-cost, while that of C++ is
+not). Additionally, Rust has a novel <a
+href="https://doc.rust-lang.org/1.8.0/book/references-and-borrowing.html">borrow
+checker</a> which saves you from common C/C++ headaches like
+use-after-free and race-conditions. I've been using Rust since 2015, but
+this is the first project I've shared outside of a small group of
+friends.</p>
+<p>Most of the work of brinicle was completed in early 2017, but I spent
+a month or two of side-project time this year porting it to the newer
+versions of Rust and C++ that are currently available.</p>
 </div><div class="post">
 
-<p>For the UI, brinicle uses react-native. In the current release, brinicle only supports audio plug-ins in macOS (although I have some hacked branches lying around which support iOS). This means it uses the somewhat half-baked react-native-macos port. While react-native is conceptually much clearer than other desktop UI libraries, it does have a lot of layers to it, which makes it complex to work with and debug.</p>
-<p>The knobs in the example app created by the scaffolding script use <a href="https://airbnb.io/lottie/#/">lottie</a> for smooth operation.</p>
+<p>For the UI, brinicle uses react-native. In the current release,
+brinicle only supports audio plug-ins in macOS (although I have some
+hacked branches lying around which support iOS). This means it uses the
+somewhat half-baked react-native-macos port. While react-native is
+conceptually much clearer than other desktop UI libraries, it does have
+a lot of layers to it, which makes it complex to work with and
+debug.</p>
+<p>The knobs in the example app created by the scaffolding script use <a
+href="https://airbnb.io/lottie/#/">lottie</a> for smooth operation.</p>
 <p><img src="../images/brinicle-example.png" alt="Demo app" /></p>
 </div><div class="post">
 
-<p>Most of the work in this project was in the <span class="underline">interfaces</span> between the different pieces of technology. Rust is particularly difficult to interface with C++, since everything has to go through a C interop layer. For things like sum-types, I represented these as enums on the Rust side, and <code>std::variant</code>'s on the C++-side, each wrapping a C interface. Once in C++, it was fairly easy to interface with react-native through Objective-C++.</p>
-<p>Hopefully, this project inspires someone to dream about better ways to write audio software. While I'm not planning on investing in this project in the near future, I may well come back to it at some point. Obvious ways to extend it include: iOS support, virtual instrument support in addition to virtual effect support, and fleshing out the signal-processing library on the rust side.</p>
+<p>Most of the work in this project was in the <u>interfaces</u> between
+the different pieces of technology. Rust is particularly difficult to
+interface with C++, since everything has to go through a C interop
+layer. For things like sum-types, I represented these as enums on the
+Rust side, and <code>std::variant</code>'s on the C++-side, each
+wrapping a C interface. Once in C++, it was fairly easy to interface
+with react-native through Objective-C++.</p>
+<p>Hopefully, this project inspires someone to dream about better ways
+to write audio software. While I'm not planning on investing in this
+project in the near future, I may well come back to it at some point.
+Obvious ways to extend it include: iOS support, virtual instrument
+support in addition to virtual effect support, and fleshing out the
+signal-processing library on the rust side.</p>
   </div>
 </article>
 ]]></description>
