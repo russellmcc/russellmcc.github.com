@@ -1266,8 +1266,7 @@ really grateful.</p>
 "return-type" overload of <code>fmap</code> and <code>bind</code>. In
 fact, ignoring the error path, the Promises/A+ <code>then</code> is
 equivalent to <code>bind</code> in the sense that given one, you can
-write the other:</p>
-<script src="https://gist.github.com/russellmcc/8497511.js"></script>
+write the other.</p>
 <p>Promises/A+ are actually a little more expressive than a monad, in
 that they have rich operations for error catching in addition to the
 operations required by the monad structure. One of the authors of the
@@ -1313,30 +1312,6 @@ ecosystem is the various UI widgets that have for some reason been
 forever tied to the jQuery library.</p>
 <p>This project is an attempt to show that distributing widgets without
 jQuery doesn't have to be painful.</p>
-</div>
-<div class="post">
-<h2>live demo</h2>
-<link rel='stylesheet' href='http://www.russellmcc.com/knobjs/knobjs.css'>
-<script src="http://www.russellmcc.com/knobjs/knob.min.js"></script>
-<x-knobjs-knob id="knob"></x-knobjs-knob>
-<input id="input" style="vertical-align:top;">
-<script type="text/javascript">
-  window.onload = function(){
-    var knob = document.getElementById("knob");
-    var input = document.getElementById("input");
-    knob.onchange = function(){
-      input.value = ~~knob.value;
-    }
-    input.onchange = function(){
-      knob.value = ~~input.value;
-    }
-    input.value = knob.value;
-  }
-</script>
-</div>
-<div class="post">
-<h2>live demo code</h2>
-<script src="https://gist.github.com/russellmcc/8760316.js"></script>
 </div>
 <div class="post">
 <h2>technical details</h2>

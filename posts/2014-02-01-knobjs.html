@@ -48,30 +48,6 @@ forever tied to the jQuery library.</p>
 jQuery doesn't have to be painful.</p>
 </div>
 <div class="post">
-<h2>live demo</h2>
-<link rel="stylesheet" href="http://www.russellmcc.com/knobjs/knobjs.css">
-<script src="http://www.russellmcc.com/knobjs/knob.min.js"></script>
-<x-knobjs-knob id="knob"></x-knobjs-knob>
-<input id="input" style="vertical-align:top;">
-<script type="text/javascript">
-  window.onload = function(){
-    var knob = document.getElementById("knob");
-    var input = document.getElementById("input");
-    knob.onchange = function(){
-      input.value = ~~knob.value;
-    }
-    input.onchange = function(){
-      knob.value = ~~input.value;
-    }
-    input.value = knob.value;
-  }
-</script>
-</div>
-<div class="post">
-<h2>live demo code</h2>
-<script src="https://gist.github.com/russellmcc/8760316.js"></script>
-</div>
-<div class="post">
 <h2>technical details</h2>
 <p>The project uses google's <a href="https://github.com/polymer/platform">polymer platform</a> to
 polyfill some <a href="http://www.w3.org/TR/components-intro/">web
