@@ -1590,6 +1590,80 @@ signal-processing library on the rust side.</p>
     <guid>http://www.russellmcc.com/posts/2019-06-30-Brinicle.html</guid>
     <dc:creator>Russell McClellan</dc:creator>
 </item>
+<item>
+    <title>aido.el - give chatgpt control of your emacs</title>
+    <link>http://www.russellmcc.com/posts/2023-04-03-aido-el.html</link>
+    <description><![CDATA[<article itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="post post-title" style="background-image:url(/images/aido-el-banner.png);">
+    <h1 itemprop="name headline">aido.el - give chatgpt control of your emacs</h1>
+    <span class="hidden-author" itemprop="author" itemscope="" itemtype="http://schema.org/Person"><span itemprop="name"><a href="http://russellmcc.com" itemprop="url" rel="author">Russell McClellan</a></span></span>
+    <time itemprop="datePublished" datetime="2023-04-03">April  3, 2023</time>
+  </div>
+  <div class="post">
+    <p>Have you ever forgotten an emacs command and wish you could just
+describe it with words?</p>
+<p><a href="https://github.com/russellmcc/aido.el">aido.el</a> is an
+brand new, irresponsible emacs package to let you do just that!</p>
+<p>For example, you can <code>M-x aido</code> and then type "insert
+today's date" and then today's date will (usually) be inserted! Check
+out the readme for more usage tips.</p>
+</div><div class="post">
+
+<p>In 2023 I've been having fun chatting with large language models like
+ChatGPT and Bing. It's been amazing to watch their rapid progress. One
+idea I'm especially excited by is giving these language models "super
+powers" by embedding them in systems that are able to execute the
+model's commands. Bing itself is a great example of this; actions like
+searches and suggestions are controlled by the model. In <a
+href="https://about.sourcegraph.com/blog/cheating-is-all-you-need">"Cheating
+is all you need"</a> Steve Yegge argues that listening for queries and
+injecting results could be a powerful tool for code generation and
+completion.</p>
+<p>In <code>aido.el</code>, we prompt the model to create an org-mode
+file with a description followed by the code block. In my testing so
+far, gpt3.5 based models seem to do better if they are allowed to write
+a description - think of it as a way for the model to think to itself
+"out loud". We then ignore all the description and execute the code
+block, doing whatever it says! For example, here's the full output when
+I ran <code>M-x aido</code> <code>insert today's date</code>:</p>
+<pre><code>Here&#39;s an emacs-lisp code block that will insert today&#39;s date in the format of &quot;YYYY-MM-DD&quot;:
+
+#+BEGIN_SRC emacs-lisp
+(insert (format-time-string &quot;%Y-%m-%d&quot;))
+#+END_SRC
+</code></pre>
+</div><div class="post">
+
+<p>One issue I noticed with early versions of my prompt, is that gpt3.5
+based models would often get confused about formatting and put a
+<code>#+begin_src org</code> code block <u>around</u> the code block,
+something like this:</p>
+<pre><code>  Here&#39;s an org-mode document with a code block that will insert today&#39;s date in the format of &quot;YYYY-MM-DD&quot;:
+
+#+BEGIN_SRC org
+#+BEGIN_SRC emacs-lisp
+  (insert (format-time-string &quot;%Y-%m-%d&quot;))
+#+END_SRC
+#+END_SRC
+</code></pre>
+<p>This clearly is not ideal, but it was surprisingly hard to get the
+model to avoid making this sort of mistake with prompt design. I wonder
+if something about the formatting used to encode the chat conversation
+is confounding the model somehow. My current fix is to insert a
+synthetic "reminder" message tagged with the assistant role at the end
+of the chat log which says "I'll try to help, but no matter what, I
+won't produce a nested code block. I would never do that. Instead I'll
+produce a single <code>emacs-lisp</code> code block." This sort of "note
+to self" can be a hint to the model about what the assistant should and
+should not do and is a good technique to remember when prompting these
+sort of models.</p>
+  </div>
+</article>
+]]></description>
+    <pubDate>Mon, 03 Apr 2023 00:00:00 UT</pubDate>
+    <guid>http://www.russellmcc.com/posts/2023-04-03-aido-el.html</guid>
+    <dc:creator>Russell McClellan</dc:creator>
+</item>
 
     </channel>
 </rss>
