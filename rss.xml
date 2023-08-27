@@ -491,7 +491,7 @@ href="http://en.wikipedia.org/wiki/Voltage-controlled_filter">VCF</a>,
 href="http://en.wikipedia.org/wiki/Voltage-controlled_amplifier">VCA</a>)
 was implemented by a dedicated chip.</p>
 <p>At first glance, there's nothing incredibly extraordinary about the
-<a href="http://www.synthtech.com/cem/c3372pdf.pdf">CEM3372</a> VCF
+<a href="http://www.synfo.nl/datasheets/CEM3372.pdf">CEM3372</a> VCF
 chip. It is famous for its use in the wildly flexible <a
 href="http://www.youtube.com/watch?v=kmfzoHDqPpk">Oberheim</a> <a
 href="http://www.youtube.com/watch?v=XN6LuK80KrM">Xpander</a> filter
